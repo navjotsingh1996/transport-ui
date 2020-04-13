@@ -1,0 +1,1 @@
+export const stopTypes = { 'pickup':'PICKUP', 'delivery':'DELIVERY' };

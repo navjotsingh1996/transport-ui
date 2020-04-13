@@ -3,22 +3,15 @@ import { Route } from 'react-router-dom';
 import routes from '../routes';
 import Layout from './Layout';
 
-class Main extends React.Component {
-  constructor() {
-    super();
-  }
+export default function Main() {
 
-  render() {
-    return (
-      <div id='transport-main' style={{display: 'flex'}}>
-        <Layout>
-          {routes.map(route => (
-            <Route path={`${route.path}`}  component={route.component}/>
-          ))}
-        </Layout>
-      </div>
-    );
-  }
+  return (
+    <div id='transport-main' style={{display: 'flex'}}>
+      <Layout>
+        {routes.map(route => (
+          <Route key={route.path} path={`${route.path}`}  component={route.component}/>
+        ))}
+      </Layout>
+    </div>
+  );
 }
-
-export default Main;

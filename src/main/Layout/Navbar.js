@@ -9,8 +9,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import { useLocation } from 'react-router-dom'
 
 const drawerWidth = 240;
 
@@ -39,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar(props) {
   const classes = useStyles();
+  const location = useLocation();
   const { children } = props;
   return (
     <div className={classes.root}>
@@ -55,7 +55,13 @@ export default function Navbar(props) {
         <div className={classes.drawerContainer}>
           <List>
             {routes.map((route) => (
-              <ListItem button key={route.path} component={Link} to={`${route.path}`} >
+              <ListItem
+                button
+                key={route.path}
+                component={Link}
+                to={`${route.path}`}
+                selected={location.pathname === route.path}
+              >
                 <ListItemIcon>{route.icon}</ListItemIcon>
                 <ListItemText primary={route.text} />
               </ListItem>
