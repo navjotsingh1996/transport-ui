@@ -1,4970 +1,4853 @@
 const fakeData = [
   {
-    "invoiceNumber": 22,
-    "loadNumber": 28,
-    "billTo": {
-      "name": "KYAGORO",
-      "streetAddress": "228 Kane Street",
-      "city": "Tilden",
-      "state": " Federated States Of Micronesia",
-      "zip": 2902
-    },
-    "stops": [
-      {
-        "date": "2016-03-11T09:46:51 +08:00",
-        "name": "CENTREGY",
-        "streetAddress": "997 Lorraine Street",
-        "city": "Troy",
-        "state": "Michigan",
-        "zip": 1041,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-10-31T02:08:08 +07:00",
-        "name": "QUILK",
-        "streetAddress": "780 Bijou Avenue",
-        "city": "Lynn",
-        "state": "Alaska",
-        "zip": 615,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-02-23T07:03:05 +08:00",
-        "name": "SEALOUD",
-        "streetAddress": "359 Empire Boulevard",
-        "city": "Broadlands",
-        "state": "New Jersey",
-        "zip": 3237,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-01-05T10:26:20 +08:00",
-        "name": "FLUMBO",
-        "streetAddress": "797 Meadow Street",
-        "city": "Dodge",
-        "state": "Virginia",
-        "zip": 924,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,912.72",
-      "detention": "$2,001.37",
-      "layover": "$1,082.80"
-    }
-  },
-  {
-    "invoiceNumber": 39,
-    "loadNumber": 30,
-    "billTo": {
-      "name": "ARTWORLDS",
-      "streetAddress": "713 Dekalb Avenue",
-      "city": "Weogufka",
-      "state": " Montana",
-      "zip": 9431
-    },
-    "stops": [
-      {
-        "date": "2015-12-11T07:16:52 +08:00",
-        "name": "ZILLACON",
-        "streetAddress": "345 Chester Avenue",
-        "city": "Tolu",
-        "state": "Illinois",
-        "zip": 173,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-01-14T01:23:44 +08:00",
-        "name": "XERONK",
-        "streetAddress": "617 Noel Avenue",
-        "city": "Kilbourne",
-        "state": "Wyoming",
-        "zip": 1734,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-06-10T07:24:02 +07:00",
-        "name": "FLYBOYZ",
-        "streetAddress": "585 Schaefer Street",
-        "city": "Datil",
-        "state": "Georgia",
-        "zip": 3113,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,048.08",
-      "detention": "$3,538.75",
-      "layover": "$1,116.18"
-    }
-  },
-  {
-    "invoiceNumber": 36,
-    "loadNumber": 27,
-    "billTo": {
-      "name": "HONOTRON",
-      "streetAddress": "247 Bogart Street",
-      "city": "Turah",
-      "state": " Washington",
-      "zip": 5855
-    },
-    "stops": [
-      {
-        "date": "2019-03-29T07:31:32 +07:00",
-        "name": "PLEXIA",
-        "streetAddress": "843 Glenmore Avenue",
-        "city": "Mansfield",
-        "state": "District Of Columbia",
-        "zip": 1042,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-04-28T09:39:16 +07:00",
-        "name": "SUPPORTAL",
-        "streetAddress": "255 Clinton Avenue",
-        "city": "Darlington",
-        "state": "West Virginia",
-        "zip": 2925,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2017-03-16T10:49:58 +07:00",
-        "name": "MOTOVATE",
-        "streetAddress": "380 India Street",
-        "city": "Alleghenyville",
-        "state": "North Dakota",
-        "zip": 3699,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-11-06T09:34:07 +08:00",
-        "name": "ENDIPIN",
-        "streetAddress": "631 Diamond Street",
-        "city": "Coaldale",
-        "state": "Wisconsin",
-        "zip": 9580,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,470.79",
-      "detention": "$1,759.37",
-      "layover": "$2,033.76"
-    }
-  },
-  {
-    "invoiceNumber": 27,
+    "invoiceNumber": "5e951a0aad9d31d739bfcbab",
     "loadNumber": 34,
     "billTo": {
-      "name": "ACIUM",
-      "streetAddress": "458 Pershing Loop",
-      "city": "Indio",
-      "state": " Nevada",
-      "zip": 9072
+      "name": "SYNTAC",
+      "streetAddress": "896 Glendale Court",
+      "city": "Groveville",
+      "state": " Idaho",
+      "zip": 1215
     },
     "stops": [
       {
-        "date": "2018-05-27T01:42:49 +07:00",
-        "name": "SHOPABOUT",
-        "streetAddress": "781 Lombardy Street",
-        "city": "Waverly",
-        "state": "South Carolina",
-        "zip": 7550,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-07-15T02:42:26 +07:00",
-        "name": "GLUKGLUK",
-        "streetAddress": "117 Rutland Road",
-        "city": "Clayville",
-        "state": "Palau",
-        "zip": 4301,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-08-23T05:15:02 +07:00",
-        "name": "SIGNITY",
-        "streetAddress": "610 Catherine Street",
-        "city": "Harborton",
-        "state": "Iowa",
-        "zip": 5887,
+        "date": "2018-05-01T02:18:31 +07:00",
+        "name": "EURON",
+        "streetAddress": "901 Rost Place",
+        "city": "Dorneyville",
+        "state": "Massachusetts",
+        "zip": 2243,
         "type": "DELIVERY"
       },
       {
-        "date": "2019-11-25T03:02:09 +08:00",
-        "name": "XYQAG",
-        "streetAddress": "491 Dewitt Avenue",
-        "city": "Coalmont",
-        "state": "Ohio",
-        "zip": 8668,
+        "date": "2014-09-11T01:03:10 +07:00",
+        "name": "MEDIOT",
+        "streetAddress": "904 Voorhies Avenue",
+        "city": "Hanover",
+        "state": "Oregon",
+        "zip": 3072,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,540.83",
+      "detention": "$3,268.18",
+      "layover": "$3,891.29"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a705d6fcd80ace318",
+    "loadNumber": 23,
+    "billTo": {
+      "name": "NURPLEX",
+      "streetAddress": "806 Truxton Street",
+      "city": "Chamizal",
+      "state": " Kansas",
+      "zip": 825
+    },
+    "stops": [
+      {
+        "date": "2016-01-29T08:32:55 +08:00",
+        "name": "HATOLOGY",
+        "streetAddress": "902 Emmons Avenue",
+        "city": "Bennett",
+        "state": "American Samoa",
+        "zip": 8662,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-08-23T03:58:04 +07:00",
+        "name": "ZIORE",
+        "streetAddress": "764 Ridge Boulevard",
+        "city": "Hannasville",
+        "state": "Oklahoma",
+        "zip": 4293,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2018-05-31T02:30:31 +07:00",
+        "name": "SNACKTION",
+        "streetAddress": "601 Miller Place",
+        "city": "Chautauqua",
+        "state": "Nebraska",
+        "zip": 4032,
         "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$3,163.76",
-      "detention": "$2,637.46",
-      "layover": "$3,847.96"
+      "rateAmount": "$1,278.03",
+      "detention": "$1,348.18",
+      "layover": "$1,707.62"
     }
   },
   {
-    "invoiceNumber": 33,
-    "loadNumber": 38,
+    "invoiceNumber": "5e951a0aa8843620c658ebd8",
+    "loadNumber": 35,
     "billTo": {
-      "name": "BIOSPAN",
-      "streetAddress": "944 Lloyd Court",
-      "city": "Glidden",
-      "state": " Oregon",
-      "zip": 8418
+      "name": "NORSUL",
+      "streetAddress": "689 Ide Court",
+      "city": "Belva",
+      "state": " Marshall Islands",
+      "zip": 2551
     },
     "stops": [
       {
-        "date": "2020-01-11T11:46:08 +08:00",
-        "name": "IMAGEFLOW",
-        "streetAddress": "551 Cranberry Street",
-        "city": "Windsor",
-        "state": "Vermont",
-        "zip": 6393,
+        "date": "2018-05-05T07:30:45 +07:00",
+        "name": "SONGBIRD",
+        "streetAddress": "193 Remsen Avenue",
+        "city": "Sardis",
+        "state": "Alaska",
+        "zip": 5324,
         "type": "DELIVERY"
       },
       {
-        "date": "2016-06-15T06:42:57 +07:00",
-        "name": "EGYPTO",
-        "streetAddress": "664 Butler Street",
-        "city": "Chumuckla",
+        "date": "2017-06-22T03:32:02 +07:00",
+        "name": "QUAILCOM",
+        "streetAddress": "707 Berry Street",
+        "city": "Rosburg",
+        "state": "Michigan",
+        "zip": 6153,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,911.19",
+      "detention": "$1,817.76",
+      "layover": "$3,052.36"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0ae9c504b8c257448a",
+    "loadNumber": 37,
+    "billTo": {
+      "name": "HAWKSTER",
+      "streetAddress": "388 Gerry Street",
+      "city": "Coral",
+      "state": " Mississippi",
+      "zip": 7004
+    },
+    "stops": [
+      {
+        "date": "2016-05-04T12:43:25 +07:00",
+        "name": "ASIMILINE",
+        "streetAddress": "617 Townsend Street",
+        "city": "Coyote",
+        "state": "New Hampshire",
+        "zip": 2788,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-03-16T12:48:52 +07:00",
+        "name": "PETICULAR",
+        "streetAddress": "679 Whitwell Place",
+        "city": "Yogaville",
+        "state": "Delaware",
+        "zip": 8310,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-08-29T08:31:02 +07:00",
+        "name": "TUBALUM",
+        "streetAddress": "315 Nassau Street",
+        "city": "Succasunna",
+        "state": "Georgia",
+        "zip": 4467,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,430.66",
+      "detention": "$1,702.51",
+      "layover": "$3,379.00"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0ab97b6a20ac959687",
+    "loadNumber": 24,
+    "billTo": {
+      "name": "SENTIA",
+      "streetAddress": "162 Berriman Street",
+      "city": "Frystown",
+      "state": " Guam",
+      "zip": 8949
+    },
+    "stops": [
+      {
+        "date": "2014-03-16T04:36:26 +07:00",
+        "name": "FREAKIN",
+        "streetAddress": "434 Baughman Place",
+        "city": "Dragoon",
+        "state": "Ohio",
+        "zip": 2557,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-02-24T05:36:22 +08:00",
+        "name": "EMPIRICA",
+        "streetAddress": "183 Front Street",
+        "city": "Colton",
+        "state": "Hawaii",
+        "zip": 4686,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2017-04-12T07:10:20 +07:00",
+        "name": "QUORDATE",
+        "streetAddress": "751 College Place",
+        "city": "Devon",
+        "state": "Missouri",
+        "zip": 3823,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,394.71",
+      "detention": "$2,260.14",
+      "layover": "$1,098.85"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a6d7e5e16e6d90824",
+    "loadNumber": 23,
+    "billTo": {
+      "name": "OTHERSIDE",
+      "streetAddress": "681 Danforth Street",
+      "city": "Southview",
+      "state": " Tennessee",
+      "zip": 789
+    },
+    "stops": [
+      {
+        "date": "2015-11-02T11:13:33 +08:00",
+        "name": "RECOGNIA",
+        "streetAddress": "852 Berkeley Place",
+        "city": "Bonanza",
+        "state": "Texas",
+        "zip": 1573,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-08-27T09:27:19 +07:00",
+        "name": "VALPREAL",
+        "streetAddress": "677 Taaffe Place",
+        "city": "Englevale",
+        "state": "Puerto Rico",
+        "zip": 5077,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,337.17",
+      "detention": "$3,470.44",
+      "layover": "$3,843.67"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0ae4197d8fd3e7dac7",
+    "loadNumber": 34,
+    "billTo": {
+      "name": "WAAB",
+      "streetAddress": "409 Bayard Street",
+      "city": "Gilgo",
+      "state": " Arkansas",
+      "zip": 2033
+    },
+    "stops": [
+      {
+        "date": "2017-07-09T01:00:17 +07:00",
+        "name": "OHMNET",
+        "streetAddress": "236 Belvidere Street",
+        "city": "Clara",
+        "state": "Montana",
+        "zip": 4245,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2020-03-19T03:55:25 +07:00",
+        "name": "MOBILDATA",
+        "streetAddress": "237 Cozine Avenue",
+        "city": "Zortman",
+        "state": "Louisiana",
+        "zip": 7245,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-12-24T09:01:00 +08:00",
+        "name": "EPLODE",
+        "streetAddress": "138 Beekman Place",
+        "city": "Winfred",
         "state": "Alabama",
+        "zip": 2549,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-07-20T11:37:01 +07:00",
+        "name": "AUSTECH",
+        "streetAddress": "823 Bulwer Place",
+        "city": "Grayhawk",
+        "state": "Maryland",
+        "zip": 2532,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,005.38",
+      "detention": "$3,004.53",
+      "layover": "$1,085.27"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a4994a90aac6fcfa1",
+    "loadNumber": 22,
+    "billTo": {
+      "name": "BRISTO",
+      "streetAddress": "703 Huntington Street",
+      "city": "Nord",
+      "state": " Vermont",
+      "zip": 9208
+    },
+    "stops": [
+      {
+        "date": "2017-04-18T04:57:38 +07:00",
+        "name": "QUIZKA",
+        "streetAddress": "452 Ditmars Street",
+        "city": "Lavalette",
+        "state": "Pennsylvania",
+        "zip": 5148,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-02-25T12:11:56 +08:00",
+        "name": "COLUMELLA",
+        "streetAddress": "329 Cornelia Street",
+        "city": "Whitestone",
+        "state": "Federated States Of Micronesia",
+        "zip": 1268,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2018-08-24T10:30:31 +07:00",
+        "name": "KATAKANA",
+        "streetAddress": "777 Troy Avenue",
+        "city": "Wakarusa",
+        "state": "New Jersey",
+        "zip": 7009,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-03-22T02:12:41 +07:00",
+        "name": "PROXSOFT",
+        "streetAddress": "146 Cumberland Street",
+        "city": "Indio",
+        "state": "Iowa",
+        "zip": 3445,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-01-14T12:01:39 +08:00",
+        "name": "ELPRO",
+        "streetAddress": "994 Preston Court",
+        "city": "Neahkahnie",
+        "state": "Wyoming",
+        "zip": 7114,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,162.23",
+      "detention": "$2,681.20",
+      "layover": "$2,914.83"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a55b63dbe4a1e3cd6",
+    "loadNumber": 26,
+    "billTo": {
+      "name": "ZYTRAC",
+      "streetAddress": "542 Java Street",
+      "city": "Saddlebrooke",
+      "state": " District Of Columbia",
+      "zip": 2734
+    },
+    "stops": [
+      {
+        "date": "2016-07-10T05:05:57 +07:00",
+        "name": "NETPLODE",
+        "streetAddress": "524 Fane Court",
+        "city": "Utting",
+        "state": "Colorado",
+        "zip": 3737,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-12-07T08:33:01 +08:00",
+        "name": "GOLISTIC",
+        "streetAddress": "484 Pacific Street",
+        "city": "Franklin",
+        "state": "West Virginia",
+        "zip": 7804,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-11-15T08:31:16 +08:00",
+        "name": "ENERFORCE",
+        "streetAddress": "951 Veterans Avenue",
+        "city": "Riegelwood",
+        "state": "California",
+        "zip": 1647,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-05-05T11:08:56 +07:00",
+        "name": "NEPTIDE",
+        "streetAddress": "252 Lincoln Terrace",
+        "city": "Summertown",
+        "state": "New Mexico",
+        "zip": 7427,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,723.55",
+      "detention": "$2,465.88",
+      "layover": "$3,483.23"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a2b2f32d50984507b",
+    "loadNumber": 26,
+    "billTo": {
+      "name": "QUAREX",
+      "streetAddress": "932 Quay Street",
+      "city": "Eagleville",
+      "state": " North Carolina",
+      "zip": 5637
+    },
+    "stops": [
+      {
+        "date": "2019-10-08T02:31:16 +07:00",
+        "name": "HELIXO",
+        "streetAddress": "404 Hill Street",
+        "city": "Harrodsburg",
+        "state": "Illinois",
+        "zip": 9724,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-06-14T12:13:02 +07:00",
+        "name": "ACCIDENCY",
+        "streetAddress": "786 Alice Court",
+        "city": "Bergoo",
+        "state": "Kentucky",
+        "zip": 6731,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-10-15T01:47:06 +07:00",
+        "name": "LIMOZEN",
+        "streetAddress": "907 Vista Place",
+        "city": "Needmore",
+        "state": "Minnesota",
+        "zip": 1473,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-10-21T06:45:53 +07:00",
+        "name": "CINASTER",
+        "streetAddress": "469 Murdock Court",
+        "city": "Jacksonburg",
+        "state": "Connecticut",
+        "zip": 1129,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-05-16T11:20:14 +07:00",
+        "name": "NURALI",
+        "streetAddress": "750 Manhattan Court",
+        "city": "Talpa",
+        "state": "Nevada",
+        "zip": 2932,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,821.73",
+      "detention": "$3,773.09",
+      "layover": "$2,759.25"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0aa12e768b8942087a",
+    "loadNumber": 28,
+    "billTo": {
+      "name": "BUZZWORKS",
+      "streetAddress": "680 Wythe Avenue",
+      "city": "Roderfield",
+      "state": " South Dakota",
+      "zip": 8717
+    },
+    "stops": [
+      {
+        "date": "2018-11-14T07:41:34 +08:00",
+        "name": "SULTRAX",
+        "streetAddress": "170 Micieli Place",
+        "city": "Lafferty",
+        "state": "Rhode Island",
+        "zip": 2668,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2020-03-03T11:59:07 +08:00",
+        "name": "PARCOE",
+        "streetAddress": "161 Dahill Road",
+        "city": "Dola",
+        "state": "Utah",
+        "zip": 2438,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-07-20T12:22:32 +07:00",
+        "name": "ZANITY",
+        "streetAddress": "578 Bergen Avenue",
+        "city": "Brazos",
+        "state": "Virginia",
+        "zip": 2611,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-06-06T01:29:42 +07:00",
+        "name": "EYEWAX",
+        "streetAddress": "835 Cropsey Avenue",
+        "city": "Delco",
+        "state": "Florida",
+        "zip": 778,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2016-10-30T01:20:56 +07:00",
+        "name": "IMPERIUM",
+        "streetAddress": "913 Crescent Street",
+        "city": "Greenock",
+        "state": "Northern Mariana Islands",
         "zip": 1365,
         "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$3,713.95",
-      "detention": "$2,899.30",
-      "layover": "$1,782.71"
+      "rateAmount": "$1,866.89",
+      "detention": "$2,688.89",
+      "layover": "$1,321.30"
     }
   },
   {
-    "invoiceNumber": 37,
-    "loadNumber": 26,
-    "billTo": {
-      "name": "ZIZZLE",
-      "streetAddress": "424 Bancroft Place",
-      "city": "Waukeenah",
-      "state": " Kansas",
-      "zip": 4496
-    },
-    "stops": [
-      {
-        "date": "2017-08-24T03:58:07 +07:00",
-        "name": "TRASOLA",
-        "streetAddress": "318 Louisiana Avenue",
-        "city": "Bynum",
-        "state": "New York",
-        "zip": 8328,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-01-30T12:58:52 +08:00",
-        "name": "MARQET",
-        "streetAddress": "592 Lake Place",
-        "city": "Yorklyn",
-        "state": "California",
-        "zip": 5166,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-08-09T08:44:45 +07:00",
-        "name": "EVEREST",
-        "streetAddress": "920 Montgomery Place",
-        "city": "Bluffview",
-        "state": "Rhode Island",
-        "zip": 876,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-09-01T02:12:36 +07:00",
-        "name": "VORTEXACO",
-        "streetAddress": "192 Polar Street",
-        "city": "Draper",
-        "state": "Minnesota",
-        "zip": 1085,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-10-24T08:45:09 +07:00",
-        "name": "FREAKIN",
-        "streetAddress": "933 Veranda Place",
-        "city": "Waumandee",
-        "state": "Pennsylvania",
-        "zip": 1710,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,824.21",
-      "detention": "$3,295.46",
-      "layover": "$3,044.68"
-    }
-  },
-  {
-    "invoiceNumber": 25,
-    "loadNumber": 30,
-    "billTo": {
-      "name": "CODACT",
-      "streetAddress": "403 Alton Place",
-      "city": "Boonville",
-      "state": " Colorado",
-      "zip": 9960
-    },
-    "stops": [
-      {
-        "date": "2019-08-16T07:16:07 +07:00",
-        "name": "ESSENSIA",
-        "streetAddress": "233 Neptune Court",
-        "city": "Bluetown",
-        "state": "Idaho",
-        "zip": 1182,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-04-03T06:02:07 +07:00",
-        "name": "RADIANTIX",
-        "streetAddress": "678 Montauk Avenue",
-        "city": "Wyoming",
-        "state": "Utah",
-        "zip": 1229,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-04-09T01:57:11 +07:00",
-        "name": "FARMAGE",
-        "streetAddress": "668 Norfolk Street",
-        "city": "Groton",
-        "state": "Florida",
-        "zip": 7560,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,624.10",
-      "detention": "$1,327.14",
-      "layover": "$2,554.69"
-    }
-  },
-  {
-    "invoiceNumber": 26,
-    "loadNumber": 36,
-    "billTo": {
-      "name": "PIVITOL",
-      "streetAddress": "505 Lincoln Road",
-      "city": "Winesburg",
-      "state": " Delaware",
-      "zip": 228
-    },
-    "stops": [
-      {
-        "date": "2014-11-15T11:53:21 +08:00",
-        "name": "KRAGGLE",
-        "streetAddress": "600 Cherry Street",
-        "city": "Drummond",
-        "state": "Texas",
-        "zip": 4708,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-09-04T12:46:42 +07:00",
-        "name": "ENERSOL",
-        "streetAddress": "189 Vanderbilt Street",
-        "city": "Outlook",
-        "state": "Nebraska",
-        "zip": 833,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-02-17T04:06:17 +08:00",
-        "name": "ZBOO",
-        "streetAddress": "936 Thornton Street",
-        "city": "Manitou",
-        "state": "Guam",
-        "zip": 5950,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-06-07T10:35:05 +07:00",
-        "name": "SPHERIX",
-        "streetAddress": "575 Dinsmore Place",
-        "city": "Foscoe",
-        "state": "South Dakota",
-        "zip": 8199,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-04-10T02:17:41 +07:00",
-        "name": "SPRINGBEE",
-        "streetAddress": "620 Lott Avenue",
-        "city": "Welda",
-        "state": "Tennessee",
-        "zip": 5992,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,986.84",
-      "detention": "$2,289.64",
-      "layover": "$2,825.79"
-    }
-  },
-  {
-    "invoiceNumber": 40,
-    "loadNumber": 21,
-    "billTo": {
-      "name": "EZENTIA",
-      "streetAddress": "139 Withers Street",
-      "city": "Bison",
-      "state": " Mississippi",
-      "zip": 5701
-    },
-    "stops": [
-      {
-        "date": "2018-11-27T12:59:05 +08:00",
-        "name": "SONGBIRD",
-        "streetAddress": "342 Harbor Court",
-        "city": "Boyd",
-        "state": "Indiana",
-        "zip": 7919,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2020-01-30T03:00:08 +08:00",
-        "name": "RENOVIZE",
-        "streetAddress": "565 Livingston Street",
-        "city": "Homeworth",
-        "state": "Kentucky",
-        "zip": 4199,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-04-14T03:16:00 +07:00",
-        "name": "PRINTSPAN",
-        "streetAddress": "428 Downing Street",
-        "city": "Driftwood",
-        "state": "Marshall Islands",
-        "zip": 6256,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2020-03-12T06:58:11 +07:00",
-        "name": "TROLLERY",
-        "streetAddress": "366 Ocean Parkway",
-        "city": "Ticonderoga",
-        "state": "North Carolina",
-        "zip": 4962,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-01-12T12:14:12 +08:00",
-        "name": "SATIANCE",
-        "streetAddress": "615 Broome Street",
-        "city": "Cuylerville",
-        "state": "Oklahoma",
-        "zip": 6899,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,740.86",
-      "detention": "$3,488.77",
-      "layover": "$3,138.22"
-    }
-  },
-  {
-    "invoiceNumber": 34,
-    "loadNumber": 22,
-    "billTo": {
-      "name": "TECHTRIX",
-      "streetAddress": "586 Aurelia Court",
-      "city": "Mayfair",
-      "state": " New Hampshire",
-      "zip": 7133
-    },
-    "stops": [
-      {
-        "date": "2018-02-26T10:04:53 +08:00",
-        "name": "GRAINSPOT",
-        "streetAddress": "392 Kansas Place",
-        "city": "Coultervillle",
-        "state": "Louisiana",
-        "zip": 4745,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2017-08-12T12:15:31 +07:00",
-        "name": "ENOMEN",
-        "streetAddress": "789 Cropsey Avenue",
-        "city": "Cade",
-        "state": "Maine",
-        "zip": 2884,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-07-22T07:17:55 +07:00",
-        "name": "BALUBA",
-        "streetAddress": "992 Hale Avenue",
-        "city": "Wauhillau",
-        "state": "Northern Mariana Islands",
-        "zip": 4302,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-11-17T02:56:27 +08:00",
-        "name": "COLUMELLA",
-        "streetAddress": "282 Sunnyside Avenue",
-        "city": "Baker",
-        "state": "American Samoa",
-        "zip": 8128,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-12-04T06:48:32 +08:00",
-        "name": "MOLTONIC",
-        "streetAddress": "705 Seabring Street",
-        "city": "Noblestown",
-        "state": "Massachusetts",
-        "zip": 8813,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,754.22",
-      "detention": "$2,414.55",
-      "layover": "$3,112.92"
-    }
-  },
-  {
-    "invoiceNumber": 35,
-    "loadNumber": 29,
-    "billTo": {
-      "name": "ONTALITY",
-      "streetAddress": "321 Chester Court",
-      "city": "Sedley",
-      "state": " Puerto Rico",
-      "zip": 192
-    },
-    "stops": [
-      {
-        "date": "2016-02-12T04:46:03 +08:00",
-        "name": "ZYTREK",
-        "streetAddress": "209 Melrose Street",
-        "city": "Bellfountain",
-        "state": "Connecticut",
-        "zip": 118,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-09-19T12:18:38 +07:00",
-        "name": "ZENOLUX",
-        "streetAddress": "833 Verona Street",
-        "city": "Groveville",
-        "state": "Arkansas",
-        "zip": 9722,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-03-09T08:28:44 +08:00",
-        "name": "EPLODE",
-        "streetAddress": "907 Independence Avenue",
-        "city": "Magnolia",
-        "state": "Virgin Islands",
-        "zip": 5820,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,920.56",
-      "detention": "$2,310.17",
-      "layover": "$3,482.02"
-    }
-  },
-  {
-    "invoiceNumber": 38,
-    "loadNumber": 23,
-    "billTo": {
-      "name": "INDEXIA",
-      "streetAddress": "730 Jewel Street",
-      "city": "Independence",
-      "state": " Maryland",
-      "zip": 6706
-    },
-    "stops": [
-      {
-        "date": "2017-06-20T03:41:44 +07:00",
-        "name": "STEELTAB",
-        "streetAddress": "312 Herkimer Street",
-        "city": "Sutton",
-        "state": "Missouri",
-        "zip": 9901,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-11-04T08:27:39 +08:00",
-        "name": "INTERFIND",
-        "streetAddress": "258 Apollo Street",
-        "city": "Cazadero",
-        "state": "Hawaii",
-        "zip": 2600,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-11-19T01:02:45 +08:00",
-        "name": "COLAIRE",
-        "streetAddress": "517 Holt Court",
-        "city": "Crayne",
-        "state": "Arizona",
-        "zip": 7020,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-05-18T03:31:12 +07:00",
-        "name": "VENOFLEX",
-        "streetAddress": "502 Bedford Avenue",
-        "city": "Disautel",
-        "state": "Federated States Of Micronesia",
-        "zip": 9376,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,755.58",
-      "detention": "$1,651.22",
-      "layover": "$2,951.88"
-    }
-  },
-  {
-    "invoiceNumber": 32,
-    "loadNumber": 21,
-    "billTo": {
-      "name": "ZUVY",
-      "streetAddress": "502 Meserole Street",
-      "city": "Stockdale",
-      "state": " Michigan",
-      "zip": 4196
-    },
-    "stops": [
-      {
-        "date": "2015-07-25T11:09:37 +07:00",
-        "name": "EXOVENT",
-        "streetAddress": "850 Dikeman Street",
-        "city": "Jessie",
-        "state": "Alaska",
-        "zip": 1372,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-03-08T10:01:05 +08:00",
-        "name": "MYOPIUM",
-        "streetAddress": "105 Highland Boulevard",
-        "city": "Hendersonville",
-        "state": "New Jersey",
-        "zip": 1344,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2020-01-10T06:21:37 +08:00",
-        "name": "HOTCAKES",
-        "streetAddress": "423 Cox Place",
-        "city": "Marienthal",
-        "state": "Virginia",
-        "zip": 6843,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-06-25T04:31:59 +07:00",
-        "name": "ZAYA",
-        "streetAddress": "632 Dearborn Court",
-        "city": "Summerfield",
-        "state": "Montana",
-        "zip": 7007,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-12-05T09:20:41 +08:00",
-        "name": "PROVIDCO",
-        "streetAddress": "859 Woodpoint Road",
-        "city": "Lemoyne",
-        "state": "Illinois",
-        "zip": 2377,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,507.18",
-      "detention": "$1,733.25",
-      "layover": "$2,925.69"
-    }
-  },
-  {
-    "invoiceNumber": 25,
-    "loadNumber": 29,
-    "billTo": {
-      "name": "ACLIMA",
-      "streetAddress": "943 Conway Street",
-      "city": "Smeltertown",
-      "state": " Wyoming",
-      "zip": 2445
-    },
-    "stops": [
-      {
-        "date": "2014-05-27T01:09:32 +07:00",
-        "name": "BLEENDOT",
-        "streetAddress": "301 Woodrow Court",
-        "city": "Oley",
-        "state": "Georgia",
-        "zip": 8806,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-08-26T04:05:59 +07:00",
-        "name": "EXOZENT",
-        "streetAddress": "755 Flatlands Avenue",
-        "city": "Linganore",
-        "state": "Washington",
-        "zip": 980,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-10-13T09:46:06 +07:00",
-        "name": "INRT",
-        "streetAddress": "905 Maple Avenue",
-        "city": "Deputy",
-        "state": "District Of Columbia",
-        "zip": 1832,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,941.03",
-      "detention": "$2,961.26",
-      "layover": "$1,140.43"
-    }
-  },
-  {
-    "invoiceNumber": 27,
-    "loadNumber": 39,
-    "billTo": {
-      "name": "CALLFLEX",
-      "streetAddress": "823 Clermont Avenue",
-      "city": "Vicksburg",
-      "state": " West Virginia",
-      "zip": 9917
-    },
-    "stops": [
-      {
-        "date": "2014-01-22T08:14:19 +08:00",
-        "name": "FURNITECH",
-        "streetAddress": "898 Applegate Court",
-        "city": "Camas",
-        "state": "North Dakota",
-        "zip": 2669,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-01-22T02:14:23 +08:00",
-        "name": "CINASTER",
-        "streetAddress": "500 Berkeley Place",
-        "city": "Campo",
-        "state": "Wisconsin",
-        "zip": 1130,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-12-06T02:53:51 +08:00",
-        "name": "GOGOL",
-        "streetAddress": "482 Oriental Court",
-        "city": "Ballico",
-        "state": "Nevada",
-        "zip": 1640,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-05-18T09:04:20 +07:00",
-        "name": "CAPSCREEN",
-        "streetAddress": "778 Arion Place",
-        "city": "Wacissa",
-        "state": "South Carolina",
-        "zip": 4820,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,054.78",
-      "detention": "$1,903.71",
-      "layover": "$2,065.18"
-    }
-  },
-  {
-    "invoiceNumber": 23,
+    "invoiceNumber": "5e951a0ae12278f35a6b921c",
     "loadNumber": 25,
     "billTo": {
-      "name": "GEOFORMA",
-      "streetAddress": "262 Beadel Street",
-      "city": "Fulford",
+      "name": "VIOCULAR",
+      "streetAddress": "998 Metrotech Courtr",
+      "city": "Kingstowne",
       "state": " Palau",
-      "zip": 9484
+      "zip": 9247
     },
     "stops": [
       {
-        "date": "2018-12-15T03:46:29 +08:00",
-        "name": "RETROTEX",
-        "streetAddress": "994 Plaza Street",
-        "city": "Thynedale",
-        "state": "Iowa",
-        "zip": 2223,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-09-10T04:20:50 +07:00",
-        "name": "EURON",
-        "streetAddress": "807 Rost Place",
-        "city": "Guilford",
-        "state": "Ohio",
-        "zip": 1942,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-09-30T07:15:19 +07:00",
-        "name": "SECURIA",
-        "streetAddress": "607 Turnbull Avenue",
-        "city": "Garberville",
-        "state": "Oregon",
-        "zip": 901,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-10-13T12:13:13 +07:00",
-        "name": "SURELOGIC",
-        "streetAddress": "653 Albemarle Road",
-        "city": "Camino",
-        "state": "Vermont",
-        "zip": 1787,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,241.63",
-      "detention": "$3,051.92",
-      "layover": "$3,600.54"
-    }
-  },
-  {
-    "invoiceNumber": 21,
-    "loadNumber": 28,
-    "billTo": {
-      "name": "COMCUBINE",
-      "streetAddress": "804 Manhattan Avenue",
-      "city": "Haena",
-      "state": " Alabama",
-      "zip": 132
-    },
-    "stops": [
-      {
-        "date": "2017-01-05T03:22:37 +08:00",
-        "name": "LIMOZEN",
-        "streetAddress": "900 Marconi Place",
-        "city": "Caspar",
-        "state": "Kansas",
-        "zip": 6429,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-06-07T07:31:21 +07:00",
-        "name": "SPACEWAX",
-        "streetAddress": "265 Banker Street",
-        "city": "Lupton",
-        "state": "New York",
-        "zip": 9135,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-10-27T03:53:35 +07:00",
-        "name": "KIDGREASE",
-        "streetAddress": "953 Charles Place",
-        "city": "Lavalette",
-        "state": "California",
-        "zip": 8865,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-11-07T08:09:03 +08:00",
-        "name": "MANGELICA",
-        "streetAddress": "296 Buffalo Avenue",
-        "city": "Harmon",
-        "state": "Rhode Island",
-        "zip": 4872,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,175.30",
-      "detention": "$2,442.22",
-      "layover": "$2,190.38"
-    }
-  },
-  {
-    "invoiceNumber": 37,
-    "loadNumber": 34,
-    "billTo": {
-      "name": "KENEGY",
-      "streetAddress": "116 Sutter Avenue",
-      "city": "Chesterfield",
-      "state": " Minnesota",
-      "zip": 2844
-    },
-    "stops": [
-      {
-        "date": "2017-07-05T01:42:58 +07:00",
-        "name": "RODEMCO",
-        "streetAddress": "538 Orient Avenue",
-        "city": "Bartonsville",
-        "state": "Pennsylvania",
-        "zip": 5808,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-02-05T09:40:32 +08:00",
-        "name": "GEEKOL",
-        "streetAddress": "564 Lee Avenue",
-        "city": "Why",
-        "state": "Colorado",
-        "zip": 6209,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-04-11T10:46:31 +07:00",
-        "name": "FANGOLD",
-        "streetAddress": "213 Graham Avenue",
-        "city": "Jenkinsville",
-        "state": "Idaho",
-        "zip": 9829,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-04-05T12:21:59 +07:00",
-        "name": "HAIRPORT",
-        "streetAddress": "714 Carroll Street",
-        "city": "Teasdale",
-        "state": "Utah",
-        "zip": 6262,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-03-29T03:37:22 +07:00",
-        "name": "ORGANICA",
-        "streetAddress": "729 Vermont Street",
-        "city": "Abrams",
-        "state": "Florida",
-        "zip": 9242,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,229.12",
-      "detention": "$1,432.15",
-      "layover": "$3,641.94"
-    }
-  },
-  {
-    "invoiceNumber": 23,
-    "loadNumber": 34,
-    "billTo": {
-      "name": "COGENTRY",
-      "streetAddress": "507 Rewe Street",
-      "city": "Hackneyville",
-      "state": " Delaware",
-      "zip": 5015
-    },
-    "stops": [
-      {
-        "date": "2014-08-09T05:29:30 +07:00",
-        "name": "MUSAPHICS",
-        "streetAddress": "110 Stillwell Place",
-        "city": "Shasta",
-        "state": "Texas",
-        "zip": 7061,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-01-25T09:30:59 +08:00",
-        "name": "EXOPLODE",
-        "streetAddress": "189 Wortman Avenue",
-        "city": "Cawood",
-        "state": "Nebraska",
-        "zip": 8835,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,842.99",
-      "detention": "$2,737.67",
-      "layover": "$2,963.91"
-    }
-  },
-  {
-    "invoiceNumber": 38,
-    "loadNumber": 39,
-    "billTo": {
-      "name": "CONFRENZY",
-      "streetAddress": "516 Atkins Avenue",
-      "city": "Orviston",
-      "state": " Guam",
-      "zip": 7079
-    },
-    "stops": [
-      {
-        "date": "2018-09-26T07:29:32 +07:00",
-        "name": "VIOCULAR",
-        "streetAddress": "130 Lester Court",
-        "city": "Holtville",
-        "state": "South Dakota",
-        "zip": 631,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-01-29T12:05:56 +08:00",
-        "name": "PATHWAYS",
-        "streetAddress": "680 Irwin Street",
-        "city": "Welch",
-        "state": "Tennessee",
-        "zip": 2527,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-02-25T10:22:55 +08:00",
-        "name": "FLUM",
-        "streetAddress": "699 Drew Street",
-        "city": "Marion",
-        "state": "Mississippi",
-        "zip": 2138,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-06-06T03:15:51 +07:00",
-        "name": "STUCCO",
-        "streetAddress": "458 Devon Avenue",
-        "city": "Falmouth",
-        "state": "Indiana",
-        "zip": 9577,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,275.45",
-      "detention": "$1,994.32",
-      "layover": "$2,600.76"
-    }
-  },
-  {
-    "invoiceNumber": 26,
-    "loadNumber": 25,
-    "billTo": {
-      "name": "ISOPLEX",
-      "streetAddress": "238 Atlantic Avenue",
-      "city": "Hayes",
-      "state": " Kentucky",
-      "zip": 6957
-    },
-    "stops": [
-      {
-        "date": "2016-02-16T08:10:13 +08:00",
-        "name": "ACCUSAGE",
-        "streetAddress": "490 Halsey Street",
-        "city": "Chilton",
-        "state": "Marshall Islands",
-        "zip": 3688,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-06-14T06:31:50 +07:00",
-        "name": "MANTRO",
-        "streetAddress": "108 Gates Avenue",
-        "city": "Babb",
-        "state": "North Carolina",
-        "zip": 6315,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-02-29T03:09:10 +08:00",
-        "name": "ZOUNDS",
-        "streetAddress": "128 Varick Avenue",
-        "city": "Hall",
-        "state": "Oklahoma",
-        "zip": 110,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-03-22T04:14:17 +07:00",
-        "name": "COMTRAK",
-        "streetAddress": "378 Berry Street",
-        "city": "Watrous",
-        "state": "New Hampshire",
-        "zip": 2909,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-10-04T07:15:41 +07:00",
-        "name": "POLARIA",
-        "streetAddress": "671 Schroeders Avenue",
-        "city": "Mulberry",
-        "state": "Louisiana",
-        "zip": 5923,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,542.71",
-      "detention": "$1,095.23",
-      "layover": "$3,776.69"
-    }
-  },
-  {
-    "invoiceNumber": 33,
-    "loadNumber": 36,
-    "billTo": {
-      "name": "ROCKABYE",
-      "streetAddress": "165 Polhemus Place",
-      "city": "Worcester",
-      "state": " Maine",
-      "zip": 5201
-    },
-    "stops": [
-      {
-        "date": "2016-11-10T04:27:48 +08:00",
-        "name": "ZENTILITY",
-        "streetAddress": "891 Veterans Avenue",
-        "city": "Kempton",
-        "state": "Northern Mariana Islands",
-        "zip": 9160,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-06-16T10:00:28 +07:00",
-        "name": "ORBAXTER",
-        "streetAddress": "959 Willow Street",
-        "city": "Websterville",
-        "state": "American Samoa",
-        "zip": 1288,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-03-15T07:40:33 +07:00",
-        "name": "MITROC",
-        "streetAddress": "577 Sands Street",
-        "city": "Lewis",
-        "state": "Massachusetts",
-        "zip": 7191,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,695.56",
-      "detention": "$3,187.21",
-      "layover": "$3,644.03"
-    }
-  },
-  {
-    "invoiceNumber": 27,
-    "loadNumber": 30,
-    "billTo": {
-      "name": "PLASTO",
-      "streetAddress": "659 Claver Place",
-      "city": "Somerset",
-      "state": " Puerto Rico",
-      "zip": 9936
-    },
-    "stops": [
-      {
-        "date": "2015-10-07T02:15:52 +07:00",
-        "name": "VITRICOMP",
-        "streetAddress": "326 Canton Court",
-        "city": "Richmond",
-        "state": "Connecticut",
-        "zip": 5464,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2020-04-04T05:48:44 +07:00",
-        "name": "BLEEKO",
-        "streetAddress": "950 Boerum Place",
-        "city": "Catherine",
-        "state": "Arkansas",
-        "zip": 7879,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-07-25T03:12:13 +07:00",
-        "name": "ZANITY",
-        "streetAddress": "535 Vine Street",
-        "city": "Bowden",
-        "state": "Virgin Islands",
-        "zip": 1499,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2017-09-08T11:50:02 +07:00",
-        "name": "PAPRICUT",
-        "streetAddress": "914 Debevoise Avenue",
-        "city": "Bloomington",
-        "state": "Maryland",
-        "zip": 293,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,123.65",
-      "detention": "$1,720.97",
-      "layover": "$2,032.07"
-    }
-  },
-  {
-    "invoiceNumber": 32,
-    "loadNumber": 22,
-    "billTo": {
-      "name": "ENDICIL",
-      "streetAddress": "180 Willoughby Street",
-      "city": "Orick",
-      "state": " Missouri",
-      "zip": 7032
-    },
-    "stops": [
-      {
-        "date": "2018-11-26T10:45:50 +08:00",
-        "name": "CHILLIUM",
-        "streetAddress": "747 Scott Avenue",
-        "city": "Caln",
-        "state": "Hawaii",
-        "zip": 7130,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-04-15T01:50:15 +07:00",
-        "name": "XYLAR",
-        "streetAddress": "521 Green Street",
-        "city": "Allison",
-        "state": "Arizona",
-        "zip": 8590,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-06-08T03:53:31 +07:00",
-        "name": "MANUFACT",
-        "streetAddress": "372 Rugby Road",
-        "city": "Orin",
-        "state": "Federated States Of Micronesia",
-        "zip": 5812,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-12-12T07:44:20 +08:00",
-        "name": "METROZ",
-        "streetAddress": "236 Ruby Street",
-        "city": "Falconaire",
-        "state": "Michigan",
-        "zip": 2520,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2017-04-19T10:22:54 +07:00",
-        "name": "DANCERITY",
-        "streetAddress": "755 Truxton Street",
-        "city": "Rivers",
-        "state": "Alaska",
-        "zip": 4148,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,568.62",
-      "detention": "$3,254.11",
-      "layover": "$1,272.60"
-    }
-  },
-  {
-    "invoiceNumber": 29,
-    "loadNumber": 38,
-    "billTo": {
-      "name": "ENJOLA",
-      "streetAddress": "618 Forbell Street",
-      "city": "Fidelis",
-      "state": " New Jersey",
-      "zip": 7614
-    },
-    "stops": [
-      {
-        "date": "2019-09-04T01:06:18 +07:00",
-        "name": "DIGIRANG",
-        "streetAddress": "636 Lyme Avenue",
-        "city": "Elliott",
-        "state": "Virginia",
-        "zip": 5740,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-11-13T04:32:54 +08:00",
-        "name": "KONNECT",
-        "streetAddress": "808 Meeker Avenue",
-        "city": "Charco",
-        "state": "Montana",
-        "zip": 7019,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2020-02-01T08:23:34 +08:00",
-        "name": "EXTREMO",
-        "streetAddress": "873 Logan Street",
-        "city": "Elliston",
-        "state": "Illinois",
-        "zip": 6543,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,618.69",
-      "detention": "$3,152.25",
-      "layover": "$1,528.14"
-    }
-  },
-  {
-    "invoiceNumber": 32,
-    "loadNumber": 22,
-    "billTo": {
-      "name": "YURTURE",
-      "streetAddress": "769 Fair Street",
-      "city": "Westboro",
-      "state": " Wyoming",
-      "zip": 4330
-    },
-    "stops": [
-      {
-        "date": "2015-08-02T06:12:46 +07:00",
-        "name": "BILLMED",
-        "streetAddress": "277 Barbey Street",
-        "city": "Ruckersville",
-        "state": "Georgia",
-        "zip": 2136,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-05-07T02:52:30 +07:00",
-        "name": "AMRIL",
-        "streetAddress": "747 Crawford Avenue",
-        "city": "Sidman",
-        "state": "Washington",
-        "zip": 8887,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,627.12",
-      "detention": "$2,183.27",
-      "layover": "$2,839.81"
-    }
-  },
-  {
-    "invoiceNumber": 31,
-    "loadNumber": 34,
-    "billTo": {
-      "name": "UPDAT",
-      "streetAddress": "484 Chase Court",
-      "city": "Homeland",
-      "state": " District Of Columbia",
-      "zip": 4849
-    },
-    "stops": [
-      {
-        "date": "2014-08-20T08:23:53 +07:00",
-        "name": "TELEPARK",
-        "streetAddress": "740 Ivan Court",
-        "city": "Dola",
-        "state": "West Virginia",
-        "zip": 3929,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-01-07T03:55:28 +08:00",
-        "name": "AUSTECH",
-        "streetAddress": "312 Monitor Street",
-        "city": "Chemung",
-        "state": "North Dakota",
-        "zip": 8372,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-07-08T04:50:26 +07:00",
-        "name": "EARTHPLEX",
-        "streetAddress": "978 Bleecker Street",
-        "city": "Fruitdale",
-        "state": "Wisconsin",
-        "zip": 2986,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-06-17T05:01:01 +07:00",
-        "name": "RONELON",
-        "streetAddress": "106 Bath Avenue",
-        "city": "Bartley",
-        "state": "Nevada",
-        "zip": 6518,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,414.29",
-      "detention": "$1,380.82",
-      "layover": "$3,466.69"
-    }
-  },
-  {
-    "invoiceNumber": 36,
-    "loadNumber": 25,
-    "billTo": {
-      "name": "DECRATEX",
-      "streetAddress": "861 Sandford Street",
-      "city": "Cassel",
-      "state": " South Carolina",
-      "zip": 7408
-    },
-    "stops": [
-      {
-        "date": "2017-08-21T03:58:36 +07:00",
-        "name": "HYPLEX",
-        "streetAddress": "803 Royce Street",
-        "city": "Alfarata",
-        "state": "Palau",
-        "zip": 9138,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-01-15T05:35:35 +08:00",
-        "name": "DYNO",
-        "streetAddress": "161 Borinquen Pl",
-        "city": "Tooleville",
-        "state": "Iowa",
-        "zip": 7408,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-04-20T06:58:23 +07:00",
-        "name": "ISODRIVE",
-        "streetAddress": "278 Jamison Lane",
-        "city": "Dana",
-        "state": "Ohio",
-        "zip": 219,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,531.16",
-      "detention": "$3,455.32",
-      "layover": "$3,264.98"
-    }
-  },
-  {
-    "invoiceNumber": 25,
-    "loadNumber": 38,
-    "billTo": {
-      "name": "ENTROPIX",
-      "streetAddress": "675 Whitwell Place",
-      "city": "Hoagland",
-      "state": " Oregon",
-      "zip": 262
-    },
-    "stops": [
-      {
-        "date": "2015-01-11T01:02:32 +08:00",
-        "name": "GYNKO",
-        "streetAddress": "314 Lacon Court",
-        "city": "Blanford",
-        "state": "Vermont",
-        "zip": 7134,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-09-22T12:06:20 +07:00",
-        "name": "COASH",
-        "streetAddress": "233 McClancy Place",
-        "city": "Sisquoc",
-        "state": "Alabama",
-        "zip": 3900,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,416.16",
-      "detention": "$3,843.58",
-      "layover": "$3,297.49"
-    }
-  },
-  {
-    "invoiceNumber": 40,
-    "loadNumber": 27,
-    "billTo": {
-      "name": "APPLIDECK",
-      "streetAddress": "853 McDonald Avenue",
-      "city": "Talpa",
-      "state": " Kansas",
-      "zip": 4027
-    },
-    "stops": [
-      {
-        "date": "2017-11-03T02:48:17 +07:00",
-        "name": "EXPOSA",
-        "streetAddress": "845 Erasmus Street",
-        "city": "Fairhaven",
-        "state": "New York",
-        "zip": 4735,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-08-02T01:00:21 +07:00",
-        "name": "ENDIPINE",
-        "streetAddress": "889 Bergen Court",
-        "city": "Monument",
-        "state": "California",
-        "zip": 7518,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,295.79",
-      "detention": "$3,153.00",
-      "layover": "$3,579.84"
-    }
-  },
-  {
-    "invoiceNumber": 22,
-    "loadNumber": 25,
-    "billTo": {
-      "name": "GAZAK",
-      "streetAddress": "683 Lincoln Place",
-      "city": "Morgandale",
-      "state": " Rhode Island",
-      "zip": 857
-    },
-    "stops": [
-      {
-        "date": "2020-04-08T06:33:21 +07:00",
-        "name": "STROZEN",
-        "streetAddress": "262 Kathleen Court",
-        "city": "Davenport",
-        "state": "Minnesota",
-        "zip": 1164,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-03-29T12:41:47 +07:00",
-        "name": "ROOFORIA",
-        "streetAddress": "871 Heyward Street",
-        "city": "Cloverdale",
-        "state": "Pennsylvania",
-        "zip": 1563,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,083.08",
-      "detention": "$1,062.64",
-      "layover": "$1,420.74"
-    }
-  },
-  {
-    "invoiceNumber": 21,
-    "loadNumber": 36,
-    "billTo": {
-      "name": "EMERGENT",
-      "streetAddress": "168 Roosevelt Place",
-      "city": "Coldiron",
-      "state": " Colorado",
-      "zip": 3111
-    },
-    "stops": [
-      {
-        "date": "2015-02-28T10:33:16 +08:00",
-        "name": "ZOGAK",
-        "streetAddress": "666 Forest Place",
-        "city": "Nadine",
-        "state": "Idaho",
-        "zip": 8830,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-11-10T02:37:21 +08:00",
-        "name": "ECRATER",
-        "streetAddress": "784 Interborough Parkway",
-        "city": "Mappsville",
-        "state": "Utah",
-        "zip": 293,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-11-22T08:07:27 +08:00",
-        "name": "ACRODANCE",
-        "streetAddress": "691 Amherst Street",
-        "city": "Wyano",
-        "state": "Florida",
-        "zip": 134,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-08-12T12:18:14 +07:00",
-        "name": "ENERFORCE",
-        "streetAddress": "389 Covert Street",
-        "city": "Makena",
-        "state": "Delaware",
-        "zip": 5226,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-08-12T12:53:13 +07:00",
-        "name": "UNEEQ",
-        "streetAddress": "802 Belmont Avenue",
-        "city": "Whitehaven",
-        "state": "Texas",
-        "zip": 2745,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,221.27",
-      "detention": "$3,168.09",
-      "layover": "$1,256.36"
-    }
-  },
-  {
-    "invoiceNumber": 25,
-    "loadNumber": 25,
-    "billTo": {
-      "name": "EVIDENDS",
-      "streetAddress": "655 Monaco Place",
-      "city": "Frystown",
-      "state": " Nebraska",
-      "zip": 150
-    },
-    "stops": [
-      {
-        "date": "2019-03-31T06:22:07 +07:00",
-        "name": "BOILCAT",
-        "streetAddress": "422 Vermont Court",
-        "city": "Glasgow",
-        "state": "Guam",
-        "zip": 9073,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-09-27T11:34:32 +07:00",
-        "name": "ZYTRAC",
-        "streetAddress": "288 Bainbridge Street",
-        "city": "Sanders",
-        "state": "South Dakota",
-        "zip": 9865,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-05-04T12:03:14 +07:00",
-        "name": "APEXTRI",
-        "streetAddress": "631 Metrotech Courtr",
-        "city": "Lawrence",
-        "state": "Tennessee",
-        "zip": 1782,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-08-14T05:21:44 +07:00",
-        "name": "ESCENTA",
-        "streetAddress": "596 Duryea Place",
-        "city": "Yardville",
-        "state": "Mississippi",
-        "zip": 6681,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-03-15T10:05:09 +07:00",
-        "name": "ROBOID",
-        "streetAddress": "951 Ashford Street",
-        "city": "Urbana",
-        "state": "Indiana",
-        "zip": 8460,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,703.15",
-      "detention": "$1,876.58",
-      "layover": "$1,618.23"
-    }
-  },
-  {
-    "invoiceNumber": 21,
-    "loadNumber": 24,
-    "billTo": {
-      "name": "PROGENEX",
-      "streetAddress": "798 Richmond Street",
-      "city": "Joes",
-      "state": " Kentucky",
-      "zip": 8012
-    },
-    "stops": [
-      {
-        "date": "2015-03-12T08:49:52 +07:00",
-        "name": "COMTENT",
-        "streetAddress": "697 Malta Street",
-        "city": "Salix",
-        "state": "Marshall Islands",
-        "zip": 7777,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2020-02-26T05:22:04 +08:00",
-        "name": "XUMONK",
-        "streetAddress": "936 Hampton Avenue",
-        "city": "Topaz",
-        "state": "North Carolina",
-        "zip": 4729,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-12-14T06:41:59 +08:00",
-        "name": "KIDSTOCK",
-        "streetAddress": "832 Ditmars Street",
-        "city": "Benson",
-        "state": "Oklahoma",
-        "zip": 7204,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-04-28T01:07:37 +07:00",
-        "name": "ACRUEX",
-        "streetAddress": "195 Frost Street",
-        "city": "Berwind",
-        "state": "New Hampshire",
-        "zip": 2056,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,050.62",
-      "detention": "$1,799.95",
-      "layover": "$3,013.14"
-    }
-  },
-  {
-    "invoiceNumber": 30,
-    "loadNumber": 36,
-    "billTo": {
-      "name": "PORTICA",
-      "streetAddress": "294 Harbor Lane",
-      "city": "Newkirk",
-      "state": " Louisiana",
-      "zip": 4501
-    },
-    "stops": [
-      {
-        "date": "2019-12-07T02:34:53 +08:00",
-        "name": "DOGNOSIS",
-        "streetAddress": "471 Howard Alley",
-        "city": "Riverton",
-        "state": "Maine",
-        "zip": 4953,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-12-12T11:42:45 +08:00",
-        "name": "ZENTIA",
-        "streetAddress": "951 Oxford Walk",
-        "city": "Thornport",
-        "state": "Northern Mariana Islands",
-        "zip": 9589,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-01-23T12:09:59 +08:00",
-        "name": "FISHLAND",
-        "streetAddress": "502 Pioneer Street",
-        "city": "Cucumber",
-        "state": "American Samoa",
-        "zip": 687,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-04-01T03:41:24 +07:00",
-        "name": "OVOLO",
-        "streetAddress": "928 Terrace Place",
-        "city": "Cataract",
-        "state": "Massachusetts",
-        "zip": 7885,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,568.11",
-      "detention": "$3,313.32",
-      "layover": "$1,233.89"
-    }
-  },
-  {
-    "invoiceNumber": 24,
-    "loadNumber": 33,
-    "billTo": {
-      "name": "PYRAMIS",
-      "streetAddress": "809 Newport Street",
-      "city": "Bowmansville",
-      "state": " Puerto Rico",
-      "zip": 8741
-    },
-    "stops": [
-      {
-        "date": "2015-04-25T06:21:37 +07:00",
-        "name": "ISOLOGICA",
-        "streetAddress": "822 Radde Place",
-        "city": "Rose",
-        "state": "Connecticut",
-        "zip": 7635,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2020-03-21T03:27:54 +07:00",
-        "name": "HOMETOWN",
-        "streetAddress": "297 Bragg Street",
-        "city": "Maybell",
-        "state": "Arkansas",
-        "zip": 5507,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-07-08T08:22:26 +07:00",
-        "name": "PROWASTE",
-        "streetAddress": "225 Clifton Place",
-        "city": "Hemlock",
-        "state": "Virgin Islands",
-        "zip": 1576,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,939.26",
-      "detention": "$3,718.97",
-      "layover": "$1,057.90"
-    }
-  },
-  {
-    "invoiceNumber": 40,
-    "loadNumber": 40,
-    "billTo": {
-      "name": "PULZE",
-      "streetAddress": "122 Bushwick Avenue",
-      "city": "Brandermill",
-      "state": " Maryland",
-      "zip": 1951
-    },
-    "stops": [
-      {
-        "date": "2017-11-02T03:01:06 +07:00",
-        "name": "CYCLONICA",
-        "streetAddress": "256 Homecrest Avenue",
-        "city": "Fowlerville",
-        "state": "Missouri",
-        "zip": 674,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-01-18T12:24:00 +08:00",
-        "name": "OMNIGOG",
-        "streetAddress": "759 Herzl Street",
-        "city": "Chapin",
-        "state": "Hawaii",
-        "zip": 1046,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,867.00",
-      "detention": "$1,207.40",
-      "layover": "$3,198.06"
-    }
-  },
-  {
-    "invoiceNumber": 29,
-    "loadNumber": 38,
-    "billTo": {
-      "name": "SINGAVERA",
-      "streetAddress": "659 Dunham Place",
-      "city": "Gorham",
-      "state": " Arizona",
-      "zip": 5386
-    },
-    "stops": [
-      {
-        "date": "2019-09-20T09:37:59 +07:00",
-        "name": "PUSHCART",
-        "streetAddress": "850 Bokee Court",
-        "city": "Lowgap",
-        "state": "Federated States Of Micronesia",
-        "zip": 7376,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2017-12-25T06:04:31 +08:00",
-        "name": "COMVENE",
-        "streetAddress": "794 Nautilus Avenue",
-        "city": "Blodgett",
-        "state": "Michigan",
-        "zip": 3731,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-07-28T02:52:00 +07:00",
-        "name": "HELIXO",
-        "streetAddress": "903 Schenck Street",
-        "city": "Celeryville",
-        "state": "Alaska",
-        "zip": 8602,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-03-31T05:24:13 +07:00",
-        "name": "ISOLOGIA",
-        "streetAddress": "967 Classon Avenue",
-        "city": "Needmore",
-        "state": "New Jersey",
-        "zip": 5727,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,623.60",
-      "detention": "$2,430.34",
-      "layover": "$2,222.23"
-    }
-  },
-  {
-    "invoiceNumber": 38,
-    "loadNumber": 27,
-    "billTo": {
-      "name": "LOCAZONE",
-      "streetAddress": "977 Clark Street",
-      "city": "Frierson",
-      "state": " Virginia",
-      "zip": 9290
-    },
-    "stops": [
-      {
-        "date": "2018-03-15T09:03:56 +07:00",
-        "name": "GONKLE",
-        "streetAddress": "110 Eagle Street",
-        "city": "Gerton",
-        "state": "Montana",
-        "zip": 6060,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-09-14T03:35:03 +07:00",
-        "name": "ZILLACTIC",
-        "streetAddress": "801 Regent Place",
-        "city": "Orason",
-        "state": "Illinois",
-        "zip": 943,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-07-15T11:00:05 +07:00",
-        "name": "COREPAN",
-        "streetAddress": "463 Corbin Place",
-        "city": "Singer",
-        "state": "Wyoming",
-        "zip": 5743,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,763.40",
-      "detention": "$1,874.55",
-      "layover": "$3,878.96"
-    }
-  },
-  {
-    "invoiceNumber": 30,
-    "loadNumber": 36,
-    "billTo": {
-      "name": "FANFARE",
-      "streetAddress": "752 Chestnut Avenue",
-      "city": "Eastmont",
-      "state": " Georgia",
-      "zip": 6491
-    },
-    "stops": [
-      {
-        "date": "2019-07-10T03:54:57 +07:00",
-        "name": "STELAECOR",
-        "streetAddress": "127 Middagh Street",
-        "city": "Waterford",
-        "state": "Washington",
-        "zip": 1115,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-10-09T12:10:42 +07:00",
-        "name": "ZAGGLE",
-        "streetAddress": "810 Bergen Street",
-        "city": "Glenville",
-        "state": "District Of Columbia",
-        "zip": 4892,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-06-05T02:02:42 +07:00",
-        "name": "UTARIAN",
-        "streetAddress": "795 Ocean Court",
-        "city": "Veguita",
-        "state": "West Virginia",
-        "zip": 8756,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-01-15T01:05:28 +08:00",
-        "name": "NEPTIDE",
-        "streetAddress": "221 Mersereau Court",
-        "city": "Ola",
-        "state": "North Dakota",
-        "zip": 9677,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,790.39",
-      "detention": "$1,622.29",
-      "layover": "$3,247.19"
-    }
-  },
-  {
-    "invoiceNumber": 32,
-    "loadNumber": 38,
-    "billTo": {
-      "name": "UTARA",
-      "streetAddress": "697 Dwight Street",
-      "city": "Brethren",
-      "state": " Wisconsin",
-      "zip": 1618
-    },
-    "stops": [
-      {
-        "date": "2018-09-09T05:59:47 +07:00",
-        "name": "BLUPLANET",
-        "streetAddress": "834 Coventry Road",
-        "city": "Blackgum",
-        "state": "Nevada",
-        "zip": 5684,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-12-10T05:31:13 +08:00",
+        "date": "2017-06-29T04:57:23 +07:00",
         "name": "REALYSIS",
-        "streetAddress": "327 Farragut Road",
-        "city": "Wells",
+        "streetAddress": "119 Sunnyside Court",
+        "city": "Temperanceville",
         "state": "South Carolina",
-        "zip": 7358,
+        "zip": 2416,
         "type": "PICKUP"
       },
       {
-        "date": "2014-12-01T07:39:01 +08:00",
-        "name": "ACCUPHARM",
-        "streetAddress": "553 McKibben Street",
-        "city": "Wawona",
-        "state": "Palau",
-        "zip": 1221,
+        "date": "2014-04-20T09:15:41 +07:00",
+        "name": "PLASMOS",
+        "streetAddress": "890 Conover Street",
+        "city": "Ola",
+        "state": "Wisconsin",
+        "zip": 7404,
         "type": "PICKUP"
       },
       {
-        "date": "2016-12-29T01:35:15 +08:00",
-        "name": "PERMADYNE",
-        "streetAddress": "281 Holmes Lane",
-        "city": "Allendale",
-        "state": "Iowa",
-        "zip": 2340,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-01-21T12:38:27 +08:00",
-        "name": "BLURRYBUS",
-        "streetAddress": "494 Navy Walk",
-        "city": "Accoville",
-        "state": "Ohio",
-        "zip": 597,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,439.55",
-      "detention": "$1,858.27",
-      "layover": "$2,958.78"
-    }
-  },
-  {
-    "invoiceNumber": 38,
-    "loadNumber": 31,
-    "billTo": {
-      "name": "QUIZMO",
-      "streetAddress": "413 Lorimer Street",
-      "city": "Bethany",
-      "state": " Oregon",
-      "zip": 901
-    },
-    "stops": [
-      {
-        "date": "2019-02-09T06:38:36 +08:00",
-        "name": "DIGIAL",
-        "streetAddress": "445 Sutton Street",
-        "city": "Morningside",
-        "state": "Vermont",
-        "zip": 5454,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-05-30T11:28:56 +07:00",
-        "name": "LYRICHORD",
-        "streetAddress": "563 Perry Place",
-        "city": "Faywood",
-        "state": "Alabama",
-        "zip": 6382,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-10-30T06:10:30 +07:00",
-        "name": "MIXERS",
-        "streetAddress": "615 Crooke Avenue",
-        "city": "Beyerville",
-        "state": "Kansas",
-        "zip": 3533,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,622.98",
-      "detention": "$2,035.81",
-      "layover": "$3,239.27"
-    }
-  },
-  {
-    "invoiceNumber": 22,
-    "loadNumber": 40,
-    "billTo": {
-      "name": "VERTIDE",
-      "streetAddress": "718 Brighton Court",
-      "city": "Bellamy",
-      "state": " New York",
-      "zip": 2668
-    },
-    "stops": [
-      {
-        "date": "2017-10-23T11:04:04 +07:00",
-        "name": "COMBOGENE",
-        "streetAddress": "998 Stratford Road",
-        "city": "Thermal",
-        "state": "California",
-        "zip": 9925,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-05-04T10:32:49 +07:00",
-        "name": "CORPULSE",
-        "streetAddress": "365 Verona Place",
-        "city": "Valle",
-        "state": "Rhode Island",
-        "zip": 5630,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2020-03-19T11:15:24 +07:00",
-        "name": "GEOFORM",
-        "streetAddress": "967 Times Placez",
-        "city": "Eagleville",
-        "state": "Minnesota",
-        "zip": 8501,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-02-11T07:44:23 +08:00",
-        "name": "ESCHOIR",
-        "streetAddress": "837 Woods Place",
-        "city": "Veyo",
-        "state": "Pennsylvania",
-        "zip": 4916,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-02-10T12:09:00 +08:00",
-        "name": "UNIA",
-        "streetAddress": "755 Montauk Court",
-        "city": "Succasunna",
-        "state": "Colorado",
-        "zip": 9234,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,034.46",
-      "detention": "$2,450.56",
-      "layover": "$2,618.37"
-    }
-  },
-  {
-    "invoiceNumber": 40,
-    "loadNumber": 22,
-    "billTo": {
-      "name": "SUREPLEX",
-      "streetAddress": "178 Kensington Walk",
-      "city": "Rote",
-      "state": " Idaho",
-      "zip": 4667
-    },
-    "stops": [
-      {
-        "date": "2015-11-14T12:16:19 +08:00",
-        "name": "STREZZO",
-        "streetAddress": "116 Voorhies Avenue",
-        "city": "Canoochee",
-        "state": "Utah",
-        "zip": 3787,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-05-06T11:51:34 +07:00",
-        "name": "REVERSUS",
-        "streetAddress": "693 Channel Avenue",
-        "city": "Breinigsville",
-        "state": "Florida",
-        "zip": 1294,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,131.92",
-      "detention": "$2,398.83",
-      "layover": "$2,067.16"
-    }
-  },
-  {
-    "invoiceNumber": 37,
-    "loadNumber": 33,
-    "billTo": {
-      "name": "TERAPRENE",
-      "streetAddress": "286 Lawton Street",
-      "city": "Trona",
-      "state": " Delaware",
-      "zip": 7650
-    },
-    "stops": [
-      {
-        "date": "2015-03-01T03:56:04 +08:00",
-        "name": "EXTRAWEAR",
-        "streetAddress": "802 King Street",
-        "city": "Inkerman",
-        "state": "Texas",
-        "zip": 2009,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-12-10T11:03:28 +08:00",
-        "name": "OVATION",
-        "streetAddress": "438 Seton Place",
-        "city": "Konterra",
-        "state": "Nebraska",
-        "zip": 6463,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-01-26T03:38:00 +08:00",
-        "name": "BIFLEX",
-        "streetAddress": "470 Ralph Avenue",
-        "city": "Dixonville",
-        "state": "Guam",
-        "zip": 8955,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2020-03-02T07:10:03 +08:00",
-        "name": "FIREWAX",
-        "streetAddress": "524 Harrison Avenue",
-        "city": "Juarez",
-        "state": "South Dakota",
-        "zip": 1424,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-01-30T12:54:20 +08:00",
-        "name": "TRIBALOG",
-        "streetAddress": "838 Lewis Place",
-        "city": "Woodruff",
-        "state": "Tennessee",
-        "zip": 2487,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,484.90",
-      "detention": "$3,227.48",
-      "layover": "$3,787.92"
-    }
-  },
-  {
-    "invoiceNumber": 36,
-    "loadNumber": 27,
-    "billTo": {
-      "name": "IZZBY",
-      "streetAddress": "183 Ferris Street",
-      "city": "Wright",
-      "state": " Mississippi",
-      "zip": 795
-    },
-    "stops": [
-      {
-        "date": "2014-03-13T09:17:30 +07:00",
-        "name": "GRACKER",
-        "streetAddress": "371 Greenpoint Avenue",
-        "city": "National",
+        "date": "2019-04-22T03:39:50 +07:00",
+        "name": "UTARA",
+        "streetAddress": "181 Underhill Avenue",
+        "city": "Concho",
         "state": "Indiana",
-        "zip": 8060,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-05-15T10:46:39 +07:00",
-        "name": "WATERBABY",
-        "streetAddress": "514 Nevins Street",
-        "city": "Sardis",
-        "state": "Kentucky",
-        "zip": 188,
+        "zip": 4681,
         "type": "DELIVERY"
       },
       {
-        "date": "2014-02-04T05:55:33 +08:00",
-        "name": "DARWINIUM",
-        "streetAddress": "806 Rodney Street",
-        "city": "Templeton",
-        "state": "Marshall Islands",
-        "zip": 8600,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,603.66",
-      "detention": "$1,651.78",
-      "layover": "$1,232.69"
-    }
-  },
-  {
-    "invoiceNumber": 36,
-    "loadNumber": 38,
-    "billTo": {
-      "name": "XINWARE",
-      "streetAddress": "790 Brooklyn Road",
-      "city": "Savage",
-      "state": " North Carolina",
-      "zip": 1312
-    },
-    "stops": [
-      {
-        "date": "2017-06-21T12:31:17 +07:00",
-        "name": "MAXIMIND",
-        "streetAddress": "198 Maujer Street",
-        "city": "Robbins",
-        "state": "Oklahoma",
-        "zip": 5681,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-04-03T06:49:23 +07:00",
-        "name": "NIQUENT",
-        "streetAddress": "869 Lafayette Walk",
-        "city": "Coventry",
-        "state": "New Hampshire",
-        "zip": 907,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-12-18T11:11:45 +08:00",
-        "name": "VICON",
-        "streetAddress": "677 Matthews Place",
-        "city": "Fingerville",
-        "state": "Louisiana",
-        "zip": 2111,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-10-13T06:21:23 +07:00",
-        "name": "OVERPLEX",
-        "streetAddress": "597 Hull Street",
-        "city": "Sims",
+        "date": "2017-08-30T03:10:34 +07:00",
+        "name": "ORONOKO",
+        "streetAddress": "787 Meadow Street",
+        "city": "Fairforest",
         "state": "Maine",
-        "zip": 279,
+        "zip": 670,
         "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$1,835.54",
-      "detention": "$3,369.18",
-      "layover": "$2,256.09"
+      "rateAmount": "$1,561.80",
+      "detention": "$2,410.15",
+      "layover": "$3,326.19"
     }
   },
   {
-    "invoiceNumber": 21,
-    "loadNumber": 32,
+    "invoiceNumber": "5e951a0a6c205152681bfc27",
+    "loadNumber": 37,
     "billTo": {
-      "name": "AMTAP",
-      "streetAddress": "130 Matthews Court",
-      "city": "Townsend",
-      "state": " Northern Mariana Islands",
-      "zip": 5522
+      "name": "TEMORAK",
+      "streetAddress": "527 Judge Street",
+      "city": "Sylvanite",
+      "state": " Washington",
+      "zip": 1972
     },
     "stops": [
       {
-        "date": "2014-03-20T09:36:14 +07:00",
-        "name": "LUDAK",
-        "streetAddress": "851 Christopher Avenue",
-        "city": "Guthrie",
-        "state": "American Samoa",
-        "zip": 8377,
+        "date": "2018-02-28T09:08:31 +08:00",
+        "name": "FUTURITY",
+        "streetAddress": "665 Gallatin Place",
+        "city": "Jamestown",
+        "state": "Arizona",
+        "zip": 7408,
         "type": "DELIVERY"
       },
       {
-        "date": "2018-01-03T09:24:26 +08:00",
-        "name": "MULTRON",
-        "streetAddress": "452 Vandalia Avenue",
-        "city": "Dahlen",
-        "state": "Massachusetts",
-        "zip": 2435,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-05-03T05:15:13 +07:00",
-        "name": "ECOSYS",
-        "streetAddress": "947 Jay Street",
-        "city": "Roeville",
-        "state": "Puerto Rico",
-        "zip": 5245,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,287.10",
-      "detention": "$2,454.14",
-      "layover": "$2,047.33"
-    }
-  },
-  {
-    "invoiceNumber": 34,
-    "loadNumber": 34,
-    "billTo": {
-      "name": "ZOLARITY",
-      "streetAddress": "663 Euclid Avenue",
-      "city": "Summerset",
-      "state": " Connecticut",
-      "zip": 2845
-    },
-    "stops": [
-      {
-        "date": "2017-05-07T10:33:07 +07:00",
-        "name": "QUINTITY",
-        "streetAddress": "895 Seaview Court",
-        "city": "Grill",
-        "state": "Arkansas",
-        "zip": 1623,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2020-03-25T05:17:35 +07:00",
-        "name": "ISOLOGICS",
-        "streetAddress": "150 Mayfair Drive",
-        "city": "Chloride",
+        "date": "2016-02-16T05:06:59 +08:00",
+        "name": "DOGSPA",
+        "streetAddress": "424 Mill Lane",
+        "city": "Brantleyville",
         "state": "Virgin Islands",
-        "zip": 1236,
+        "zip": 7289,
         "type": "PICKUP"
       },
       {
-        "date": "2016-12-12T04:43:59 +08:00",
-        "name": "PASTURIA",
-        "streetAddress": "561 Navy Street",
-        "city": "Riceville",
-        "state": "Maryland",
-        "zip": 2577,
+        "date": "2018-03-05T06:24:47 +08:00",
+        "name": "INEAR",
+        "streetAddress": "571 Ryder Avenue",
+        "city": "Shelby",
+        "state": "North Dakota",
+        "zip": 4994,
         "type": "DELIVERY"
       },
       {
-        "date": "2017-08-01T02:33:23 +07:00",
-        "name": "QIMONK",
-        "streetAddress": "402 Clarendon Road",
-        "city": "Coleville",
-        "state": "Missouri",
-        "zip": 8921,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-02-11T07:43:20 +08:00",
-        "name": "SPORTAN",
-        "streetAddress": "945 Loring Avenue",
-        "city": "Clarence",
-        "state": "Hawaii",
-        "zip": 3906,
+        "date": "2018-06-20T02:43:10 +07:00",
+        "name": "SNIPS",
+        "streetAddress": "870 Hampton Avenue",
+        "city": "Nutrioso",
+        "state": "Idaho",
+        "zip": 1308,
         "type": "DELIVERY"
       }
     ],
     "balances": {
-      "rateAmount": "$3,747.73",
-      "detention": "$2,768.44",
-      "layover": "$1,850.25"
+      "rateAmount": "$2,371.25",
+      "detention": "$2,060.07",
+      "layover": "$1,118.54"
     }
   },
   {
-    "invoiceNumber": 32,
-    "loadNumber": 30,
+    "invoiceNumber": "5e951a0aca4cce3726ed2483",
+    "loadNumber": 21,
+    "billTo": {
+      "name": "METROZ",
+      "streetAddress": "331 Girard Street",
+      "city": "Whitehaven",
+      "state": " Massachusetts",
+      "zip": 2852
+    },
+    "stops": [
+      {
+        "date": "2018-04-03T08:23:09 +07:00",
+        "name": "MEDCOM",
+        "streetAddress": "976 Georgia Avenue",
+        "city": "Crown",
+        "state": "Oregon",
+        "zip": 5568,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2016-03-15T11:55:54 +07:00",
+        "name": "BRAINCLIP",
+        "streetAddress": "267 Himrod Street",
+        "city": "Iola",
+        "state": "Kansas",
+        "zip": 3296,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2020-02-06T06:50:27 +08:00",
+        "name": "ZENSOR",
+        "streetAddress": "938 Schenectady Avenue",
+        "city": "Siglerville",
+        "state": "American Samoa",
+        "zip": 5658,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,449.75",
+      "detention": "$3,899.01",
+      "layover": "$1,939.10"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a23c6f1f8e2dd6594",
+    "loadNumber": 24,
     "billTo": {
       "name": "EMTRAC",
-      "streetAddress": "895 Ocean Avenue",
-      "city": "Maplewood",
-      "state": " Arizona",
-      "zip": 6472
+      "streetAddress": "664 Dearborn Court",
+      "city": "Shepardsville",
+      "state": " Oklahoma",
+      "zip": 9089
     },
     "stops": [
       {
-        "date": "2016-08-22T06:35:14 +07:00",
-        "name": "UXMOX",
-        "streetAddress": "680 Stockholm Street",
-        "city": "Chesapeake",
-        "state": "Federated States Of Micronesia",
-        "zip": 5615,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2020-02-22T06:51:24 +08:00",
-        "name": "HATOLOGY",
-        "streetAddress": "133 Hendrickson Street",
-        "city": "Sunbury",
-        "state": "Michigan",
-        "zip": 4416,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,284.37",
-      "detention": "$3,295.89",
-      "layover": "$1,944.70"
-    }
-  },
-  {
-    "invoiceNumber": 22,
-    "loadNumber": 23,
-    "billTo": {
-      "name": "DREAMIA",
-      "streetAddress": "567 Pacific Street",
-      "city": "Lacomb",
-      "state": " Alaska",
-      "zip": 6185
-    },
-    "stops": [
-      {
-        "date": "2019-07-25T03:04:28 +07:00",
-        "name": "REMOLD",
-        "streetAddress": "605 Leonora Court",
-        "city": "Gardiner",
-        "state": "New Jersey",
-        "zip": 4821,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-05-16T07:14:54 +07:00",
-        "name": "QUANTALIA",
-        "streetAddress": "225 Morton Street",
-        "city": "Bagtown",
-        "state": "Virginia",
-        "zip": 839,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-09-15T02:19:58 +07:00",
-        "name": "UNDERTAP",
-        "streetAddress": "297 Plymouth Street",
-        "city": "Virgie",
-        "state": "Montana",
-        "zip": 8919,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,636.57",
-      "detention": "$1,309.18",
-      "layover": "$3,570.55"
-    }
-  },
-  {
-    "invoiceNumber": 25,
-    "loadNumber": 38,
-    "billTo": {
-      "name": "COMVERGES",
-      "streetAddress": "601 Folsom Place",
-      "city": "Tilleda",
-      "state": " Illinois",
-      "zip": 5705
-    },
-    "stops": [
-      {
-        "date": "2015-04-04T04:49:10 +07:00",
-        "name": "GOLOGY",
-        "streetAddress": "898 Monroe Street",
-        "city": "Lisco",
-        "state": "Wyoming",
-        "zip": 6737,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-03-27T05:58:34 +07:00",
-        "name": "NETUR",
-        "streetAddress": "311 Battery Avenue",
-        "city": "Wildwood",
-        "state": "Georgia",
-        "zip": 1696,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-05-24T09:29:55 +07:00",
-        "name": "VOIPA",
-        "streetAddress": "745 Sedgwick Street",
-        "city": "Lithium",
-        "state": "Washington",
-        "zip": 2450,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-11-02T04:30:22 +07:00",
-        "name": "TALKALOT",
-        "streetAddress": "155 Dakota Place",
-        "city": "Fairfield",
-        "state": "District Of Columbia",
-        "zip": 7862,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,160.21",
-      "detention": "$2,586.42",
-      "layover": "$2,308.63"
-    }
-  },
-  {
-    "invoiceNumber": 37,
-    "loadNumber": 35,
-    "billTo": {
-      "name": "FUELTON",
-      "streetAddress": "379 Albee Square",
-      "city": "Wheatfields",
-      "state": " West Virginia",
-      "zip": 7617
-    },
-    "stops": [
-      {
-        "date": "2019-09-12T02:23:19 +07:00",
-        "name": "DIGIQUE",
-        "streetAddress": "416 Powers Street",
-        "city": "Graniteville",
-        "state": "North Dakota",
-        "zip": 6259,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-05-26T07:43:37 +07:00",
-        "name": "MEDALERT",
-        "streetAddress": "649 Judge Street",
-        "city": "Soudan",
-        "state": "Wisconsin",
-        "zip": 7784,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,348.88",
-      "detention": "$1,831.38",
-      "layover": "$3,329.00"
-    }
-  },
-  {
-    "invoiceNumber": 27,
-    "loadNumber": 40,
-    "billTo": {
-      "name": "CHORIZON",
-      "streetAddress": "315 Stuyvesant Avenue",
-      "city": "Northchase",
-      "state": " Nevada",
-      "zip": 3058
-    },
-    "stops": [
-      {
-        "date": "2015-07-10T03:51:01 +07:00",
-        "name": "ANARCO",
-        "streetAddress": "566 McKibbin Street",
-        "city": "Kimmell",
-        "state": "South Carolina",
-        "zip": 2343,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-10-11T08:00:07 +07:00",
-        "name": "KINDALOO",
-        "streetAddress": "813 Conselyea Street",
-        "city": "Imperial",
-        "state": "Palau",
-        "zip": 3700,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2017-12-19T09:14:33 +08:00",
-        "name": "QUILITY",
-        "streetAddress": "268 Ridgecrest Terrace",
-        "city": "Barclay",
-        "state": "Iowa",
-        "zip": 9124,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-05-29T03:31:20 +07:00",
-        "name": "TOYLETRY",
-        "streetAddress": "707 Richardson Street",
-        "city": "Oneida",
-        "state": "Ohio",
-        "zip": 2543,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,215.49",
-      "detention": "$1,236.57",
-      "layover": "$2,541.34"
-    }
-  },
-  {
-    "invoiceNumber": 33,
-    "loadNumber": 27,
-    "billTo": {
-      "name": "MAGNAFONE",
-      "streetAddress": "907 Tapscott Avenue",
-      "city": "Como",
-      "state": " Oregon",
-      "zip": 155
-    },
-    "stops": [
-      {
-        "date": "2015-04-10T12:25:15 +07:00",
-        "name": "PEARLESEX",
-        "streetAddress": "769 Waldorf Court",
-        "city": "Selma",
-        "state": "Vermont",
-        "zip": 5062,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-06-25T04:39:24 +07:00",
-        "name": "PARLEYNET",
-        "streetAddress": "439 Wolcott Street",
-        "city": "Calpine",
-        "state": "Alabama",
-        "zip": 882,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-08-24T02:09:16 +07:00",
-        "name": "BITENDREX",
-        "streetAddress": "390 Durland Place",
-        "city": "Sena",
-        "state": "Kansas",
-        "zip": 2839,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-02-21T06:11:47 +08:00",
-        "name": "OPTIQUE",
-        "streetAddress": "578 Essex Street",
-        "city": "Caron",
-        "state": "New York",
-        "zip": 4939,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-03-07T11:40:08 +08:00",
-        "name": "FLEXIGEN",
-        "streetAddress": "889 Furman Street",
-        "city": "Shelby",
-        "state": "California",
-        "zip": 198,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,685.87",
-      "detention": "$3,229.34",
-      "layover": "$2,537.70"
-    }
-  },
-  {
-    "invoiceNumber": 23,
-    "loadNumber": 25,
-    "billTo": {
-      "name": "PLASMOX",
-      "streetAddress": "732 Garfield Place",
-      "city": "Hillsboro",
-      "state": " Rhode Island",
-      "zip": 8719
-    },
-    "stops": [
-      {
-        "date": "2014-06-23T08:11:37 +07:00",
-        "name": "HARMONEY",
-        "streetAddress": "203 Rogers Avenue",
-        "city": "Comptche",
-        "state": "Minnesota",
-        "zip": 4354,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-06-24T02:19:29 +07:00",
-        "name": "RAMJOB",
-        "streetAddress": "306 Laurel Avenue",
-        "city": "Collins",
-        "state": "Pennsylvania",
-        "zip": 3538,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,415.03",
-      "detention": "$2,793.56",
-      "layover": "$1,261.12"
-    }
-  },
-  {
-    "invoiceNumber": 39,
-    "loadNumber": 24,
-    "billTo": {
-      "name": "VORATAK",
-      "streetAddress": "604 Chapel Street",
-      "city": "Leyner",
-      "state": " Colorado",
-      "zip": 3957
-    },
-    "stops": [
-      {
-        "date": "2017-09-07T08:42:55 +07:00",
-        "name": "MOBILDATA",
-        "streetAddress": "807 College Place",
-        "city": "Taycheedah",
-        "state": "Idaho",
-        "zip": 9445,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-06-27T05:08:33 +07:00",
-        "name": "ACCUPRINT",
-        "streetAddress": "591 Stuart Street",
-        "city": "Hollins",
-        "state": "Utah",
-        "zip": 4915,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-08-18T01:36:32 +07:00",
-        "name": "JASPER",
-        "streetAddress": "755 Strong Place",
-        "city": "Tuttle",
-        "state": "Florida",
-        "zip": 2288,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-02-25T06:15:00 +08:00",
-        "name": "DYMI",
-        "streetAddress": "576 Schenck Place",
-        "city": "Corinne",
-        "state": "Delaware",
-        "zip": 8391,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,474.68",
-      "detention": "$1,606.33",
-      "layover": "$3,794.51"
-    }
-  },
-  {
-    "invoiceNumber": 35,
-    "loadNumber": 28,
-    "billTo": {
-      "name": "DIGIPRINT",
-      "streetAddress": "660 Broadway ",
-      "city": "Farmington",
-      "state": " Texas",
-      "zip": 2023
-    },
-    "stops": [
-      {
-        "date": "2015-05-24T03:04:14 +07:00",
-        "name": "OVERFORK",
-        "streetAddress": "142 Coleridge Street",
-        "city": "Cecilia",
+        "date": "2014-10-29T01:09:36 +07:00",
+        "name": "HIVEDOM",
+        "streetAddress": "175 Broadway ",
+        "city": "Libertytown",
         "state": "Nebraska",
-        "zip": 3935,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-05-15T07:45:28 +07:00",
-        "name": "JAMNATION",
-        "streetAddress": "107 Williams Avenue",
-        "city": "Nanafalia",
-        "state": "Guam",
-        "zip": 8922,
+        "zip": 1190,
         "type": "DELIVERY"
       },
       {
-        "date": "2018-12-19T09:14:31 +08:00",
-        "name": "NEXGENE",
-        "streetAddress": "666 Nelson Street",
-        "city": "Detroit",
-        "state": "South Dakota",
-        "zip": 2403,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,311.38",
-      "detention": "$1,461.82",
-      "layover": "$3,576.37"
-    }
-  },
-  {
-    "invoiceNumber": 30,
-    "loadNumber": 25,
-    "billTo": {
-      "name": "BIZMATIC",
-      "streetAddress": "745 Wyckoff Avenue",
-      "city": "Cliff",
-      "state": " Tennessee",
-      "zip": 4843
-    },
-    "stops": [
-      {
-        "date": "2015-04-17T05:37:34 +07:00",
-        "name": "CUIZINE",
-        "streetAddress": "460 Hamilton Walk",
-        "city": "Temperanceville",
-        "state": "Mississippi",
-        "zip": 7090,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2017-06-18T08:38:23 +07:00",
-        "name": "CONJURICA",
-        "streetAddress": "438 Hillel Place",
-        "city": "Sugartown",
-        "state": "Indiana",
-        "zip": 2095,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-03-13T09:15:35 +07:00",
-        "name": "RODEOCEAN",
-        "streetAddress": "924 Milton Street",
-        "city": "Tedrow",
-        "state": "Kentucky",
-        "zip": 9544,
+        "date": "2014-04-30T03:17:02 +07:00",
+        "name": "ECRATER",
+        "streetAddress": "666 Hegeman Avenue",
+        "city": "Tibbie",
+        "state": "Marshall Islands",
+        "zip": 3244,
         "type": "DELIVERY"
       }
     ],
     "balances": {
-      "rateAmount": "$3,387.64",
-      "detention": "$3,319.02",
-      "layover": "$3,364.15"
+      "rateAmount": "$2,956.97",
+      "detention": "$3,184.08",
+      "layover": "$2,306.69"
     }
   },
   {
-    "invoiceNumber": 37,
-    "loadNumber": 34,
-    "billTo": {
-      "name": "PROTODYNE",
-      "streetAddress": "593 Arlington Avenue",
-      "city": "Manila",
-      "state": " Marshall Islands",
-      "zip": 7271
-    },
-    "stops": [
-      {
-        "date": "2016-04-12T09:48:12 +07:00",
-        "name": "KYAGURU",
-        "streetAddress": "261 Arkansas Drive",
-        "city": "Fairlee",
-        "state": "North Carolina",
-        "zip": 2677,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-01-08T05:22:36 +08:00",
-        "name": "VELOS",
-        "streetAddress": "274 Sharon Street",
-        "city": "Herald",
-        "state": "Oklahoma",
-        "zip": 9726,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,203.84",
-      "detention": "$2,057.18",
-      "layover": "$2,124.50"
-    }
-  },
-  {
-    "invoiceNumber": 24,
-    "loadNumber": 38,
-    "billTo": {
-      "name": "BARKARAMA",
-      "streetAddress": "492 Lawrence Street",
-      "city": "Onton",
-      "state": " New Hampshire",
-      "zip": 4672
-    },
-    "stops": [
-      {
-        "date": "2019-01-25T04:07:47 +08:00",
-        "name": "IMMUNICS",
-        "streetAddress": "690 Canarsie Road",
-        "city": "Topanga",
-        "state": "Louisiana",
-        "zip": 7409,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-10-28T03:08:10 +07:00",
-        "name": "GOLISTIC",
-        "streetAddress": "461 Havens Place",
-        "city": "Hinsdale",
-        "state": "Maine",
-        "zip": 1975,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2019-08-01T03:20:23 +07:00",
-        "name": "MAZUDA",
-        "streetAddress": "851 Brightwater Avenue",
-        "city": "Avoca",
-        "state": "Northern Mariana Islands",
-        "zip": 2219,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-03-22T09:55:55 +07:00",
-        "name": "KOFFEE",
-        "streetAddress": "521 Clinton Street",
-        "city": "Hoehne",
-        "state": "American Samoa",
-        "zip": 6405,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-06-19T06:14:55 +07:00",
-        "name": "COMTRAIL",
-        "streetAddress": "226 Beach Place",
-        "city": "Bedias",
-        "state": "Massachusetts",
-        "zip": 2729,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,982.96",
-      "detention": "$1,936.73",
-      "layover": "$1,053.50"
-    }
-  },
-  {
-    "invoiceNumber": 33,
-    "loadNumber": 36,
-    "billTo": {
-      "name": "MAGNEATO",
-      "streetAddress": "121 Gunnison Court",
-      "city": "Canby",
-      "state": " Puerto Rico",
-      "zip": 4468
-    },
-    "stops": [
-      {
-        "date": "2017-11-07T06:34:19 +08:00",
-        "name": "DANCITY",
-        "streetAddress": "887 Tillary Street",
-        "city": "Kidder",
-        "state": "Connecticut",
-        "zip": 2185,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-02-26T03:21:20 +08:00",
-        "name": "IMANT",
-        "streetAddress": "826 Overbaugh Place",
-        "city": "Waterloo",
-        "state": "Arkansas",
-        "zip": 4475,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,975.10",
-      "detention": "$1,872.19",
-      "layover": "$3,096.44"
-    }
-  },
-  {
-    "invoiceNumber": 25,
-    "loadNumber": 22,
-    "billTo": {
-      "name": "ZILLANET",
-      "streetAddress": "397 Boulevard Court",
-      "city": "Beechmont",
-      "state": " Virgin Islands",
-      "zip": 9926
-    },
-    "stops": [
-      {
-        "date": "2018-04-15T06:12:49 +07:00",
-        "name": "MAGNEMO",
-        "streetAddress": "419 Amber Street",
-        "city": "Muir",
-        "state": "Maryland",
-        "zip": 3303,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-01-04T01:27:45 +08:00",
-        "name": "RUBADUB",
-        "streetAddress": "994 Beard Street",
-        "city": "Sexton",
-        "state": "Missouri",
-        "zip": 689,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,106.33",
-      "detention": "$2,580.62",
-      "layover": "$1,051.85"
-    }
-  },
-  {
-    "invoiceNumber": 35,
-    "loadNumber": 23,
-    "billTo": {
-      "name": "ZEPITOPE",
-      "streetAddress": "364 Clifford Place",
-      "city": "Gouglersville",
-      "state": " Hawaii",
-      "zip": 4189
-    },
-    "stops": [
-      {
-        "date": "2014-12-20T07:30:38 +08:00",
-        "name": "LINGOAGE",
-        "streetAddress": "642 Portland Avenue",
-        "city": "Drytown",
-        "state": "Arizona",
-        "zip": 9541,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-12-22T02:19:59 +08:00",
-        "name": "ILLUMITY",
-        "streetAddress": "293 Glenwood Road",
-        "city": "Chicopee",
-        "state": "Federated States Of Micronesia",
-        "zip": 5527,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-09-27T06:11:49 +07:00",
-        "name": "ROCKYARD",
-        "streetAddress": "178 Greenwood Avenue",
-        "city": "Vincent",
-        "state": "Michigan",
-        "zip": 114,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,157.90",
-      "detention": "$1,833.53",
-      "layover": "$1,652.26"
-    }
-  },
-  {
-    "invoiceNumber": 25,
+    "invoiceNumber": "5e951a0aa741011953e526b1",
     "loadNumber": 39,
     "billTo": {
-      "name": "ZYTREX",
-      "streetAddress": "458 Front Street",
-      "city": "Frizzleburg",
+      "name": "KOG",
+      "streetAddress": "764 Waldorf Court",
+      "city": "Richville",
       "state": " Alaska",
-      "zip": 4032
+      "zip": 5302
     },
     "stops": [
       {
-        "date": "2017-12-24T04:32:04 +08:00",
-        "name": "VISUALIX",
-        "streetAddress": "143 Benson Avenue",
-        "city": "Evergreen",
-        "state": "New Jersey",
-        "zip": 208,
-        "type": "DELIVERY"
+        "date": "2018-11-04T10:59:15 +08:00",
+        "name": "IMAGINART",
+        "streetAddress": "443 Pleasant Place",
+        "city": "Hayes",
+        "state": "Michigan",
+        "zip": 8923,
+        "type": "PICKUP"
       },
       {
-        "date": "2017-12-02T02:16:53 +08:00",
-        "name": "SONIQUE",
-        "streetAddress": "393 Montrose Avenue",
-        "city": "Elwood",
-        "state": "Virginia",
-        "zip": 7723,
+        "date": "2016-03-28T12:58:13 +07:00",
+        "name": "DENTREX",
+        "streetAddress": "588 Carlton Avenue",
+        "city": "Adamstown",
+        "state": "Mississippi",
+        "zip": 1705,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-11-25T01:25:49 +08:00",
+        "name": "ESCHOIR",
+        "streetAddress": "961 Clay Street",
+        "city": "Shindler",
+        "state": "New Hampshire",
+        "zip": 515,
         "type": "DELIVERY"
       }
     ],
     "balances": {
-      "rateAmount": "$3,418.43",
-      "detention": "$3,354.49",
-      "layover": "$1,303.80"
+      "rateAmount": "$1,922.16",
+      "detention": "$2,847.20",
+      "layover": "$3,598.99"
     }
   },
   {
-    "invoiceNumber": 20,
-    "loadNumber": 27,
-    "billTo": {
-      "name": "LIMAGE",
-      "streetAddress": "863 Emerald Street",
-      "city": "Crisman",
-      "state": " Montana",
-      "zip": 8728
-    },
-    "stops": [
-      {
-        "date": "2019-01-03T04:53:47 +08:00",
-        "name": "PROFLEX",
-        "streetAddress": "566 Noble Street",
-        "city": "Kirk",
-        "state": "Illinois",
-        "zip": 9912,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-02-26T04:21:20 +08:00",
-        "name": "VERTON",
-        "streetAddress": "377 Lake Street",
-        "city": "Tibbie",
-        "state": "Wyoming",
-        "zip": 6994,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-06-13T01:13:55 +07:00",
-        "name": "PARAGONIA",
-        "streetAddress": "356 Auburn Place",
-        "city": "Brecon",
-        "state": "Georgia",
-        "zip": 7333,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-05-25T10:34:41 +07:00",
-        "name": "SUPREMIA",
-        "streetAddress": "380 Just Court",
-        "city": "Edgar",
-        "state": "Washington",
-        "zip": 4833,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,695.91",
-      "detention": "$1,625.22",
-      "layover": "$3,097.14"
-    }
-  },
-  {
-    "invoiceNumber": 23,
-    "loadNumber": 21,
-    "billTo": {
-      "name": "DIGIGENE",
-      "streetAddress": "933 Clove Road",
-      "city": "Salunga",
-      "state": " District Of Columbia",
-      "zip": 940
-    },
-    "stops": [
-      {
-        "date": "2015-08-16T06:00:45 +07:00",
-        "name": "JOVIOLD",
-        "streetAddress": "115 Dunne Court",
-        "city": "Baden",
-        "state": "West Virginia",
-        "zip": 875,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-01-02T08:56:04 +08:00",
-        "name": "TINGLES",
-        "streetAddress": "592 Greene Avenue",
-        "city": "Farmers",
-        "state": "North Dakota",
-        "zip": 4203,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-02-14T11:22:03 +08:00",
-        "name": "BULLJUICE",
-        "streetAddress": "985 Moore Place",
-        "city": "Gwynn",
-        "state": "Wisconsin",
-        "zip": 7943,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-07-26T09:25:30 +07:00",
-        "name": "BOINK",
-        "streetAddress": "368 Story Street",
-        "city": "Hayden",
-        "state": "Nevada",
-        "zip": 8858,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-06-05T10:15:30 +07:00",
-        "name": "GEOSTELE",
-        "streetAddress": "434 Division Avenue",
-        "city": "Rosewood",
-        "state": "South Carolina",
-        "zip": 9907,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,311.67",
-      "detention": "$3,069.98",
-      "layover": "$3,636.50"
-    }
-  },
-  {
-    "invoiceNumber": 36,
-    "loadNumber": 31,
-    "billTo": {
-      "name": "SHADEASE",
-      "streetAddress": "993 Veronica Place",
-      "city": "Adelino",
-      "state": " Palau",
-      "zip": 3212
-    },
-    "stops": [
-      {
-        "date": "2015-12-09T12:47:34 +08:00",
-        "name": "GYNK",
-        "streetAddress": "970 Gold Street",
-        "city": "Cutter",
-        "state": "Iowa",
-        "zip": 2429,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-08-19T08:48:12 +07:00",
-        "name": "GOKO",
-        "streetAddress": "744 Union Avenue",
-        "city": "Bannock",
-        "state": "Ohio",
-        "zip": 3795,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-09-15T07:21:51 +07:00",
-        "name": "ETERNIS",
-        "streetAddress": "299 Exeter Street",
-        "city": "Tecolotito",
-        "state": "Oregon",
-        "zip": 9731,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-11-20T12:37:48 +08:00",
-        "name": "ZERBINA",
-        "streetAddress": "533 Church Lane",
-        "city": "Takilma",
-        "state": "Vermont",
-        "zip": 3449,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,435.76",
-      "detention": "$1,490.81",
-      "layover": "$2,268.06"
-    }
-  },
-  {
-    "invoiceNumber": 26,
-    "loadNumber": 38,
-    "billTo": {
-      "name": "ZENTHALL",
-      "streetAddress": "751 Montgomery Street",
-      "city": "Coral",
-      "state": " Alabama",
-      "zip": 1738
-    },
-    "stops": [
-      {
-        "date": "2016-09-29T06:49:21 +07:00",
-        "name": "OCEANICA",
-        "streetAddress": "528 Girard Street",
-        "city": "Clay",
-        "state": "Kansas",
-        "zip": 6436,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-08-26T08:13:09 +07:00",
-        "name": "HAWKSTER",
-        "streetAddress": "317 Seaview Avenue",
-        "city": "Bladensburg",
-        "state": "New York",
-        "zip": 7205,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,559.52",
-      "detention": "$3,981.74",
-      "layover": "$1,794.34"
-    }
-  },
-  {
-    "invoiceNumber": 40,
-    "loadNumber": 33,
-    "billTo": {
-      "name": "VISALIA",
-      "streetAddress": "515 Varanda Place",
-      "city": "Dante",
-      "state": " California",
-      "zip": 6464
-    },
-    "stops": [
-      {
-        "date": "2014-11-17T08:27:09 +08:00",
-        "name": "MALATHION",
-        "streetAddress": "882 Albany Avenue",
-        "city": "Clarksburg",
-        "state": "Rhode Island",
-        "zip": 2047,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-03-27T11:55:04 +07:00",
-        "name": "EXOBLUE",
-        "streetAddress": "433 Winthrop Street",
-        "city": "Glendale",
-        "state": "Minnesota",
-        "zip": 8878,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-03-08T01:31:58 +08:00",
-        "name": "PLASMOSIS",
-        "streetAddress": "442 Murdock Court",
-        "city": "Boomer",
-        "state": "Pennsylvania",
-        "zip": 4675,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,377.79",
-      "detention": "$3,630.40",
-      "layover": "$3,411.34"
-    }
-  },
-  {
-    "invoiceNumber": 33,
+    "invoiceNumber": "5e951a0adbb2e396e0f4ce25",
     "loadNumber": 32,
     "billTo": {
-      "name": "VINCH",
-      "streetAddress": "424 Guider Avenue",
-      "city": "Wintersburg",
-      "state": " Colorado",
-      "zip": 9371
+      "name": "LOCAZONE",
+      "streetAddress": "252 Cheever Place",
+      "city": "Toftrees",
+      "state": " Delaware",
+      "zip": 6542
     },
     "stops": [
       {
-        "date": "2017-12-23T03:15:35 +08:00",
-        "name": "ZORK",
-        "streetAddress": "468 Homecrest Court",
-        "city": "Bethpage",
-        "state": "Idaho",
-        "zip": 3532,
+        "date": "2018-07-25T03:30:41 +07:00",
+        "name": "ORBOID",
+        "streetAddress": "566 Neptune Court",
+        "city": "Enoree",
+        "state": "Georgia",
+        "zip": 5670,
         "type": "PICKUP"
       },
       {
-        "date": "2017-03-09T11:32:22 +08:00",
-        "name": "LUNCHPOD",
-        "streetAddress": "489 Freeman Street",
-        "city": "Tampico",
-        "state": "Utah",
-        "zip": 1997,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-11-28T07:04:08 +08:00",
-        "name": "GENMEX",
-        "streetAddress": "259 Onderdonk Avenue",
-        "city": "Downsville",
-        "state": "Florida",
-        "zip": 4325,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-12-24T03:30:47 +08:00",
-        "name": "HANDSHAKE",
-        "streetAddress": "529 Kensington Street",
-        "city": "Nicholson",
-        "state": "Delaware",
-        "zip": 416,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-03-11T02:04:36 +07:00",
-        "name": "SNOWPOKE",
-        "streetAddress": "298 Grand Street",
-        "city": "Jugtown",
-        "state": "Texas",
-        "zip": 5022,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,293.80",
-      "detention": "$1,608.43",
-      "layover": "$1,958.07"
-    }
-  },
-  {
-    "invoiceNumber": 27,
-    "loadNumber": 26,
-    "billTo": {
-      "name": "TYPHONICA",
-      "streetAddress": "911 Schenectady Avenue",
-      "city": "Malott",
-      "state": " Nebraska",
-      "zip": 7942
-    },
-    "stops": [
-      {
-        "date": "2018-06-16T09:45:28 +07:00",
-        "name": "VELITY",
-        "streetAddress": "159 Billings Place",
-        "city": "Wollochet",
+        "date": "2016-08-20T01:52:59 +07:00",
+        "name": "TELEQUIET",
+        "streetAddress": "850 Lawn Court",
+        "city": "Fairmount",
         "state": "Guam",
-        "zip": 9177,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-02-12T01:08:18 +08:00",
-        "name": "DRAGBOT",
-        "streetAddress": "366 Rochester Avenue",
-        "city": "Vandiver",
-        "state": "South Dakota",
-        "zip": 3158,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-06-28T01:43:28 +07:00",
-        "name": "JUMPSTACK",
-        "streetAddress": "274 Kiely Place",
-        "city": "Defiance",
-        "state": "Tennessee",
-        "zip": 4777,
+        "zip": 4079,
         "type": "DELIVERY"
+      },
+      {
+        "date": "2015-03-10T07:40:11 +07:00",
+        "name": "SINGAVERA",
+        "streetAddress": "935 Vandalia Avenue",
+        "city": "Machias",
+        "state": "Ohio",
+        "zip": 7897,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-09-06T01:51:34 +07:00",
+        "name": "MICROLUXE",
+        "streetAddress": "152 Macdougal Street",
+        "city": "Sussex",
+        "state": "Hawaii",
+        "zip": 8854,
+        "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$1,101.33",
-      "detention": "$2,119.76",
-      "layover": "$2,140.39"
+      "rateAmount": "$1,703.62",
+      "detention": "$1,220.41",
+      "layover": "$3,505.40"
     }
   },
   {
-    "invoiceNumber": 37,
-    "loadNumber": 35,
+    "invoiceNumber": "5e951a0ad70608c5470f244d",
+    "loadNumber": 24,
     "billTo": {
-      "name": "VALPREAL",
-      "streetAddress": "694 Farragut Place",
-      "city": "Sheatown",
-      "state": " Mississippi",
-      "zip": 1793
+      "name": "PAPRIKUT",
+      "streetAddress": "423 Kaufman Place",
+      "city": "Dante",
+      "state": " Missouri",
+      "zip": 9803
     },
     "stops": [
       {
-        "date": "2015-12-16T09:03:53 +08:00",
-        "name": "FIBRODYNE",
-        "streetAddress": "115 Henderson Walk",
+        "date": "2016-12-11T04:56:34 +08:00",
+        "name": "UNIA",
+        "streetAddress": "714 Clara Street",
         "city": "Saticoy",
-        "state": "Indiana",
-        "zip": 4722,
+        "state": "Tennessee",
+        "zip": 8383,
         "type": "DELIVERY"
       },
       {
-        "date": "2014-04-19T09:58:13 +07:00",
-        "name": "ENTHAZE",
-        "streetAddress": "116 Legion Street",
-        "city": "Trail",
-        "state": "Kentucky",
-        "zip": 7036,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-10-13T08:33:00 +07:00",
-        "name": "ENORMO",
-        "streetAddress": "769 Grafton Street",
-        "city": "Hiwasse",
-        "state": "Marshall Islands",
-        "zip": 7563,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,353.21",
-      "detention": "$1,829.22",
-      "layover": "$1,610.18"
-    }
-  },
-  {
-    "invoiceNumber": 20,
-    "loadNumber": 21,
-    "billTo": {
-      "name": "BRAINCLIP",
-      "streetAddress": "333 Orange Street",
-      "city": "Marysville",
-      "state": " North Carolina",
-      "zip": 2715
-    },
-    "stops": [
-      {
-        "date": "2018-10-22T05:30:40 +07:00",
-        "name": "CUJO",
-        "streetAddress": "363 Ditmas Avenue",
-        "city": "Wolcott",
-        "state": "Oklahoma",
-        "zip": 2066,
+        "date": "2019-04-08T08:39:29 +07:00",
+        "name": "MINGA",
+        "streetAddress": "305 Williams Court",
+        "city": "Falmouth",
+        "state": "Texas",
+        "zip": 3875,
         "type": "DELIVERY"
-      },
-      {
-        "date": "2015-06-26T01:49:27 +07:00",
-        "name": "HIVEDOM",
-        "streetAddress": "431 Indiana Place",
-        "city": "Day",
-        "state": "New Hampshire",
-        "zip": 3987,
-        "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$1,469.63",
-      "detention": "$3,483.57",
-      "layover": "$1,408.30"
+      "rateAmount": "$2,698.16",
+      "detention": "$3,217.00",
+      "layover": "$3,372.10"
     }
   },
   {
-    "invoiceNumber": 21,
+    "invoiceNumber": "5e951a0af50e39d8354ecefa",
     "loadNumber": 28,
     "billTo": {
-      "name": "SLOFAST",
-      "streetAddress": "223 Dennett Place",
-      "city": "Snelling",
-      "state": " Louisiana",
-      "zip": 3088
+      "name": "EARTHPLEX",
+      "streetAddress": "690 Roder Avenue",
+      "city": "Blackgum",
+      "state": " Puerto Rico",
+      "zip": 584
     },
     "stops": [
       {
-        "date": "2015-11-01T03:01:59 +08:00",
-        "name": "BITTOR",
-        "streetAddress": "852 Fleet Street",
-        "city": "Castleton",
-        "state": "Maine",
-        "zip": 9071,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-07-02T03:22:24 +07:00",
-        "name": "KEEG",
-        "streetAddress": "102 Poly Place",
-        "city": "Kohatk",
-        "state": "Northern Mariana Islands",
-        "zip": 5220,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-01-24T12:21:54 +08:00",
-        "name": "MEGALL",
-        "streetAddress": "820 Quentin Road",
-        "city": "Sussex",
-        "state": "American Samoa",
-        "zip": 3343,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-10-03T11:59:30 +07:00",
-        "name": "HOPELI",
-        "streetAddress": "718 Hendrickson Place",
-        "city": "Craig",
-        "state": "Massachusetts",
-        "zip": 3146,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-05-09T01:39:30 +07:00",
-        "name": "OULU",
-        "streetAddress": "351 Denton Place",
-        "city": "Hannasville",
-        "state": "Puerto Rico",
-        "zip": 8180,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,250.68",
-      "detention": "$3,905.60",
-      "layover": "$2,785.73"
-    }
-  },
-  {
-    "invoiceNumber": 33,
-    "loadNumber": 32,
-    "billTo": {
-      "name": "XYMONK",
-      "streetAddress": "348 Melba Court",
-      "city": "Taft",
-      "state": " Connecticut",
-      "zip": 7040
-    },
-    "stops": [
-      {
-        "date": "2014-08-25T11:22:45 +07:00",
-        "name": "MARKETOID",
-        "streetAddress": "678 Hall Street",
-        "city": "Boykin",
+        "date": "2018-06-12T02:59:17 +07:00",
+        "name": "ENQUILITY",
+        "streetAddress": "284 Canton Court",
+        "city": "Irwin",
         "state": "Arkansas",
-        "zip": 2632,
+        "zip": 1460,
         "type": "PICKUP"
       },
       {
-        "date": "2014-11-08T04:43:41 +08:00",
-        "name": "TEMORAK",
-        "streetAddress": "323 Oriental Boulevard",
-        "city": "Longoria",
-        "state": "Virgin Islands",
-        "zip": 3652,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,201.31",
-      "detention": "$3,413.18",
-      "layover": "$1,090.49"
-    }
-  },
-  {
-    "invoiceNumber": 24,
-    "loadNumber": 32,
-    "billTo": {
-      "name": "SULFAX",
-      "streetAddress": "554 Kingston Avenue",
-      "city": "Moquino",
-      "state": " Maryland",
-      "zip": 2822
-    },
-    "stops": [
-      {
-        "date": "2014-12-12T12:23:05 +08:00",
-        "name": "GEEKKO",
-        "streetAddress": "602 Utica Avenue",
-        "city": "Venice",
-        "state": "Missouri",
-        "zip": 1909,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-07-12T04:36:39 +07:00",
-        "name": "AQUOAVO",
-        "streetAddress": "780 Brown Street",
-        "city": "Vaughn",
-        "state": "Hawaii",
-        "zip": 5694,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-02-02T08:55:47 +08:00",
-        "name": "ANIVET",
-        "streetAddress": "440 Dewey Place",
-        "city": "Osage",
-        "state": "Arizona",
-        "zip": 8525,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-07-14T08:07:31 +07:00",
-        "name": "GEOFARM",
-        "streetAddress": "447 Brightwater Court",
-        "city": "Blende",
-        "state": "Federated States Of Micronesia",
-        "zip": 5216,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,139.57",
-      "detention": "$1,517.87",
-      "layover": "$3,883.72"
-    }
-  },
-  {
-    "invoiceNumber": 28,
-    "loadNumber": 27,
-    "billTo": {
-      "name": "ULTRASURE",
-      "streetAddress": "922 Bradford Street",
-      "city": "Tuskahoma",
-      "state": " Michigan",
-      "zip": 3858
-    },
-    "stops": [
-      {
-        "date": "2019-07-03T08:24:45 +07:00",
-        "name": "AEORA",
-        "streetAddress": "994 Sumpter Street",
-        "city": "Wadsworth",
-        "state": "Alaska",
-        "zip": 3155,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-12-30T03:15:02 +08:00",
-        "name": "BOVIS",
-        "streetAddress": "782 Maple Street",
-        "city": "Wanship",
-        "state": "New Jersey",
-        "zip": 5132,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-03-25T07:26:34 +07:00",
-        "name": "SPEEDBOLT",
-        "streetAddress": "457 Fountain Avenue",
-        "city": "Alderpoint",
-        "state": "Virginia",
-        "zip": 2114,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-12-23T05:18:51 +08:00",
-        "name": "XLEEN",
-        "streetAddress": "687 Burnett Street",
-        "city": "Brambleton",
+        "date": "2019-07-20T02:56:27 +07:00",
+        "name": "CORECOM",
+        "streetAddress": "822 Atlantic Avenue",
+        "city": "Idledale",
         "state": "Montana",
-        "zip": 9165,
+        "zip": 5824,
         "type": "DELIVERY"
       },
       {
-        "date": "2016-02-25T02:00:08 +08:00",
-        "name": "PLUTORQUE",
-        "streetAddress": "152 Beacon Court",
-        "city": "Shrewsbury",
-        "state": "Illinois",
-        "zip": 6515,
+        "date": "2016-04-17T04:34:41 +07:00",
+        "name": "ZIDOX",
+        "streetAddress": "361 Brooklyn Avenue",
+        "city": "Conestoga",
+        "state": "Louisiana",
+        "zip": 9768,
         "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$3,237.35",
-      "detention": "$2,096.93",
-      "layover": "$2,325.65"
+      "rateAmount": "$2,383.28",
+      "detention": "$2,869.18",
+      "layover": "$2,133.14"
     }
   },
   {
-    "invoiceNumber": 29,
+    "invoiceNumber": "5e951a0a796644df1ece8a56",
     "loadNumber": 38,
     "billTo": {
-      "name": "GEEKUS",
-      "streetAddress": "190 Mill Road",
-      "city": "Williamson",
-      "state": " Wyoming",
-      "zip": 3375
+      "name": "GAZAK",
+      "streetAddress": "570 Madison Place",
+      "city": "Carbonville",
+      "state": " Alabama",
+      "zip": 5961
     },
     "stops": [
       {
-        "date": "2017-04-04T11:30:02 +07:00",
-        "name": "LEXICONDO",
-        "streetAddress": "936 Ryder Street",
-        "city": "Yonah",
-        "state": "Georgia",
-        "zip": 5251,
+        "date": "2017-10-09T10:45:03 +07:00",
+        "name": "DAIDO",
+        "streetAddress": "402 Wakeman Place",
+        "city": "Topaz",
+        "state": "Maryland",
+        "zip": 253,
         "type": "DELIVERY"
       },
       {
-        "date": "2016-10-06T11:09:30 +07:00",
-        "name": "INJOY",
-        "streetAddress": "946 Karweg Place",
-        "city": "Mahtowa",
-        "state": "Washington",
-        "zip": 2817,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-08-26T11:50:27 +07:00",
-        "name": "ENQUILITY",
-        "streetAddress": "343 Dahl Court",
-        "city": "Brenton",
-        "state": "District Of Columbia",
-        "zip": 9027,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-02-21T02:19:33 +08:00",
-        "name": "STRALOY",
-        "streetAddress": "207 Elton Street",
-        "city": "Blandburg",
-        "state": "West Virginia",
-        "zip": 1227,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-03-03T07:41:23 +08:00",
-        "name": "COSMETEX",
-        "streetAddress": "309 Ira Court",
-        "city": "Bonanza",
-        "state": "North Dakota",
-        "zip": 8034,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,167.21",
-      "detention": "$1,143.90",
-      "layover": "$2,571.63"
-    }
-  },
-  {
-    "invoiceNumber": 32,
-    "loadNumber": 34,
-    "billTo": {
-      "name": "COMBOT",
-      "streetAddress": "623 Newkirk Placez",
-      "city": "Witmer",
-      "state": " Wisconsin",
-      "zip": 6123
-    },
-    "stops": [
-      {
-        "date": "2015-10-01T04:49:20 +07:00",
-        "name": "FORTEAN",
-        "streetAddress": "648 Rockaway Avenue",
-        "city": "Finzel",
-        "state": "Nevada",
-        "zip": 3482,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-09-24T04:11:39 +07:00",
-        "name": "AMTAS",
-        "streetAddress": "424 Creamer Street",
-        "city": "Newry",
-        "state": "South Carolina",
-        "zip": 727,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,471.33",
-      "detention": "$1,392.42",
-      "layover": "$2,172.10"
-    }
-  },
-  {
-    "invoiceNumber": 38,
-    "loadNumber": 36,
-    "billTo": {
-      "name": "EXERTA",
-      "streetAddress": "419 Brooklyn Avenue",
-      "city": "Toftrees",
-      "state": " Palau",
-      "zip": 4979
-    },
-    "stops": [
-      {
-        "date": "2017-02-19T02:48:40 +08:00",
-        "name": "MINGA",
-        "streetAddress": "507 Imlay Street",
-        "city": "Caroline",
-        "state": "Iowa",
-        "zip": 6227,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-04-17T04:59:29 +07:00",
-        "name": "INSECTUS",
-        "streetAddress": "602 Thatford Avenue",
-        "city": "Iberia",
-        "state": "Ohio",
-        "zip": 4171,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-01-26T01:50:46 +08:00",
-        "name": "FITCORE",
-        "streetAddress": "870 Bayview Place",
-        "city": "Martinez",
-        "state": "Oregon",
-        "zip": 5801,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-06-27T06:04:47 +07:00",
-        "name": "WEBIOTIC",
-        "streetAddress": "693 Hubbard Place",
-        "city": "Catharine",
+        "date": "2015-10-07T02:01:42 +07:00",
+        "name": "ACCUSAGE",
+        "streetAddress": "563 Sumner Place",
+        "city": "Emerald",
         "state": "Vermont",
-        "zip": 3971,
+        "zip": 9720,
         "type": "PICKUP"
       },
       {
-        "date": "2017-12-19T11:05:19 +08:00",
-        "name": "FLEETMIX",
-        "streetAddress": "350 Tilden Avenue",
-        "city": "Rossmore",
-        "state": "Alabama",
-        "zip": 5998,
+        "date": "2014-06-07T12:41:22 +07:00",
+        "name": "DYMI",
+        "streetAddress": "259 Rockwell Place",
+        "city": "Magnolia",
+        "state": "Pennsylvania",
+        "zip": 7282,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,817.35",
+      "detention": "$2,986.66",
+      "layover": "$3,434.10"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a5548a960df1bd28f",
+    "loadNumber": 29,
+    "billTo": {
+      "name": "LIMAGE",
+      "streetAddress": "456 Canda Avenue",
+      "city": "Ladera",
+      "state": " Federated States Of Micronesia",
+      "zip": 9947
+    },
+    "stops": [
+      {
+        "date": "2016-01-22T03:09:31 +08:00",
+        "name": "OZEAN",
+        "streetAddress": "917 Lamont Court",
+        "city": "Haena",
+        "state": "New Jersey",
+        "zip": 6089,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-08-12T11:05:19 +07:00",
+        "name": "GEEKOL",
+        "streetAddress": "793 Meeker Avenue",
+        "city": "Nile",
+        "state": "Iowa",
+        "zip": 1113,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,348.22",
+      "detention": "$1,127.30",
+      "layover": "$1,389.95"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a217702e871ed27e9",
+    "loadNumber": 38,
+    "billTo": {
+      "name": "INQUALA",
+      "streetAddress": "626 Burnett Street",
+      "city": "Crumpler",
+      "state": " Wyoming",
+      "zip": 8270
+    },
+    "stops": [
+      {
+        "date": "2015-02-18T04:29:17 +08:00",
+        "name": "COGNICODE",
+        "streetAddress": "557 Highland Place",
+        "city": "Dargan",
+        "state": "District Of Columbia",
+        "zip": 3690,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-03-20T05:01:11 +07:00",
+        "name": "EARTHWAX",
+        "streetAddress": "718 Dunne Court",
+        "city": "Woodburn",
+        "state": "Colorado",
+        "zip": 5748,
         "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$2,561.47",
-      "detention": "$3,172.12",
-      "layover": "$2,870.92"
+      "rateAmount": "$1,741.45",
+      "detention": "$2,975.46",
+      "layover": "$2,579.40"
     }
   },
   {
-    "invoiceNumber": 40,
+    "invoiceNumber": "5e951a0a557ba24b23785e7f",
+    "loadNumber": 29,
+    "billTo": {
+      "name": "ORBIXTAR",
+      "streetAddress": "104 Heyward Street",
+      "city": "Sunnyside",
+      "state": " West Virginia",
+      "zip": 1690
+    },
+    "stops": [
+      {
+        "date": "2015-06-20T10:11:27 +07:00",
+        "name": "XUMONK",
+        "streetAddress": "887 Hendrickson Street",
+        "city": "Cassel",
+        "state": "California",
+        "zip": 7160,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-04-06T11:46:36 +07:00",
+        "name": "ZYTREX",
+        "streetAddress": "222 Walker Court",
+        "city": "Escondida",
+        "state": "New Mexico",
+        "zip": 4762,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2018-11-28T03:18:21 +08:00",
+        "name": "OVIUM",
+        "streetAddress": "675 Benson Avenue",
+        "city": "Cutter",
+        "state": "North Carolina",
+        "zip": 7429,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-09-28T11:56:29 +07:00",
+        "name": "KYAGORO",
+        "streetAddress": "350 Everit Street",
+        "city": "Bentonville",
+        "state": "Illinois",
+        "zip": 4947,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-06-02T02:02:32 +07:00",
+        "name": "ZOGAK",
+        "streetAddress": "182 Navy Walk",
+        "city": "Ada",
+        "state": "Kentucky",
+        "zip": 5900,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,611.04",
+      "detention": "$3,953.76",
+      "layover": "$1,967.24"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a32cc5c62c100d303",
     "loadNumber": 26,
     "billTo": {
-      "name": "BUZZWORKS",
-      "streetAddress": "305 Jerome Avenue",
-      "city": "Duryea",
-      "state": " Kansas",
-      "zip": 5513
+      "name": "GORGANIC",
+      "streetAddress": "876 Livonia Avenue",
+      "city": "Brutus",
+      "state": " Minnesota",
+      "zip": 2135
     },
     "stops": [
       {
-        "date": "2015-10-29T10:27:58 +07:00",
-        "name": "EXIAND",
-        "streetAddress": "163 Vista Place",
-        "city": "Eastvale",
-        "state": "New York",
-        "zip": 5774,
+        "date": "2017-06-17T05:25:35 +07:00",
+        "name": "ASSURITY",
+        "streetAddress": "222 Just Court",
+        "city": "Crayne",
+        "state": "Connecticut",
+        "zip": 5805,
         "type": "PICKUP"
       },
       {
-        "date": "2015-01-03T12:19:35 +08:00",
-        "name": "BLANET",
-        "streetAddress": "425 Bristol Street",
-        "city": "Harrison",
-        "state": "California",
-        "zip": 241,
-        "type": "PICKUP"
+        "date": "2017-02-25T04:58:11 +08:00",
+        "name": "CIPROMOX",
+        "streetAddress": "942 Ainslie Street",
+        "city": "Edinburg",
+        "state": "Nevada",
+        "zip": 3562,
+        "type": "DELIVERY"
       },
       {
-        "date": "2020-02-08T03:06:09 +08:00",
-        "name": "GEEKMOSIS",
-        "streetAddress": "800 Shale Street",
-        "city": "Norwood",
+        "date": "2018-07-27T07:49:40 +07:00",
+        "name": "TELEPARK",
+        "streetAddress": "159 Gunther Place",
+        "city": "Eggertsville",
+        "state": "South Dakota",
+        "zip": 4869,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-06-24T12:23:27 +07:00",
+        "name": "WAZZU",
+        "streetAddress": "333 Irvington Place",
+        "city": "Jugtown",
         "state": "Rhode Island",
-        "zip": 7584,
+        "zip": 350,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-04-16T08:14:23 +07:00",
+        "name": "COMBOGEN",
+        "streetAddress": "624 Hooper Street",
+        "city": "Healy",
+        "state": "Utah",
+        "zip": 1780,
         "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$1,677.64",
-      "detention": "$1,011.01",
-      "layover": "$2,390.55"
+      "rateAmount": "$1,388.41",
+      "detention": "$3,997.61",
+      "layover": "$2,944.76"
     }
   },
   {
-    "invoiceNumber": 25,
-    "loadNumber": 32,
+    "invoiceNumber": "5e951a0a063ea4461d70209f",
+    "loadNumber": 37,
     "billTo": {
-      "name": "NORSUL",
-      "streetAddress": "612 Louis Place",
-      "city": "Alden",
-      "state": " Minnesota",
-      "zip": 7603
+      "name": "KONGENE",
+      "streetAddress": "252 Thomas Street",
+      "city": "Grahamtown",
+      "state": " Virginia",
+      "zip": 5639
     },
     "stops": [
       {
-        "date": "2016-12-12T06:41:51 +08:00",
-        "name": "PURIA",
-        "streetAddress": "812 Revere Place",
-        "city": "Ogema",
-        "state": "Pennsylvania",
-        "zip": 2740,
-        "type": "PICKUP"
+        "date": "2014-09-25T12:33:13 +07:00",
+        "name": "COMTEST",
+        "streetAddress": "410 Loring Avenue",
+        "city": "Snyderville",
+        "state": "Florida",
+        "zip": 5162,
+        "type": "DELIVERY"
       },
       {
-        "date": "2019-08-28T01:12:13 +07:00",
-        "name": "PETIGEMS",
-        "streetAddress": "651 Manhattan Court",
-        "city": "Noxen",
-        "state": "Colorado",
-        "zip": 8449,
+        "date": "2014-01-11T06:08:54 +08:00",
+        "name": "JASPER",
+        "streetAddress": "135 Cove Lane",
+        "city": "Cascades",
+        "state": "Northern Mariana Islands",
+        "zip": 627,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,039.23",
+      "detention": "$3,485.17",
+      "layover": "$3,516.84"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0afd51ceae43a22f0f",
+    "loadNumber": 28,
+    "billTo": {
+      "name": "PEARLESEX",
+      "streetAddress": "525 Radde Place",
+      "city": "Belvoir",
+      "state": " Palau",
+      "zip": 472
+    },
+    "stops": [
+      {
+        "date": "2019-06-11T02:24:06 +07:00",
+        "name": "AQUAZURE",
+        "streetAddress": "323 Gates Avenue",
+        "city": "Sharon",
+        "state": "South Carolina",
+        "zip": 6302,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2017-08-29T12:42:37 +07:00",
+        "name": "MARTGO",
+        "streetAddress": "517 Bergen Place",
+        "city": "Grill",
+        "state": "Wisconsin",
+        "zip": 1184,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-02-22T12:17:14 +08:00",
+        "name": "YURTURE",
+        "streetAddress": "338 Garnet Street",
+        "city": "Suitland",
+        "state": "Indiana",
+        "zip": 8678,
         "type": "DELIVERY"
       }
     ],
     "balances": {
-      "rateAmount": "$2,311.95",
-      "detention": "$2,943.97",
-      "layover": "$3,251.53"
+      "rateAmount": "$2,302.94",
+      "detention": "$1,039.31",
+      "layover": "$1,931.87"
     }
   },
   {
-    "invoiceNumber": 22,
+    "invoiceNumber": "5e951a0a56224c3c39f28646",
+    "loadNumber": 33,
+    "billTo": {
+      "name": "EXODOC",
+      "streetAddress": "926 Wolcott Street",
+      "city": "Chloride",
+      "state": " Maine",
+      "zip": 1986
+    },
+    "stops": [
+      {
+        "date": "2019-05-08T07:59:07 +07:00",
+        "name": "HINWAY",
+        "streetAddress": "691 Dupont Street",
+        "city": "Ezel",
+        "state": "Washington",
+        "zip": 3574,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-06-23T02:45:19 +07:00",
+        "name": "GEOFORM",
+        "streetAddress": "913 Coleman Street",
+        "city": "Farmers",
+        "state": "Arizona",
+        "zip": 9987,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,544.33",
+      "detention": "$3,172.84",
+      "layover": "$2,712.56"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a0081ec7ba44d9584",
+    "loadNumber": 25,
+    "billTo": {
+      "name": "GLOBOIL",
+      "streetAddress": "252 Wolf Place",
+      "city": "Lindisfarne",
+      "state": " Virgin Islands",
+      "zip": 1866
+    },
+    "stops": [
+      {
+        "date": "2019-08-24T12:46:10 +07:00",
+        "name": "UNIWORLD",
+        "streetAddress": "391 Visitation Place",
+        "city": "Wolcott",
+        "state": "North Dakota",
+        "zip": 3665,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-01-14T02:33:06 +08:00",
+        "name": "ZOLAR",
+        "streetAddress": "428 Friel Place",
+        "city": "Waumandee",
+        "state": "Idaho",
+        "zip": 5043,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-10-22T08:40:34 +07:00",
+        "name": "SLOGANAUT",
+        "streetAddress": "964 Belmont Avenue",
+        "city": "Herald",
+        "state": "Massachusetts",
+        "zip": 562,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-03-19T11:41:59 +07:00",
+        "name": "FRENEX",
+        "streetAddress": "869 Albany Avenue",
+        "city": "Nipinnawasee",
+        "state": "Oregon",
+        "zip": 6629,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,489.30",
+      "detention": "$3,299.95",
+      "layover": "$3,134.06"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a840648e3789be3b5",
+    "loadNumber": 30,
+    "billTo": {
+      "name": "ZYTRAX",
+      "streetAddress": "919 Hunts Lane",
+      "city": "Wildwood",
+      "state": " Kansas",
+      "zip": 6412
+    },
+    "stops": [
+      {
+        "date": "2017-04-25T03:28:33 +07:00",
+        "name": "VERTON",
+        "streetAddress": "970 Branton Street",
+        "city": "Driftwood",
+        "state": "American Samoa",
+        "zip": 4359,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-03-23T11:20:49 +07:00",
+        "name": "COGENTRY",
+        "streetAddress": "728 Dewitt Avenue",
+        "city": "Fedora",
+        "state": "Oklahoma",
+        "zip": 6619,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-07-17T09:46:21 +07:00",
+        "name": "BARKARAMA",
+        "streetAddress": "742 Sullivan Place",
+        "city": "Chelsea",
+        "state": "Nebraska",
+        "zip": 3455,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,531.21",
+      "detention": "$2,197.35",
+      "layover": "$2,810.01"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a85bb0c8652dbc023",
+    "loadNumber": 21,
+    "billTo": {
+      "name": "EVEREST",
+      "streetAddress": "526 Woodrow Court",
+      "city": "Fairhaven",
+      "state": " Marshall Islands",
+      "zip": 7229
+    },
+    "stops": [
+      {
+        "date": "2015-05-19T10:19:51 +07:00",
+        "name": "EWAVES",
+        "streetAddress": "507 Lake Place",
+        "city": "Idamay",
+        "state": "Alaska",
+        "zip": 9430,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-04-26T09:22:05 +07:00",
+        "name": "COMVENE",
+        "streetAddress": "460 Rose Street",
+        "city": "Weeksville",
+        "state": "Michigan",
+        "zip": 6430,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-03-14T07:44:10 +07:00",
+        "name": "DIGIRANG",
+        "streetAddress": "115 Roosevelt Court",
+        "city": "Titanic",
+        "state": "Mississippi",
+        "zip": 5974,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-12-13T08:33:48 +08:00",
+        "name": "ZILENCIO",
+        "streetAddress": "945 Monitor Street",
+        "city": "Websterville",
+        "state": "New Hampshire",
+        "zip": 183,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-08-27T01:38:30 +07:00",
+        "name": "MEMORA",
+        "streetAddress": "256 Winthrop Street",
+        "city": "Loomis",
+        "state": "Delaware",
+        "zip": 2780,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,518.38",
+      "detention": "$2,629.30",
+      "layover": "$3,491.27"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a25e79890a4225548",
     "loadNumber": 36,
     "billTo": {
-      "name": "PHOLIO",
-      "streetAddress": "708 Howard Place",
-      "city": "Beaulieu",
-      "state": " Idaho",
-      "zip": 6046
+      "name": "PRINTSPAN",
+      "streetAddress": "207 Ryder Street",
+      "city": "Kirk",
+      "state": " Georgia",
+      "zip": 5139
     },
     "stops": [
       {
-        "date": "2015-10-14T12:21:47 +07:00",
-        "name": "IMAGINART",
-        "streetAddress": "475 Caton Avenue",
-        "city": "Cliffside",
-        "state": "Utah",
-        "zip": 2112,
+        "date": "2016-09-01T01:11:30 +07:00",
+        "name": "EDECINE",
+        "streetAddress": "736 Fay Court",
+        "city": "Beason",
+        "state": "Guam",
+        "zip": 185,
         "type": "DELIVERY"
       },
       {
-        "date": "2017-05-30T04:34:47 +07:00",
-        "name": "PORTICO",
-        "streetAddress": "981 Dare Court",
-        "city": "Cherokee",
-        "state": "Florida",
-        "zip": 5573,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-10-11T05:21:44 +07:00",
-        "name": "ELENTRIX",
-        "streetAddress": "628 Hudson Avenue",
-        "city": "Urie",
-        "state": "Delaware",
-        "zip": 5582,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-04-02T04:19:06 +07:00",
-        "name": "CENTURIA",
-        "streetAddress": "279 Nichols Avenue",
-        "city": "Worton",
-        "state": "Texas",
-        "zip": 3973,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-05-06T02:10:37 +07:00",
-        "name": "CALCU",
-        "streetAddress": "146 Hoyt Street",
-        "city": "Swartzville",
-        "state": "Nebraska",
-        "zip": 1618,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,791.50",
-      "detention": "$3,770.68",
-      "layover": "$3,326.63"
-    }
-  },
-  {
-    "invoiceNumber": 30,
-    "loadNumber": 27,
-    "billTo": {
-      "name": "SIGNIDYNE",
-      "streetAddress": "822 Moffat Street",
-      "city": "Interlochen",
-      "state": " Guam",
-      "zip": 240
-    },
-    "stops": [
-      {
-        "date": "2014-03-16T09:39:07 +07:00",
-        "name": "PODUNK",
-        "streetAddress": "633 Irving Place",
-        "city": "Westwood",
-        "state": "South Dakota",
-        "zip": 7981,
+        "date": "2017-09-23T08:44:36 +07:00",
+        "name": "SONGLINES",
+        "streetAddress": "693 Arlington Avenue",
+        "city": "Wollochet",
+        "state": "Ohio",
+        "zip": 6975,
         "type": "PICKUP"
       },
       {
-        "date": "2016-01-23T09:59:41 +08:00",
-        "name": "QUAREX",
-        "streetAddress": "277 Kosciusko Street",
-        "city": "Sultana",
-        "state": "Tennessee",
-        "zip": 2292,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,391.06",
-      "detention": "$3,065.44",
-      "layover": "$1,269.51"
-    }
-  },
-  {
-    "invoiceNumber": 37,
-    "loadNumber": 31,
-    "billTo": {
-      "name": "KAGGLE",
-      "streetAddress": "741 Blake Avenue",
-      "city": "Rockingham",
-      "state": " Mississippi",
-      "zip": 6007
-    },
-    "stops": [
-      {
-        "date": "2017-11-21T05:50:03 +08:00",
-        "name": "QUILCH",
-        "streetAddress": "932 Bliss Terrace",
-        "city": "Laurelton",
-        "state": "Indiana",
-        "zip": 2634,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-12-29T06:35:01 +08:00",
-        "name": "STRALUM",
-        "streetAddress": "171 Clarkson Avenue",
-        "city": "Freelandville",
-        "state": "Kentucky",
-        "zip": 6740,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,024.42",
-      "detention": "$2,816.27",
-      "layover": "$2,822.14"
-    }
-  },
-  {
-    "invoiceNumber": 26,
-    "loadNumber": 27,
-    "billTo": {
-      "name": "GEEKETRON",
-      "streetAddress": "376 Garnet Street",
-      "city": "Nescatunga",
-      "state": " Marshall Islands",
-      "zip": 7884
-    },
-    "stops": [
-      {
-        "date": "2019-06-30T05:48:39 +07:00",
-        "name": "KNOWLYSIS",
-        "streetAddress": "387 Hart Place",
-        "city": "Yukon",
-        "state": "North Carolina",
-        "zip": 8990,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-12-18T11:22:25 +08:00",
-        "name": "FRENEX",
-        "streetAddress": "516 Centre Street",
-        "city": "Stouchsburg",
-        "state": "Oklahoma",
-        "zip": 6384,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2019-02-13T01:21:56 +08:00",
-        "name": "PHARMACON",
-        "streetAddress": "718 Beayer Place",
-        "city": "Cumberland",
-        "state": "New Hampshire",
-        "zip": 6550,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-12-14T06:50:58 +08:00",
-        "name": "KEGULAR",
-        "streetAddress": "682 Boardwalk ",
-        "city": "Nile",
-        "state": "Louisiana",
-        "zip": 8542,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2014-10-12T03:43:16 +07:00",
-        "name": "ZILIDIUM",
-        "streetAddress": "262 Herkimer Court",
-        "city": "Ladera",
-        "state": "Maine",
-        "zip": 6196,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,927.60",
-      "detention": "$2,941.77",
-      "layover": "$1,871.11"
-    }
-  },
-  {
-    "invoiceNumber": 37,
-    "loadNumber": 33,
-    "billTo": {
-      "name": "HINWAY",
-      "streetAddress": "137 Elizabeth Place",
-      "city": "Dalton",
-      "state": " Northern Mariana Islands",
-      "zip": 4111
-    },
-    "stops": [
-      {
-        "date": "2019-03-26T07:37:56 +07:00",
-        "name": "NUTRALAB",
-        "streetAddress": "503 Jodie Court",
-        "city": "Starks",
-        "state": "American Samoa",
-        "zip": 1155,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2016-01-26T03:34:41 +08:00",
-        "name": "GAPTEC",
-        "streetAddress": "787 Knight Court",
-        "city": "Convent",
-        "state": "Massachusetts",
-        "zip": 3425,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2017-03-13T04:13:34 +07:00",
-        "name": "OPTICON",
-        "streetAddress": "700 Bowne Street",
-        "city": "Shaft",
-        "state": "Puerto Rico",
-        "zip": 1768,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-10-10T01:30:26 +07:00",
-        "name": "PYRAMAX",
-        "streetAddress": "481 Arlington Place",
-        "city": "Hondah",
-        "state": "Connecticut",
-        "zip": 8666,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,617.75",
-      "detention": "$2,014.46",
-      "layover": "$3,508.39"
-    }
-  },
-  {
-    "invoiceNumber": 35,
-    "loadNumber": 23,
-    "billTo": {
-      "name": "EQUITOX",
-      "streetAddress": "233 Oakland Place",
-      "city": "Garnet",
-      "state": " Arkansas",
-      "zip": 1049
-    },
-    "stops": [
-      {
-        "date": "2019-11-04T03:49:55 +08:00",
-        "name": "UNCORP",
-        "streetAddress": "533 Hazel Court",
-        "city": "Deseret",
-        "state": "Virgin Islands",
-        "zip": 2251,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2015-04-04T05:03:41 +07:00",
-        "name": "RONBERT",
-        "streetAddress": "906 Hope Street",
-        "city": "Sperryville",
-        "state": "Maryland",
-        "zip": 4613,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$2,197.76",
-      "detention": "$1,657.23",
-      "layover": "$1,690.35"
-    }
-  },
-  {
-    "invoiceNumber": 33,
-    "loadNumber": 33,
-    "billTo": {
-      "name": "WARETEL",
-      "streetAddress": "140 Vanderveer Street",
-      "city": "Navarre",
-      "state": " Missouri",
-      "zip": 9519
-    },
-    "stops": [
-      {
-        "date": "2016-03-23T09:23:33 +07:00",
-        "name": "IRACK",
-        "streetAddress": "328 Strauss Street",
-        "city": "Remington",
+        "date": "2019-07-09T06:01:50 +07:00",
+        "name": "OLUCORE",
+        "streetAddress": "323 Clarkson Avenue",
+        "city": "Retsof",
         "state": "Hawaii",
-        "zip": 9942,
+        "zip": 2952,
         "type": "PICKUP"
       },
       {
-        "date": "2019-01-14T03:27:13 +08:00",
-        "name": "ZIORE",
-        "streetAddress": "207 Lawrence Avenue",
-        "city": "Delshire",
-        "state": "Arizona",
-        "zip": 5206,
+        "date": "2015-08-21T04:43:10 +07:00",
+        "name": "COMTRAIL",
+        "streetAddress": "717 Ridgecrest Terrace",
+        "city": "Blue",
+        "state": "Missouri",
+        "zip": 8041,
         "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$2,837.91",
-      "detention": "$2,387.25",
-      "layover": "$2,897.82"
+      "rateAmount": "$1,999.71",
+      "detention": "$2,133.57",
+      "layover": "$2,881.07"
     }
   },
   {
-    "invoiceNumber": 31,
+    "invoiceNumber": "5e951a0a0ea7bac9048aea8d",
+    "loadNumber": 26,
+    "billTo": {
+      "name": "ISOPLEX",
+      "streetAddress": "928 Melrose Street",
+      "city": "Springville",
+      "state": " Tennessee",
+      "zip": 2016
+    },
+    "stops": [
+      {
+        "date": "2015-12-01T05:55:34 +08:00",
+        "name": "THREDZ",
+        "streetAddress": "671 Coleridge Street",
+        "city": "Laurelton",
+        "state": "Texas",
+        "zip": 2068,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-12-01T01:21:15 +08:00",
+        "name": "SUREMAX",
+        "streetAddress": "523 Ditmas Avenue",
+        "city": "Bethany",
+        "state": "Puerto Rico",
+        "zip": 993,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-04-08T12:57:28 +07:00",
+        "name": "HALAP",
+        "streetAddress": "897 Nelson Street",
+        "city": "Blanco",
+        "state": "Arkansas",
+        "zip": 7701,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-03-23T06:17:40 +07:00",
+        "name": "COLAIRE",
+        "streetAddress": "696 Withers Street",
+        "city": "Outlook",
+        "state": "Montana",
+        "zip": 1271,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2016-10-14T10:50:03 +07:00",
+        "name": "IZZBY",
+        "streetAddress": "673 Kenilworth Place",
+        "city": "Greenfields",
+        "state": "Louisiana",
+        "zip": 7166,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,556.33",
+      "detention": "$1,586.62",
+      "layover": "$2,575.45"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a466f7535ac580180",
     "loadNumber": 35,
     "billTo": {
-      "name": "ECLIPTO",
-      "streetAddress": "531 Bryant Street",
-      "city": "Ellerslie",
-      "state": " Federated States Of Micronesia",
-      "zip": 655
+      "name": "OBONES",
+      "streetAddress": "610 Oakland Place",
+      "city": "Jennings",
+      "state": " Alabama",
+      "zip": 6522
     },
     "stops": [
       {
-        "date": "2016-11-17T08:10:14 +08:00",
-        "name": "APEX",
-        "streetAddress": "599 Montana Place",
-        "city": "Westerville",
-        "state": "Michigan",
-        "zip": 1313,
+        "date": "2015-08-19T12:10:29 +07:00",
+        "name": "PREMIANT",
+        "streetAddress": "853 Powers Street",
+        "city": "Abrams",
+        "state": "Maryland",
+        "zip": 398,
         "type": "DELIVERY"
       },
       {
-        "date": "2014-03-30T02:53:18 +07:00",
-        "name": "AVENETRO",
-        "streetAddress": "570 Duffield Street",
-        "city": "Chautauqua",
-        "state": "Alaska",
-        "zip": 1596,
+        "date": "2018-11-07T07:40:18 +08:00",
+        "name": "SOFTMICRO",
+        "streetAddress": "978 Christopher Avenue",
+        "city": "Lithium",
+        "state": "Vermont",
+        "zip": 9279,
         "type": "DELIVERY"
       }
     ],
     "balances": {
-      "rateAmount": "$1,374.97",
-      "detention": "$3,156.81",
-      "layover": "$3,701.89"
+      "rateAmount": "$3,295.94",
+      "detention": "$3,830.83",
+      "layover": "$3,563.15"
     }
   },
   {
-    "invoiceNumber": 37,
-    "loadNumber": 34,
+    "invoiceNumber": "5e951a0a375f8c8abc033fa9",
+    "loadNumber": 20,
     "billTo": {
-      "name": "EQUITAX",
-      "streetAddress": "975 Bayard Street",
-      "city": "Concho",
-      "state": " New Jersey",
-      "zip": 8812
+      "name": "ENTHAZE",
+      "streetAddress": "578 Dewey Place",
+      "city": "Cliff",
+      "state": " Pennsylvania",
+      "zip": 3979
     },
     "stops": [
       {
-        "date": "2014-03-20T04:47:07 +07:00",
-        "name": "KRAG",
-        "streetAddress": "429 Monroe Place",
-        "city": "Beason",
-        "state": "Virginia",
-        "zip": 7600,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-08-18T05:14:26 +07:00",
-        "name": "LYRIA",
-        "streetAddress": "676 Miller Avenue",
-        "city": "Marne",
-        "state": "Montana",
-        "zip": 2727,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-04-06T01:08:30 +07:00",
-        "name": "QUONATA",
-        "streetAddress": "754 Georgia Avenue",
-        "city": "Nelson",
-        "state": "Illinois",
-        "zip": 2902,
+        "date": "2020-02-25T03:47:25 +08:00",
+        "name": "QABOOS",
+        "streetAddress": "918 Beaver Street",
+        "city": "Berwind",
+        "state": "Federated States Of Micronesia",
+        "zip": 1709,
         "type": "DELIVERY"
       },
       {
-        "date": "2018-01-02T06:54:07 +08:00",
-        "name": "BICOL",
-        "streetAddress": "573 Aster Court",
-        "city": "Leming",
-        "state": "Wyoming",
-        "zip": 6221,
+        "date": "2016-07-27T10:16:40 +07:00",
+        "name": "JUNIPOOR",
+        "streetAddress": "807 Anthony Street",
+        "city": "Riviera",
+        "state": "New Jersey",
+        "zip": 1534,
         "type": "PICKUP"
       },
       {
-        "date": "2018-11-28T11:57:20 +08:00",
-        "name": "GEEKWAGON",
-        "streetAddress": "702 Roosevelt Court",
-        "city": "Stewartville",
-        "state": "Georgia",
-        "zip": 5094,
+        "date": "2018-03-20T11:41:09 +07:00",
+        "name": "CYTREK",
+        "streetAddress": "931 Seagate Terrace",
+        "city": "Sanders",
+        "state": "Iowa",
+        "zip": 7558,
         "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$1,443.96",
-      "detention": "$1,830.37",
-      "layover": "$1,916.88"
+      "rateAmount": "$2,851.14",
+      "detention": "$1,242.98",
+      "layover": "$2,035.83"
     }
   },
   {
-    "invoiceNumber": 37,
-    "loadNumber": 31,
-    "billTo": {
-      "name": "SNIPS",
-      "streetAddress": "779 Branton Street",
-      "city": "Dowling",
-      "state": " Washington",
-      "zip": 7035
-    },
-    "stops": [
-      {
-        "date": "2014-04-11T10:05:41 +07:00",
-        "name": "ULTRIMAX",
-        "streetAddress": "910 Madoc Avenue",
-        "city": "Terlingua",
-        "state": "District Of Columbia",
-        "zip": 4740,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-11-28T12:47:24 +08:00",
-        "name": "DAIDO",
-        "streetAddress": "506 Tapscott Street",
-        "city": "Neahkahnie",
-        "state": "West Virginia",
-        "zip": 8212,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2018-08-03T06:09:51 +07:00",
-        "name": "AUTOMON",
-        "streetAddress": "713 Kingsway Place",
-        "city": "Rew",
-        "state": "North Dakota",
-        "zip": 9492,
-        "type": "PICKUP"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$3,480.32",
-      "detention": "$1,112.55",
-      "layover": "$1,859.55"
-    }
-  },
-  {
-    "invoiceNumber": 27,
+    "invoiceNumber": "5e951a0a29049971d7116782",
     "loadNumber": 40,
     "billTo": {
-      "name": "FARMEX",
-      "streetAddress": "322 Keen Court",
-      "city": "Southmont",
-      "state": " Wisconsin",
-      "zip": 2545
+      "name": "CUBIX",
+      "streetAddress": "758 Bassett Avenue",
+      "city": "Golconda",
+      "state": " Wyoming",
+      "zip": 1255
     },
     "stops": [
       {
-        "date": "2014-09-17T11:42:38 +07:00",
-        "name": "BUGSALL",
-        "streetAddress": "365 Quentin Street",
-        "city": "Fairforest",
-        "state": "Nevada",
-        "zip": 3964,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-10-13T06:36:29 +07:00",
-        "name": "FUTURIZE",
-        "streetAddress": "220 President Street",
-        "city": "Harrodsburg",
-        "state": "South Carolina",
-        "zip": 223,
+        "date": "2017-12-23T10:08:40 +08:00",
+        "name": "DEEPENDS",
+        "streetAddress": "442 Nevins Street",
+        "city": "Clarksburg",
+        "state": "District Of Columbia",
+        "zip": 8132,
         "type": "DELIVERY"
       },
       {
-        "date": "2016-03-07T04:32:01 +08:00",
-        "name": "DUOFLEX",
-        "streetAddress": "322 Allen Avenue",
-        "city": "Cotopaxi",
-        "state": "Palau",
-        "zip": 7728,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,979.88",
-      "detention": "$3,764.99",
-      "layover": "$2,346.49"
-    }
-  },
-  {
-    "invoiceNumber": 20,
-    "loadNumber": 27,
-    "billTo": {
-      "name": "KINETICUT",
-      "streetAddress": "979 Dodworth Street",
-      "city": "Curtice",
-      "state": " Iowa",
-      "zip": 4854
-    },
-    "stops": [
-      {
-        "date": "2014-12-04T03:09:33 +08:00",
-        "name": "ZENCO",
-        "streetAddress": "842 Hoyts Lane",
-        "city": "Steinhatchee",
-        "state": "Ohio",
-        "zip": 7218,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2015-09-24T08:29:51 +07:00",
-        "name": "EARGO",
-        "streetAddress": "542 Madeline Court",
-        "city": "Lowell",
-        "state": "Oregon",
-        "zip": 4856,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2016-11-25T08:32:37 +08:00",
-        "name": "SENMEI",
-        "streetAddress": "112 Herbert Street",
-        "city": "Jardine",
-        "state": "Vermont",
-        "zip": 8456,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2017-09-09T03:14:59 +07:00",
-        "name": "ZILLAR",
-        "streetAddress": "376 Rose Street",
-        "city": "Nash",
-        "state": "Alabama",
-        "zip": 8552,
-        "type": "DELIVERY"
-      }
-    ],
-    "balances": {
-      "rateAmount": "$1,896.56",
-      "detention": "$3,586.99",
-      "layover": "$2,819.99"
-    }
-  },
-  {
-    "invoiceNumber": 20,
-    "loadNumber": 34,
-    "billTo": {
-      "name": "GRONK",
-      "streetAddress": "871 Nixon Court",
-      "city": "Buxton",
-      "state": " Kansas",
-      "zip": 4403
-    },
-    "stops": [
-      {
-        "date": "2018-11-10T09:48:08 +08:00",
-        "name": "DOGNOST",
-        "streetAddress": "808 Kermit Place",
-        "city": "Chase",
-        "state": "New York",
-        "zip": 3131,
+        "date": "2015-08-24T09:12:16 +07:00",
+        "name": "FURNAFIX",
+        "streetAddress": "568 Beaumont Street",
+        "city": "Barrelville",
+        "state": "Colorado",
+        "zip": 1507,
         "type": "DELIVERY"
       },
       {
-        "date": "2019-04-21T09:11:34 +07:00",
-        "name": "KATAKANA",
-        "streetAddress": "102 Ross Street",
-        "city": "Kenwood",
+        "date": "2020-01-13T04:59:16 +08:00",
+        "name": "WRAPTURE",
+        "streetAddress": "117 Poplar Street",
+        "city": "Stonybrook",
+        "state": "West Virginia",
+        "zip": 9697,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-10-18T02:23:15 +07:00",
+        "name": "UTARIAN",
+        "streetAddress": "182 Ovington Court",
+        "city": "Hendersonville",
         "state": "California",
-        "zip": 6606,
+        "zip": 6105,
         "type": "DELIVERY"
-      },
-      {
-        "date": "2019-11-21T03:11:58 +08:00",
-        "name": "ROUGHIES",
-        "streetAddress": "896 Oceanview Avenue",
-        "city": "Shawmut",
-        "state": "Rhode Island",
-        "zip": 2706,
-        "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$2,031.73",
-      "detention": "$1,532.81",
-      "layover": "$2,850.17"
+      "rateAmount": "$3,180.10",
+      "detention": "$3,392.22",
+      "layover": "$3,543.67"
     }
   },
   {
-    "invoiceNumber": 30,
+    "invoiceNumber": "5e951a0a52061735010b6bc7",
     "loadNumber": 35,
     "billTo": {
-      "name": "POWERNET",
-      "streetAddress": "715 Mill Lane",
-      "city": "Villarreal",
-      "state": " Minnesota",
-      "zip": 2033
+      "name": "ATOMICA",
+      "streetAddress": "172 Onderdonk Avenue",
+      "city": "Osage",
+      "state": " New Mexico",
+      "zip": 511
     },
     "stops": [
       {
-        "date": "2019-12-15T09:09:15 +08:00",
-        "name": "SULTRAXIN",
-        "streetAddress": "316 Vanderveer Place",
-        "city": "Stewart",
-        "state": "Pennsylvania",
-        "zip": 7991,
+        "date": "2019-04-08T11:38:25 +07:00",
+        "name": "ZENTRY",
+        "streetAddress": "990 Junius Street",
+        "city": "Worton",
+        "state": "North Carolina",
+        "zip": 2664,
         "type": "PICKUP"
       },
       {
-        "date": "2017-10-14T04:50:52 +07:00",
-        "name": "KROG",
-        "streetAddress": "432 Coleman Street",
-        "city": "Holcombe",
-        "state": "Colorado",
-        "zip": 8553,
+        "date": "2014-10-31T01:41:16 +07:00",
+        "name": "KRAG",
+        "streetAddress": "143 Post Court",
+        "city": "Dixie",
+        "state": "Illinois",
+        "zip": 9472,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,476.64",
+      "detention": "$1,141.19",
+      "layover": "$1,462.87"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a81fb0b140f3f2d93",
+    "loadNumber": 30,
+    "billTo": {
+      "name": "NIPAZ",
+      "streetAddress": "505 Louisiana Avenue",
+      "city": "Wheatfields",
+      "state": " Kentucky",
+      "zip": 9140
+    },
+    "stops": [
+      {
+        "date": "2017-08-26T07:30:05 +07:00",
+        "name": "UNQ",
+        "streetAddress": "672 Boardwalk ",
+        "city": "Geyserville",
+        "state": "Minnesota",
+        "zip": 824,
         "type": "PICKUP"
       },
       {
-        "date": "2018-11-18T01:02:50 +08:00",
-        "name": "XIIX",
-        "streetAddress": "549 Everett Avenue",
-        "city": "Ypsilanti",
-        "state": "Idaho",
-        "zip": 4568,
+        "date": "2018-07-19T08:07:55 +07:00",
+        "name": "FORTEAN",
+        "streetAddress": "407 Neptune Avenue",
+        "city": "Whipholt",
+        "state": "Connecticut",
+        "zip": 5934,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-07-04T08:49:13 +07:00",
+        "name": "AQUACINE",
+        "streetAddress": "448 Royce Street",
+        "city": "Morningside",
+        "state": "Nevada",
+        "zip": 8508,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-06-11T04:00:34 +07:00",
+        "name": "VORTEXACO",
+        "streetAddress": "495 Montrose Avenue",
+        "city": "Henrietta",
+        "state": "South Dakota",
+        "zip": 7899,
         "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$3,073.38",
-      "detention": "$1,368.12",
-      "layover": "$1,289.36"
+      "rateAmount": "$1,723.80",
+      "detention": "$2,662.04",
+      "layover": "$2,574.23"
     }
   },
   {
-    "invoiceNumber": 28,
+    "invoiceNumber": "5e951a0a9ca15956765fdedc",
+    "loadNumber": 22,
+    "billTo": {
+      "name": "ORBIFLEX",
+      "streetAddress": "142 Columbia Street",
+      "city": "Brambleton",
+      "state": " Rhode Island",
+      "zip": 1933
+    },
+    "stops": [
+      {
+        "date": "2017-10-15T11:41:25 +07:00",
+        "name": "MAGNEMO",
+        "streetAddress": "294 Times Placez",
+        "city": "Cornfields",
+        "state": "Utah",
+        "zip": 1282,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-08-18T08:27:04 +07:00",
+        "name": "CABLAM",
+        "streetAddress": "432 Brooklyn Road",
+        "city": "Cecilia",
+        "state": "Virginia",
+        "zip": 2669,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,858.10",
+      "detention": "$1,897.27",
+      "layover": "$1,381.65"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0acc62f62955a75694",
+    "loadNumber": 21,
+    "billTo": {
+      "name": "COMVEYER",
+      "streetAddress": "236 Gotham Avenue",
+      "city": "Kiskimere",
+      "state": " Florida",
+      "zip": 1371
+    },
+    "stops": [
+      {
+        "date": "2018-11-27T02:13:42 +08:00",
+        "name": "CEDWARD",
+        "streetAddress": "590 Concord Street",
+        "city": "Yettem",
+        "state": "Northern Mariana Islands",
+        "zip": 5286,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-03-17T02:56:19 +07:00",
+        "name": "NEUROCELL",
+        "streetAddress": "224 Veronica Place",
+        "city": "Holtville",
+        "state": "Palau",
+        "zip": 1877,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-06-15T04:46:34 +07:00",
+        "name": "QUARMONY",
+        "streetAddress": "459 Gold Street",
+        "city": "Ribera",
+        "state": "South Carolina",
+        "zip": 7334,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,983.86",
+      "detention": "$3,321.81",
+      "layover": "$1,311.56"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0ac1bd9bf806ddcd16",
+    "loadNumber": 33,
+    "billTo": {
+      "name": "COMCUBINE",
+      "streetAddress": "901 Bogart Street",
+      "city": "Herbster",
+      "state": " Wisconsin",
+      "zip": 1569
+    },
+    "stops": [
+      {
+        "date": "2019-08-18T02:54:02 +07:00",
+        "name": "LIQUICOM",
+        "streetAddress": "712 Creamer Street",
+        "city": "Homeworth",
+        "state": "Indiana",
+        "zip": 5064,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2018-05-05T02:08:07 +07:00",
+        "name": "COMTOUR",
+        "streetAddress": "513 Bedford Avenue",
+        "city": "Inkerman",
+        "state": "Maine",
+        "zip": 4553,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,336.71",
+      "detention": "$3,229.26",
+      "layover": "$3,094.86"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0abd024237125982c2",
+    "loadNumber": 32,
+    "billTo": {
+      "name": "COMSTRUCT",
+      "streetAddress": "608 Bowne Street",
+      "city": "Gadsden",
+      "state": " Washington",
+      "zip": 5188
+    },
+    "stops": [
+      {
+        "date": "2017-01-09T10:38:50 +08:00",
+        "name": "NEWCUBE",
+        "streetAddress": "854 Bedell Lane",
+        "city": "Moquino",
+        "state": "Arizona",
+        "zip": 8028,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-08-06T12:17:46 +07:00",
+        "name": "BICOL",
+        "streetAddress": "791 Willow Street",
+        "city": "Hobucken",
+        "state": "Virgin Islands",
+        "zip": 5574,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,997.68",
+      "detention": "$2,561.76",
+      "layover": "$1,020.54"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a3043f1e4d8ec9e74",
+    "loadNumber": 23,
+    "billTo": {
+      "name": "VOLAX",
+      "streetAddress": "325 Montgomery Street",
+      "city": "Allendale",
+      "state": " North Dakota",
+      "zip": 6498
+    },
+    "stops": [
+      {
+        "date": "2019-05-31T09:15:59 +07:00",
+        "name": "UNEEQ",
+        "streetAddress": "764 Forest Place",
+        "city": "Stevens",
+        "state": "Idaho",
+        "zip": 4446,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-04-29T04:08:12 +07:00",
+        "name": "PLASTO",
+        "streetAddress": "157 Paerdegat Avenue",
+        "city": "Tetherow",
+        "state": "Massachusetts",
+        "zip": 7445,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-05-09T01:13:28 +07:00",
+        "name": "GENMEX",
+        "streetAddress": "327 Olive Street",
+        "city": "Bowden",
+        "state": "Oregon",
+        "zip": 2427,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,633.92",
+      "detention": "$1,018.23",
+      "layover": "$3,479.45"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a86e0f7f511e8582e",
+    "loadNumber": 20,
+    "billTo": {
+      "name": "EXTRAWEAR",
+      "streetAddress": "219 Kane Place",
+      "city": "Katonah",
+      "state": " Kansas",
+      "zip": 6601
+    },
+    "stops": [
+      {
+        "date": "2016-04-03T11:45:12 +07:00",
+        "name": "ACLIMA",
+        "streetAddress": "173 Midwood Street",
+        "city": "Russellville",
+        "state": "American Samoa",
+        "zip": 475,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-03-23T08:32:26 +07:00",
+        "name": "BILLMED",
+        "streetAddress": "940 Linden Street",
+        "city": "Bowmansville",
+        "state": "Oklahoma",
+        "zip": 3502,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-11-18T06:32:45 +08:00",
+        "name": "DELPHIDE",
+        "streetAddress": "750 Court Square",
+        "city": "Bakersville",
+        "state": "Nebraska",
+        "zip": 2639,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-02-28T10:27:37 +08:00",
+        "name": "PYRAMIS",
+        "streetAddress": "606 Prescott Place",
+        "city": "Ferney",
+        "state": "Marshall Islands",
+        "zip": 7616,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-04-25T04:51:52 +07:00",
+        "name": "MANGELICA",
+        "streetAddress": "255 Halsey Street",
+        "city": "Kula",
+        "state": "Alaska",
+        "zip": 9941,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,143.34",
+      "detention": "$3,491.07",
+      "layover": "$1,789.29"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0aca1b1eac2af2736c",
+    "loadNumber": 30,
+    "billTo": {
+      "name": "LYRICHORD",
+      "streetAddress": "709 Kossuth Place",
+      "city": "Glasgow",
+      "state": " Michigan",
+      "zip": 9005
+    },
+    "stops": [
+      {
+        "date": "2019-06-25T11:27:16 +07:00",
+        "name": "ILLUMITY",
+        "streetAddress": "445 Reeve Place",
+        "city": "Fruitdale",
+        "state": "Mississippi",
+        "zip": 9990,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-03-07T08:25:36 +08:00",
+        "name": "ZUVY",
+        "streetAddress": "740 Regent Place",
+        "city": "Newcastle",
+        "state": "New Hampshire",
+        "zip": 6045,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-01-21T12:24:41 +08:00",
+        "name": "ISOLOGICS",
+        "streetAddress": "780 Beach Place",
+        "city": "Lewis",
+        "state": "Delaware",
+        "zip": 2085,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,593.23",
+      "detention": "$3,919.32",
+      "layover": "$3,962.03"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a4582515a36ad41e1",
+    "loadNumber": 29,
+    "billTo": {
+      "name": "TALKALOT",
+      "streetAddress": "531 Hazel Court",
+      "city": "Gambrills",
+      "state": " Georgia",
+      "zip": 7804
+    },
+    "stops": [
+      {
+        "date": "2014-02-08T09:23:53 +08:00",
+        "name": "NAVIR",
+        "streetAddress": "215 Mersereau Court",
+        "city": "Rivereno",
+        "state": "Guam",
+        "zip": 4189,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-03-01T04:05:21 +08:00",
+        "name": "VETRON",
+        "streetAddress": "403 Homecrest Court",
+        "city": "Mahtowa",
+        "state": "Ohio",
+        "zip": 2792,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-06-07T10:01:48 +07:00",
+        "name": "KAGGLE",
+        "streetAddress": "303 Driggs Avenue",
+        "city": "Vallonia",
+        "state": "Hawaii",
+        "zip": 8254,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,980.06",
+      "detention": "$3,384.34",
+      "layover": "$1,928.79"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a31a7ebdfef006283",
     "loadNumber": 26,
     "billTo": {
-      "name": "KAGE",
-      "streetAddress": "186 Llama Court",
-      "city": "Brady",
-      "state": " Utah",
-      "zip": 5023
+      "name": "MUSIX",
+      "streetAddress": "897 Heath Place",
+      "city": "Waterloo",
+      "state": " Missouri",
+      "zip": 2302
     },
     "stops": [
       {
-        "date": "2019-11-03T06:33:31 +08:00",
-        "name": "GEEKULAR",
-        "streetAddress": "620 Pineapple Street",
-        "city": "Carbonville",
-        "state": "Florida",
-        "zip": 1060,
+        "date": "2018-11-14T03:23:38 +08:00",
+        "name": "SUPREMIA",
+        "streetAddress": "287 Otsego Street",
+        "city": "Gibsonia",
+        "state": "Tennessee",
+        "zip": 6096,
         "type": "PICKUP"
       },
       {
-        "date": "2014-05-23T01:41:37 +07:00",
-        "name": "ACCIDENCY",
-        "streetAddress": "173 Bragg Court",
-        "city": "Waikele",
-        "state": "Delaware",
-        "zip": 2478,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2017-07-16T05:57:52 +07:00",
-        "name": "ARCHITAX",
-        "streetAddress": "676 Frank Court",
-        "city": "Manchester",
+        "date": "2018-05-19T03:29:57 +07:00",
+        "name": "ENTROFLEX",
+        "streetAddress": "526 Bleecker Street",
+        "city": "Bradenville",
         "state": "Texas",
-        "zip": 3969,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-08-14T09:08:28 +07:00",
-        "name": "NAXDIS",
-        "streetAddress": "888 Townsend Street",
-        "city": "Cleary",
-        "state": "Nebraska",
-        "zip": 3133,
+        "zip": 3625,
         "type": "DELIVERY"
       },
       {
-        "date": "2017-10-20T04:23:58 +07:00",
-        "name": "TERSANKI",
-        "streetAddress": "297 Crown Street",
-        "city": "Gracey",
-        "state": "Guam",
-        "zip": 7236,
+        "date": "2014-04-24T02:34:23 +07:00",
+        "name": "JAMNATION",
+        "streetAddress": "683 Hinsdale Street",
+        "city": "Joes",
+        "state": "Puerto Rico",
+        "zip": 2351,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-11-01T09:55:58 +07:00",
+        "name": "OCEANICA",
+        "streetAddress": "318 Bouck Court",
+        "city": "Dunnavant",
+        "state": "Arkansas",
+        "zip": 5187,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-05-14T01:30:38 +07:00",
+        "name": "ANDRYX",
+        "streetAddress": "927 Chester Avenue",
+        "city": "Foxworth",
+        "state": "Montana",
+        "zip": 5292,
         "type": "DELIVERY"
       }
     ],
     "balances": {
-      "rateAmount": "$2,915.46",
-      "detention": "$1,253.71",
-      "layover": "$2,876.64"
+      "rateAmount": "$1,059.18",
+      "detention": "$1,082.53",
+      "layover": "$2,145.26"
     }
   },
   {
-    "invoiceNumber": 24,
+    "invoiceNumber": "5e951a0ad982af4e205b1c9a",
+    "loadNumber": 26,
+    "billTo": {
+      "name": "MULTRON",
+      "streetAddress": "904 Tehama Street",
+      "city": "Elbert",
+      "state": " Louisiana",
+      "zip": 663
+    },
+    "stops": [
+      {
+        "date": "2014-06-19T02:53:09 +07:00",
+        "name": "ZEROLOGY",
+        "streetAddress": "531 Anna Court",
+        "city": "Kanauga",
+        "state": "Alabama",
+        "zip": 6625,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-02-21T01:22:13 +08:00",
+        "name": "MARVANE",
+        "streetAddress": "703 Orient Avenue",
+        "city": "Hiwasse",
+        "state": "Maryland",
+        "zip": 6839,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,905.80",
+      "detention": "$1,512.38",
+      "layover": "$2,739.97"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a6cc5b202b8c33c32",
+    "loadNumber": 37,
+    "billTo": {
+      "name": "COMBOT",
+      "streetAddress": "172 Guernsey Street",
+      "city": "Lowgap",
+      "state": " Vermont",
+      "zip": 1516
+    },
+    "stops": [
+      {
+        "date": "2018-05-25T09:44:28 +07:00",
+        "name": "ECLIPTO",
+        "streetAddress": "874 Ferry Place",
+        "city": "Orovada",
+        "state": "Pennsylvania",
+        "zip": 2335,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-08-15T02:51:41 +07:00",
+        "name": "OLYMPIX",
+        "streetAddress": "482 Wyckoff Street",
+        "city": "Heil",
+        "state": "Federated States Of Micronesia",
+        "zip": 4100,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2016-09-22T07:35:13 +07:00",
+        "name": "VINCH",
+        "streetAddress": "573 Bank Street",
+        "city": "Rockhill",
+        "state": "New Jersey",
+        "zip": 611,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-01-26T05:07:13 +08:00",
+        "name": "SAVVY",
+        "streetAddress": "937 Story Street",
+        "city": "Springdale",
+        "state": "Iowa",
+        "zip": 4675,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-01-17T12:45:21 +08:00",
+        "name": "GENESYNK",
+        "streetAddress": "810 Metropolitan Avenue",
+        "city": "Columbus",
+        "state": "Wyoming",
+        "zip": 1374,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,543.35",
+      "detention": "$3,185.01",
+      "layover": "$2,783.71"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0aa928b6a076d5f026",
+    "loadNumber": 38,
+    "billTo": {
+      "name": "KNEEDLES",
+      "streetAddress": "928 Croton Loop",
+      "city": "Matheny",
+      "state": " District Of Columbia",
+      "zip": 2001
+    },
+    "stops": [
+      {
+        "date": "2019-08-09T05:08:46 +07:00",
+        "name": "PLEXIA",
+        "streetAddress": "581 Hampton Place",
+        "city": "Century",
+        "state": "Colorado",
+        "zip": 7885,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-04-03T05:03:02 +07:00",
+        "name": "JUMPSTACK",
+        "streetAddress": "168 Grove Street",
+        "city": "Williston",
+        "state": "West Virginia",
+        "zip": 4071,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,947.67",
+      "detention": "$1,374.09",
+      "layover": "$1,524.82"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0aecd6fb703370abee",
+    "loadNumber": 37,
+    "billTo": {
+      "name": "AQUASURE",
+      "streetAddress": "771 Greenpoint Avenue",
+      "city": "Hartsville/Hartley",
+      "state": " California",
+      "zip": 5936
+    },
+    "stops": [
+      {
+        "date": "2014-07-06T04:40:03 +07:00",
+        "name": "ZENTIX",
+        "streetAddress": "387 Kent Street",
+        "city": "Charco",
+        "state": "New Mexico",
+        "zip": 3493,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-02-20T03:20:36 +08:00",
+        "name": "COMTRAK",
+        "streetAddress": "674 Boerum Place",
+        "city": "Jenkinsville",
+        "state": "North Carolina",
+        "zip": 7113,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,949.81",
+      "detention": "$3,902.72",
+      "layover": "$3,142.61"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0adbffb35ff418a067",
+    "loadNumber": 25,
+    "billTo": {
+      "name": "MAROPTIC",
+      "streetAddress": "752 Lloyd Court",
+      "city": "Nogal",
+      "state": " Illinois",
+      "zip": 4534
+    },
+    "stops": [
+      {
+        "date": "2019-10-13T11:36:27 +07:00",
+        "name": "LYRIA",
+        "streetAddress": "237 Howard Alley",
+        "city": "Mooresburg",
+        "state": "Kentucky",
+        "zip": 4714,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-04-22T11:51:20 +07:00",
+        "name": "SKINSERVE",
+        "streetAddress": "413 Harrison Avenue",
+        "city": "Welda",
+        "state": "Minnesota",
+        "zip": 421,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-07-24T01:07:01 +07:00",
+        "name": "MYOPIUM",
+        "streetAddress": "624 Bath Avenue",
+        "city": "Graball",
+        "state": "Connecticut",
+        "zip": 9574,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-05-13T06:15:08 +07:00",
+        "name": "APEX",
+        "streetAddress": "693 Krier Place",
+        "city": "Vernon",
+        "state": "Nevada",
+        "zip": 5957,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-12-16T01:34:06 +08:00",
+        "name": "XEREX",
+        "streetAddress": "606 Chester Court",
+        "city": "Fivepointville",
+        "state": "South Dakota",
+        "zip": 9908,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,236.99",
+      "detention": "$3,758.83",
+      "layover": "$3,208.74"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0acf797d4f760e1ee2",
+    "loadNumber": 21,
+    "billTo": {
+      "name": "DEMINIMUM",
+      "streetAddress": "616 Farragut Place",
+      "city": "Juntura",
+      "state": " Rhode Island",
+      "zip": 8785
+    },
+    "stops": [
+      {
+        "date": "2017-05-13T01:35:15 +07:00",
+        "name": "ZOMBOID",
+        "streetAddress": "559 Lake Avenue",
+        "city": "Naomi",
+        "state": "Utah",
+        "zip": 8581,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-07-06T03:50:39 +07:00",
+        "name": "OPTIQUE",
+        "streetAddress": "606 Knight Court",
+        "city": "Shaft",
+        "state": "Virginia",
+        "zip": 7661,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-05-08T06:32:24 +07:00",
+        "name": "ZENTIME",
+        "streetAddress": "777 Harden Street",
+        "city": "Verdi",
+        "state": "Florida",
+        "zip": 4373,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,826.65",
+      "detention": "$1,435.74",
+      "layover": "$2,186.81"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a91de893d38d46e23",
+    "loadNumber": 29,
+    "billTo": {
+      "name": "SLAX",
+      "streetAddress": "856 Adelphi Street",
+      "city": "Edneyville",
+      "state": " Northern Mariana Islands",
+      "zip": 5736
+    },
+    "stops": [
+      {
+        "date": "2018-07-25T03:22:04 +07:00",
+        "name": "IMKAN",
+        "streetAddress": "217 Whitty Lane",
+        "city": "Templeton",
+        "state": "Palau",
+        "zip": 4777,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-09-17T07:26:50 +07:00",
+        "name": "COMVEY",
+        "streetAddress": "635 Hornell Loop",
+        "city": "Richford",
+        "state": "South Carolina",
+        "zip": 2839,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,492.41",
+      "detention": "$1,956.87",
+      "layover": "$1,952.03"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a2cea4cde4f396e36",
+    "loadNumber": 29,
+    "billTo": {
+      "name": "BLUPLANET",
+      "streetAddress": "899 Lott Avenue",
+      "city": "Wadsworth",
+      "state": " Wisconsin",
+      "zip": 8092
+    },
+    "stops": [
+      {
+        "date": "2018-08-05T09:49:17 +07:00",
+        "name": "BEZAL",
+        "streetAddress": "830 Bridge Street",
+        "city": "Yonah",
+        "state": "Indiana",
+        "zip": 416,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-07-05T12:57:01 +07:00",
+        "name": "VORATAK",
+        "streetAddress": "797 Juliana Place",
+        "city": "Newry",
+        "state": "Maine",
+        "zip": 1525,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-06-06T08:04:21 +07:00",
+        "name": "ELECTONIC",
+        "streetAddress": "407 Willoughby Street",
+        "city": "Interlochen",
+        "state": "Washington",
+        "zip": 4150,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-08-30T06:32:31 +07:00",
+        "name": "HOTCAKES",
+        "streetAddress": "365 Grafton Street",
+        "city": "Homestead",
+        "state": "Arizona",
+        "zip": 8329,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,693.26",
+      "detention": "$2,808.99",
+      "layover": "$3,048.97"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a1a9e5342743fd89b",
+    "loadNumber": 28,
+    "billTo": {
+      "name": "SKYPLEX",
+      "streetAddress": "237 Rutland Road",
+      "city": "Rodanthe",
+      "state": " Virgin Islands",
+      "zip": 5652
+    },
+    "stops": [
+      {
+        "date": "2017-07-20T03:35:50 +07:00",
+        "name": "DIGIGEN",
+        "streetAddress": "405 Howard Avenue",
+        "city": "Taft",
+        "state": "North Dakota",
+        "zip": 2294,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-01-26T03:15:53 +08:00",
+        "name": "TRASOLA",
+        "streetAddress": "243 Kenmore Court",
+        "city": "Keyport",
+        "state": "Idaho",
+        "zip": 4771,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,103.76",
+      "detention": "$1,165.42",
+      "layover": "$3,938.31"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0abcd5b287a963d4ce",
+    "loadNumber": 20,
+    "billTo": {
+      "name": "CYCLONICA",
+      "streetAddress": "215 Reed Street",
+      "city": "Dundee",
+      "state": " Massachusetts",
+      "zip": 2565
+    },
+    "stops": [
+      {
+        "date": "2017-12-15T10:23:29 +08:00",
+        "name": "EXOPLODE",
+        "streetAddress": "772 Elm Avenue",
+        "city": "Calpine",
+        "state": "Oregon",
+        "zip": 8341,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-05-10T12:26:00 +07:00",
+        "name": "URBANSHEE",
+        "streetAddress": "250 Delmonico Place",
+        "city": "Walton",
+        "state": "Kansas",
+        "zip": 4574,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-11-08T07:09:45 +08:00",
+        "name": "QNEKT",
+        "streetAddress": "916 Osborn Street",
+        "city": "Blandburg",
+        "state": "American Samoa",
+        "zip": 2992,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-08-14T02:21:53 +07:00",
+        "name": "WARETEL",
+        "streetAddress": "620 Hart Place",
+        "city": "Gilmore",
+        "state": "Oklahoma",
+        "zip": 1819,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-08-27T12:21:54 +07:00",
+        "name": "STREZZO",
+        "streetAddress": "445 Harbor Lane",
+        "city": "Edenburg",
+        "state": "Nebraska",
+        "zip": 8557,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,018.37",
+      "detention": "$1,918.23",
+      "layover": "$1,202.83"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0afcffa589933c6b80",
+    "loadNumber": 37,
+    "billTo": {
+      "name": "CONJURICA",
+      "streetAddress": "182 Doughty Street",
+      "city": "Grazierville",
+      "state": " Marshall Islands",
+      "zip": 1401
+    },
+    "stops": [
+      {
+        "date": "2017-10-13T10:06:43 +07:00",
+        "name": "SARASONIC",
+        "streetAddress": "983 Bartlett Street",
+        "city": "Savannah",
+        "state": "Alaska",
+        "zip": 9039,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-09-15T06:00:40 +07:00",
+        "name": "EARGO",
+        "streetAddress": "569 Fairview Place",
+        "city": "Lumberton",
+        "state": "Michigan",
+        "zip": 797,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-08-26T05:17:01 +07:00",
+        "name": "SCHOOLIO",
+        "streetAddress": "169 Macon Street",
+        "city": "Caroline",
+        "state": "Mississippi",
+        "zip": 9311,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-02-20T11:59:34 +08:00",
+        "name": "GEOFORMA",
+        "streetAddress": "385 Willoughby Avenue",
+        "city": "Waukeenah",
+        "state": "New Hampshire",
+        "zip": 9964,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,881.10",
+      "detention": "$2,915.06",
+      "layover": "$3,464.49"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a3688ed044d3db99f",
+    "loadNumber": 26,
+    "billTo": {
+      "name": "DANCITY",
+      "streetAddress": "367 Bushwick Avenue",
+      "city": "Remington",
+      "state": " Delaware",
+      "zip": 6953
+    },
+    "stops": [
+      {
+        "date": "2019-04-28T05:15:02 +07:00",
+        "name": "UNCORP",
+        "streetAddress": "888 Norman Avenue",
+        "city": "Kieler",
+        "state": "Georgia",
+        "zip": 7281,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-09-12T12:26:23 +07:00",
+        "name": "MITROC",
+        "streetAddress": "969 Linden Boulevard",
+        "city": "Trexlertown",
+        "state": "Guam",
+        "zip": 7518,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-10-20T04:32:32 +07:00",
+        "name": "CUIZINE",
+        "streetAddress": "514 Rochester Avenue",
+        "city": "Tolu",
+        "state": "Ohio",
+        "zip": 158,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,735.22",
+      "detention": "$1,540.54",
+      "layover": "$3,976.40"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a4f319020f2bdfbc3",
     "loadNumber": 36,
     "billTo": {
-      "name": "GEEKFARM",
-      "streetAddress": "398 Ridge Boulevard",
-      "city": "Odessa",
-      "state": " South Dakota",
-      "zip": 3349
+      "name": "QUADEEBO",
+      "streetAddress": "626 Wilson Avenue",
+      "city": "Steinhatchee",
+      "state": " Hawaii",
+      "zip": 1583
     },
     "stops": [
       {
-        "date": "2014-08-27T09:24:04 +07:00",
-        "name": "ZOLAVO",
-        "streetAddress": "929 Canal Avenue",
-        "city": "Harviell",
+        "date": "2019-02-03T05:47:33 +08:00",
+        "name": "CENTREXIN",
+        "streetAddress": "843 Clinton Street",
+        "city": "Chase",
+        "state": "Missouri",
+        "zip": 6823,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-08-10T09:29:19 +07:00",
+        "name": "FIBRODYNE",
+        "streetAddress": "302 Tapscott Avenue",
+        "city": "Berlin",
         "state": "Tennessee",
-        "zip": 2917,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2018-11-03T10:51:43 +07:00",
-        "name": "GRUPOLI",
-        "streetAddress": "881 Ovington Avenue",
-        "city": "Sabillasville",
-        "state": "Mississippi",
-        "zip": 3853,
-        "type": "PICKUP"
-      },
-      {
-        "date": "2014-03-16T08:46:25 +07:00",
-        "name": "ACCEL",
-        "streetAddress": "219 Linwood Street",
-        "city": "Galesville",
-        "state": "Indiana",
-        "zip": 7594,
-        "type": "DELIVERY"
-      },
-      {
-        "date": "2017-09-05T12:18:30 +07:00",
-        "name": "PLAYCE",
-        "streetAddress": "864 Hanson Place",
-        "city": "Bend",
-        "state": "Kentucky",
-        "zip": 4940,
+        "zip": 8755,
         "type": "DELIVERY"
       }
     ],
     "balances": {
-      "rateAmount": "$1,742.46",
-      "detention": "$2,368.64",
-      "layover": "$3,819.40"
+      "rateAmount": "$3,756.81",
+      "detention": "$1,353.41",
+      "layover": "$2,541.56"
     }
   },
   {
-    "invoiceNumber": 30,
-    "loadNumber": 34,
+    "invoiceNumber": "5e951a0a04ad22d1f0ea7546",
+    "loadNumber": 36,
     "billTo": {
-      "name": "GLEAMINK",
-      "streetAddress": "595 Kings Place",
-      "city": "Haring",
-      "state": " Marshall Islands",
-      "zip": 7292
+      "name": "ARTWORLDS",
+      "streetAddress": "687 Moultrie Street",
+      "city": "Curtice",
+      "state": " Texas",
+      "zip": 8044
     },
     "stops": [
       {
-        "date": "2017-03-03T08:47:57 +08:00",
-        "name": "ROCKLOGIC",
-        "streetAddress": "957 Sackett Street",
-        "city": "Corriganville",
-        "state": "North Carolina",
-        "zip": 2556,
+        "date": "2016-06-14T07:27:43 +07:00",
+        "name": "UPDAT",
+        "streetAddress": "103 Miller Avenue",
+        "city": "Rockbridge",
+        "state": "Puerto Rico",
+        "zip": 1036,
         "type": "DELIVERY"
       },
       {
-        "date": "2018-11-01T04:56:14 +07:00",
-        "name": "URBANSHEE",
-        "streetAddress": "640 Garden Street",
-        "city": "Rockhill",
-        "state": "Oklahoma",
-        "zip": 9646,
+        "date": "2016-05-05T07:39:40 +07:00",
+        "name": "ZIGGLES",
+        "streetAddress": "324 Bay Avenue",
+        "city": "Sanborn",
+        "state": "Arkansas",
+        "zip": 441,
         "type": "PICKUP"
       },
       {
-        "date": "2015-01-07T10:15:25 +08:00",
-        "name": "EVENTAGE",
-        "streetAddress": "914 Rutledge Street",
-        "city": "Logan",
-        "state": "New Hampshire",
-        "zip": 7792,
-        "type": "PICKUP"
+        "date": "2014-08-12T11:13:42 +07:00",
+        "name": "ORGANICA",
+        "streetAddress": "858 Highlawn Avenue",
+        "city": "Noxen",
+        "state": "Montana",
+        "zip": 3549,
+        "type": "DELIVERY"
       },
       {
-        "date": "2017-03-22T10:55:11 +07:00",
-        "name": "ORBIXTAR",
-        "streetAddress": "818 Lexington Avenue",
-        "city": "Roosevelt",
+        "date": "2016-01-05T03:41:07 +08:00",
+        "name": "ISOSWITCH",
+        "streetAddress": "694 Poly Place",
+        "city": "Martell",
         "state": "Louisiana",
-        "zip": 3904,
+        "zip": 8120,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,375.89",
+      "detention": "$2,240.60",
+      "layover": "$3,178.32"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a5124ec052e08ab20",
+    "loadNumber": 23,
+    "billTo": {
+      "name": "SPORTAN",
+      "streetAddress": "198 Brown Street",
+      "city": "Bloomington",
+      "state": " Alabama",
+      "zip": 2325
+    },
+    "stops": [
+      {
+        "date": "2015-11-12T11:33:08 +08:00",
+        "name": "BUZZMAKER",
+        "streetAddress": "771 Sandford Street",
+        "city": "Fontanelle",
+        "state": "Maryland",
+        "zip": 9446,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2016-03-01T10:17:10 +08:00",
+        "name": "KINDALOO",
+        "streetAddress": "407 Columbus Place",
+        "city": "Bascom",
+        "state": "Vermont",
+        "zip": 4990,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-06-26T06:00:55 +07:00",
+        "name": "HOMELUX",
+        "streetAddress": "232 Bryant Street",
+        "city": "Brewster",
+        "state": "Pennsylvania",
+        "zip": 1260,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2020-03-08T06:13:28 +07:00",
+        "name": "COMCUR",
+        "streetAddress": "666 Vermont Court",
+        "city": "Twilight",
+        "state": "Federated States Of Micronesia",
+        "zip": 446,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-05-15T10:08:19 +07:00",
+        "name": "NIMON",
+        "streetAddress": "439 Montague Terrace",
+        "city": "Mulino",
+        "state": "New Jersey",
+        "zip": 5244,
         "type": "PICKUP"
       }
     ],
     "balances": {
-      "rateAmount": "$1,657.19",
-      "detention": "$3,524.24",
-      "layover": "$3,862.29"
+      "rateAmount": "$1,505.30",
+      "detention": "$2,423.33",
+      "layover": "$2,197.57"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a97c9e87bae91d206",
+    "loadNumber": 20,
+    "billTo": {
+      "name": "POLARIA",
+      "streetAddress": "155 Luquer Street",
+      "city": "Mathews",
+      "state": " Iowa",
+      "zip": 4831
+    },
+    "stops": [
+      {
+        "date": "2019-06-24T08:36:43 +07:00",
+        "name": "EVENTIX",
+        "streetAddress": "651 Newkirk Avenue",
+        "city": "Wells",
+        "state": "Wyoming",
+        "zip": 5069,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-08-17T10:14:30 +07:00",
+        "name": "ZENCO",
+        "streetAddress": "995 Dank Court",
+        "city": "Hoagland",
+        "state": "District Of Columbia",
+        "zip": 3472,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-05-02T04:44:20 +07:00",
+        "name": "AMTAP",
+        "streetAddress": "202 Wortman Avenue",
+        "city": "Abiquiu",
+        "state": "Colorado",
+        "zip": 6981,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,950.99",
+      "detention": "$2,653.21",
+      "layover": "$2,297.01"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a688b2fe73b8f1e8a",
+    "loadNumber": 37,
+    "billTo": {
+      "name": "TECHMANIA",
+      "streetAddress": "351 Linwood Street",
+      "city": "Disautel",
+      "state": " West Virginia",
+      "zip": 2204
+    },
+    "stops": [
+      {
+        "date": "2014-10-03T04:46:55 +07:00",
+        "name": "INSOURCE",
+        "streetAddress": "280 Barwell Terrace",
+        "city": "Florence",
+        "state": "California",
+        "zip": 8753,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-09-28T06:45:20 +07:00",
+        "name": "EXTRAGENE",
+        "streetAddress": "947 Kane Street",
+        "city": "Ruckersville",
+        "state": "New Mexico",
+        "zip": 4187,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-07-29T08:50:35 +07:00",
+        "name": "ORBEAN",
+        "streetAddress": "777 Halleck Street",
+        "city": "Oley",
+        "state": "North Carolina",
+        "zip": 9405,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,934.90",
+      "detention": "$3,018.12",
+      "layover": "$1,930.34"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0af79552289b9a967e",
+    "loadNumber": 35,
+    "billTo": {
+      "name": "TALKOLA",
+      "streetAddress": "231 Norwood Avenue",
+      "city": "Snelling",
+      "state": " Illinois",
+      "zip": 1504
+    },
+    "stops": [
+      {
+        "date": "2017-12-04T11:23:11 +08:00",
+        "name": "DANJA",
+        "streetAddress": "738 Maujer Street",
+        "city": "Como",
+        "state": "Kentucky",
+        "zip": 686,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2018-12-07T04:53:20 +08:00",
+        "name": "ECOLIGHT",
+        "streetAddress": "244 Beard Street",
+        "city": "Gardners",
+        "state": "Minnesota",
+        "zip": 9662,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2018-12-30T01:47:56 +08:00",
+        "name": "DOGNOST",
+        "streetAddress": "111 Adler Place",
+        "city": "Marienthal",
+        "state": "Connecticut",
+        "zip": 3049,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,416.25",
+      "detention": "$2,601.83",
+      "layover": "$3,462.65"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a525202df7fe87376",
+    "loadNumber": 22,
+    "billTo": {
+      "name": "COSMETEX",
+      "streetAddress": "481 Summit Street",
+      "city": "Manila",
+      "state": " Nevada",
+      "zip": 4999
+    },
+    "stops": [
+      {
+        "date": "2019-04-30T01:10:22 +07:00",
+        "name": "GONKLE",
+        "streetAddress": "511 Lott Street",
+        "city": "Eureka",
+        "state": "South Dakota",
+        "zip": 6734,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-11-08T06:11:09 +08:00",
+        "name": "GYNKO",
+        "streetAddress": "913 Joval Court",
+        "city": "Ticonderoga",
+        "state": "Rhode Island",
+        "zip": 7620,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-02-07T12:44:41 +08:00",
+        "name": "FANFARE",
+        "streetAddress": "899 Rock Street",
+        "city": "Muir",
+        "state": "Utah",
+        "zip": 1564,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,535.34",
+      "detention": "$1,461.84",
+      "layover": "$3,645.90"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a1eac9fd82d09b209",
+    "loadNumber": 31,
+    "billTo": {
+      "name": "FLYBOYZ",
+      "streetAddress": "821 Whitney Avenue",
+      "city": "Ventress",
+      "state": " Virginia",
+      "zip": 862
+    },
+    "stops": [
+      {
+        "date": "2016-01-21T12:09:00 +08:00",
+        "name": "ACCUPRINT",
+        "streetAddress": "822 Grand Street",
+        "city": "Coalmont",
+        "state": "Florida",
+        "zip": 9335,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2018-06-25T08:44:04 +07:00",
+        "name": "EXOSIS",
+        "streetAddress": "888 Varanda Place",
+        "city": "Dennard",
+        "state": "Northern Mariana Islands",
+        "zip": 8394,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,960.14",
+      "detention": "$2,864.22",
+      "layover": "$3,798.84"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a5961f6850554878d",
+    "loadNumber": 29,
+    "billTo": {
+      "name": "TELPOD",
+      "streetAddress": "218 Howard Place",
+      "city": "Whitmer",
+      "state": " Palau",
+      "zip": 167
+    },
+    "stops": [
+      {
+        "date": "2020-01-23T01:42:58 +08:00",
+        "name": "GEEKFARM",
+        "streetAddress": "191 Garland Court",
+        "city": "Camas",
+        "state": "South Carolina",
+        "zip": 2267,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-03-15T06:32:10 +07:00",
+        "name": "GEEKUS",
+        "streetAddress": "669 Elizabeth Place",
+        "city": "Beechmont",
+        "state": "Wisconsin",
+        "zip": 7273,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-04-26T09:48:01 +07:00",
+        "name": "ISOTRONIC",
+        "streetAddress": "505 Dikeman Street",
+        "city": "Dahlen",
+        "state": "Indiana",
+        "zip": 4158,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-09-08T05:37:14 +07:00",
+        "name": "GINKLE",
+        "streetAddress": "799 Nixon Court",
+        "city": "Martinez",
+        "state": "Maine",
+        "zip": 7615,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,154.46",
+      "detention": "$2,621.55",
+      "layover": "$3,927.16"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a9b1b225a378e924c",
+    "loadNumber": 21,
+    "billTo": {
+      "name": "FIBEROX",
+      "streetAddress": "310 Boynton Place",
+      "city": "Hessville",
+      "state": " Washington",
+      "zip": 9832
+    },
+    "stops": [
+      {
+        "date": "2015-10-18T10:05:50 +07:00",
+        "name": "PORTALIS",
+        "streetAddress": "711 Kenmore Terrace",
+        "city": "Accoville",
+        "state": "Arizona",
+        "zip": 4312,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-09-09T11:41:11 +07:00",
+        "name": "ZAPHIRE",
+        "streetAddress": "705 Gaylord Drive",
+        "city": "Sunwest",
+        "state": "Virgin Islands",
+        "zip": 8355,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-04-05T11:42:30 +07:00",
+        "name": "BIZMATIC",
+        "streetAddress": "206 Cambridge Place",
+        "city": "Blende",
+        "state": "North Dakota",
+        "zip": 7969,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,878.72",
+      "detention": "$1,152.65",
+      "layover": "$2,075.93"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a5b070c4ded7d9b6c",
+    "loadNumber": 35,
+    "billTo": {
+      "name": "BLANET",
+      "streetAddress": "505 Kay Court",
+      "city": "Bluffview",
+      "state": " Idaho",
+      "zip": 6976
+    },
+    "stops": [
+      {
+        "date": "2017-09-16T02:42:10 +07:00",
+        "name": "GINK",
+        "streetAddress": "576 Legion Street",
+        "city": "Elliston",
+        "state": "Massachusetts",
+        "zip": 5587,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-03-14T07:03:00 +07:00",
+        "name": "NIKUDA",
+        "streetAddress": "980 Stewart Street",
+        "city": "Sidman",
+        "state": "Oregon",
+        "zip": 182,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,353.25",
+      "detention": "$3,403.67",
+      "layover": "$2,879.97"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a03c064f7bba90431",
+    "loadNumber": 24,
+    "billTo": {
+      "name": "PHOTOBIN",
+      "streetAddress": "527 Windsor Place",
+      "city": "Manitou",
+      "state": " Kansas",
+      "zip": 9117
+    },
+    "stops": [
+      {
+        "date": "2020-01-14T02:37:31 +08:00",
+        "name": "ICOLOGY",
+        "streetAddress": "306 Ingraham Street",
+        "city": "Axis",
+        "state": "American Samoa",
+        "zip": 4810,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-01-16T09:46:21 +08:00",
+        "name": "ROTODYNE",
+        "streetAddress": "365 Lincoln Road",
+        "city": "Tivoli",
+        "state": "Oklahoma",
+        "zip": 9699,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-11-09T11:48:19 +08:00",
+        "name": "RODEMCO",
+        "streetAddress": "369 Commercial Street",
+        "city": "Chaparrito",
+        "state": "Nebraska",
+        "zip": 930,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2017-11-05T01:47:11 +08:00",
+        "name": "COMTOURS",
+        "streetAddress": "947 Trucklemans Lane",
+        "city": "Roosevelt",
+        "state": "Marshall Islands",
+        "zip": 2347,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-11-06T02:27:16 +08:00",
+        "name": "HYPLEX",
+        "streetAddress": "996 Clark Street",
+        "city": "Roberts",
+        "state": "Alaska",
+        "zip": 5694,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,027.66",
+      "detention": "$1,473.66",
+      "layover": "$2,474.37"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0afa396e7d7ec6273b",
+    "loadNumber": 38,
+    "billTo": {
+      "name": "PHOLIO",
+      "streetAddress": "454 Hamilton Walk",
+      "city": "Maxville",
+      "state": " Michigan",
+      "zip": 9301
+    },
+    "stops": [
+      {
+        "date": "2016-07-25T08:50:35 +07:00",
+        "name": "PHEAST",
+        "streetAddress": "751 Debevoise Street",
+        "city": "Westwood",
+        "state": "Mississippi",
+        "zip": 3024,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-06-26T09:51:45 +07:00",
+        "name": "ONTALITY",
+        "streetAddress": "904 Temple Court",
+        "city": "Floriston",
+        "state": "New Hampshire",
+        "zip": 8644,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,257.74",
+      "detention": "$2,768.46",
+      "layover": "$1,855.96"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a9c74b3b08d54476f",
+    "loadNumber": 33,
+    "billTo": {
+      "name": "EQUITOX",
+      "streetAddress": "985 Devon Avenue",
+      "city": "Woodlake",
+      "state": " Delaware",
+      "zip": 1144
+    },
+    "stops": [
+      {
+        "date": "2019-04-22T08:42:26 +07:00",
+        "name": "KEEG",
+        "streetAddress": "413 Madison Street",
+        "city": "Jessie",
+        "state": "Georgia",
+        "zip": 5156,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-04-14T04:42:08 +07:00",
+        "name": "VOIPA",
+        "streetAddress": "477 Narrows Avenue",
+        "city": "Fairacres",
+        "state": "Guam",
+        "zip": 894,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-12-07T01:15:57 +08:00",
+        "name": "BLEENDOT",
+        "streetAddress": "226 Cumberland Walk",
+        "city": "Nelson",
+        "state": "Ohio",
+        "zip": 3867,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-11-07T11:28:13 +08:00",
+        "name": "EXOZENT",
+        "streetAddress": "417 Jackson Court",
+        "city": "Rehrersburg",
+        "state": "Hawaii",
+        "zip": 9380,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-07-28T04:44:58 +07:00",
+        "name": "BEDDER",
+        "streetAddress": "244 Brightwater Avenue",
+        "city": "Guthrie",
+        "state": "Missouri",
+        "zip": 6306,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,112.50",
+      "detention": "$3,093.72",
+      "layover": "$2,681.54"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0ac066717795b35bd7",
+    "loadNumber": 26,
+    "billTo": {
+      "name": "EARWAX",
+      "streetAddress": "909 Lefferts Place",
+      "city": "Calverton",
+      "state": " Tennessee",
+      "zip": 9565
+    },
+    "stops": [
+      {
+        "date": "2019-07-05T08:07:46 +07:00",
+        "name": "ECLIPSENT",
+        "streetAddress": "189 Monument Walk",
+        "city": "Courtland",
+        "state": "Texas",
+        "zip": 5802,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-04-21T12:45:56 +07:00",
+        "name": "BYTREX",
+        "streetAddress": "502 Poplar Avenue",
+        "city": "Maybell",
+        "state": "Puerto Rico",
+        "zip": 7875,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-04-19T12:03:04 +07:00",
+        "name": "SOPRANO",
+        "streetAddress": "586 Harwood Place",
+        "city": "Elliott",
+        "state": "Arkansas",
+        "zip": 8709,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2017-12-04T05:59:28 +08:00",
+        "name": "ZAJ",
+        "streetAddress": "837 Fayette Street",
+        "city": "Williams",
+        "state": "Montana",
+        "zip": 5819,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,982.14",
+      "detention": "$3,205.54",
+      "layover": "$2,590.83"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0ae00471a4dbe7fb19",
+    "loadNumber": 38,
+    "billTo": {
+      "name": "FOSSIEL",
+      "streetAddress": "880 Newel Street",
+      "city": "Hoehne",
+      "state": " Louisiana",
+      "zip": 1701
+    },
+    "stops": [
+      {
+        "date": "2019-10-08T07:17:06 +07:00",
+        "name": "OBLIQ",
+        "streetAddress": "957 Evans Street",
+        "city": "Linwood",
+        "state": "Alabama",
+        "zip": 5086,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-06-04T01:04:59 +07:00",
+        "name": "MAGNAFONE",
+        "streetAddress": "823 Seigel Court",
+        "city": "Gallina",
+        "state": "Maryland",
+        "zip": 8846,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-05-31T03:55:17 +07:00",
+        "name": "GEEKNET",
+        "streetAddress": "108 Saratoga Avenue",
+        "city": "Cochranville",
+        "state": "Vermont",
+        "zip": 782,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-12-24T03:51:15 +08:00",
+        "name": "RECRISYS",
+        "streetAddress": "488 Beverley Road",
+        "city": "Vicksburg",
+        "state": "Pennsylvania",
+        "zip": 673,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,076.30",
+      "detention": "$1,669.12",
+      "layover": "$1,363.84"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a10c20e07f34d8db4",
+    "loadNumber": 25,
+    "billTo": {
+      "name": "SHADEASE",
+      "streetAddress": "434 Hillel Place",
+      "city": "Vandiver",
+      "state": " Federated States Of Micronesia",
+      "zip": 1988
+    },
+    "stops": [
+      {
+        "date": "2019-02-14T05:50:18 +08:00",
+        "name": "ACIUM",
+        "streetAddress": "455 Powell Street",
+        "city": "Caron",
+        "state": "New Jersey",
+        "zip": 4556,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2017-02-12T05:20:05 +08:00",
+        "name": "CUBICIDE",
+        "streetAddress": "912 Wythe Place",
+        "city": "Centerville",
+        "state": "Iowa",
+        "zip": 2341,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-02-18T10:22:43 +08:00",
+        "name": "COMTENT",
+        "streetAddress": "308 Kingsland Avenue",
+        "city": "Glidden",
+        "state": "Wyoming",
+        "zip": 7845,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,978.02",
+      "detention": "$1,315.84",
+      "layover": "$1,044.19"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a3566611d7b70ea8b",
+    "loadNumber": 27,
+    "billTo": {
+      "name": "ISOPOP",
+      "streetAddress": "325 Dekoven Court",
+      "city": "Teasdale",
+      "state": " District Of Columbia",
+      "zip": 4835
+    },
+    "stops": [
+      {
+        "date": "2015-09-06T08:09:45 +07:00",
+        "name": "ZILODYNE",
+        "streetAddress": "446 Bevy Court",
+        "city": "Sena",
+        "state": "Colorado",
+        "zip": 9713,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-08-01T02:20:05 +07:00",
+        "name": "TINGLES",
+        "streetAddress": "816 Lorraine Street",
+        "city": "Homeland",
+        "state": "West Virginia",
+        "zip": 9521,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-03-31T05:26:31 +07:00",
+        "name": "ENDIPINE",
+        "streetAddress": "582 Dunne Place",
+        "city": "Olney",
+        "state": "California",
+        "zip": 5528,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-09-30T03:15:55 +07:00",
+        "name": "ZOID",
+        "streetAddress": "891 Covert Street",
+        "city": "Windsor",
+        "state": "New Mexico",
+        "zip": 3796,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,376.64",
+      "detention": "$1,756.57",
+      "layover": "$1,808.08"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0aea6b557eb70cad74",
+    "loadNumber": 28,
+    "billTo": {
+      "name": "EXIAND",
+      "streetAddress": "609 Moffat Street",
+      "city": "Spelter",
+      "state": " North Carolina",
+      "zip": 608
+    },
+    "stops": [
+      {
+        "date": "2014-01-11T04:42:19 +08:00",
+        "name": "IRACK",
+        "streetAddress": "386 Furman Avenue",
+        "city": "Cade",
+        "state": "Illinois",
+        "zip": 4258,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-09-02T10:44:27 +07:00",
+        "name": "AQUAMATE",
+        "streetAddress": "121 Campus Road",
+        "city": "Virgie",
+        "state": "Kentucky",
+        "zip": 5832,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-06-26T09:37:50 +07:00",
+        "name": "EXOVENT",
+        "streetAddress": "607 Debevoise Avenue",
+        "city": "Nadine",
+        "state": "Minnesota",
+        "zip": 6740,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,887.14",
+      "detention": "$2,105.86",
+      "layover": "$2,422.40"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a927e81a133084162",
+    "loadNumber": 40,
+    "billTo": {
+      "name": "POOCHIES",
+      "streetAddress": "209 Will Place",
+      "city": "Harold",
+      "state": " Connecticut",
+      "zip": 2986
+    },
+    "stops": [
+      {
+        "date": "2016-12-05T03:51:36 +08:00",
+        "name": "TECHADE",
+        "streetAddress": "487 Crystal Street",
+        "city": "Weogufka",
+        "state": "Nevada",
+        "zip": 9176,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-05-19T08:34:43 +07:00",
+        "name": "GEEKWAGON",
+        "streetAddress": "731 Vanderveer Street",
+        "city": "Lisco",
+        "state": "South Dakota",
+        "zip": 8565,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,675.15",
+      "detention": "$3,026.84",
+      "layover": "$1,950.68"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0ac0a39df6d4342d8b",
+    "loadNumber": 40,
+    "billTo": {
+      "name": "PUSHCART",
+      "streetAddress": "366 Grant Avenue",
+      "city": "Newkirk",
+      "state": " Rhode Island",
+      "zip": 3512
+    },
+    "stops": [
+      {
+        "date": "2014-08-18T11:12:15 +07:00",
+        "name": "AVENETRO",
+        "streetAddress": "778 Lake Street",
+        "city": "Deputy",
+        "state": "Utah",
+        "zip": 5787,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-04-14T12:16:38 +07:00",
+        "name": "KOFFEE",
+        "streetAddress": "194 Ocean Avenue",
+        "city": "Glenshaw",
+        "state": "Virginia",
+        "zip": 7556,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,600.76",
+      "detention": "$3,351.55",
+      "layover": "$1,045.13"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a9bb9138a19cfed60",
+    "loadNumber": 22,
+    "billTo": {
+      "name": "GAPTEC",
+      "streetAddress": "384 Freeman Street",
+      "city": "Washington",
+      "state": " Florida",
+      "zip": 3538
+    },
+    "stops": [
+      {
+        "date": "2014-10-30T05:41:05 +07:00",
+        "name": "KIOSK",
+        "streetAddress": "433 Hall Street",
+        "city": "Catharine",
+        "state": "Northern Mariana Islands",
+        "zip": 7668,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2016-09-10T02:38:45 +07:00",
+        "name": "CEMENTION",
+        "streetAddress": "529 Pineapple Street",
+        "city": "Corriganville",
+        "state": "Palau",
+        "zip": 3004,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-01-21T03:48:14 +08:00",
+        "name": "GRACKER",
+        "streetAddress": "890 Fountain Avenue",
+        "city": "Gracey",
+        "state": "South Carolina",
+        "zip": 721,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-05-15T05:42:56 +07:00",
+        "name": "DUFLEX",
+        "streetAddress": "308 Jerome Street",
+        "city": "Tilleda",
+        "state": "Wisconsin",
+        "zip": 738,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,721.44",
+      "detention": "$1,694.08",
+      "layover": "$1,933.36"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0af6a61003755db070",
+    "loadNumber": 32,
+    "billTo": {
+      "name": "MEDMEX",
+      "streetAddress": "945 Glenwood Road",
+      "city": "Bellfountain",
+      "state": " Indiana",
+      "zip": 2271
+    },
+    "stops": [
+      {
+        "date": "2015-09-16T12:51:54 +07:00",
+        "name": "MULTIFLEX",
+        "streetAddress": "749 Milton Street",
+        "city": "Lydia",
+        "state": "Maine",
+        "zip": 7971,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-10-31T08:45:48 +07:00",
+        "name": "ZIZZLE",
+        "streetAddress": "714 Nova Court",
+        "city": "Defiance",
+        "state": "Washington",
+        "zip": 1742,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-09-29T07:16:10 +07:00",
+        "name": "DIGIGENE",
+        "streetAddress": "293 Rodney Street",
+        "city": "Eastmont",
+        "state": "Arizona",
+        "zip": 9611,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2017-04-16T06:34:50 +07:00",
+        "name": "NAMEBOX",
+        "streetAddress": "144 Bay Street",
+        "city": "Bannock",
+        "state": "Virgin Islands",
+        "zip": 2771,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-09-06T01:01:35 +07:00",
+        "name": "ISOTERNIA",
+        "streetAddress": "292 Albemarle Road",
+        "city": "Sims",
+        "state": "North Dakota",
+        "zip": 4242,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,654.06",
+      "detention": "$2,158.36",
+      "layover": "$1,154.46"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0aff4776eb2c57f0c7",
+    "loadNumber": 30,
+    "billTo": {
+      "name": "DIGIFAD",
+      "streetAddress": "830 Apollo Street",
+      "city": "Rosine",
+      "state": " Idaho",
+      "zip": 1177
+    },
+    "stops": [
+      {
+        "date": "2017-07-06T08:30:08 +07:00",
+        "name": "EQUICOM",
+        "streetAddress": "873 Oxford Walk",
+        "city": "Belleview",
+        "state": "Massachusetts",
+        "zip": 2240,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-10-23T01:01:30 +07:00",
+        "name": "OPTICALL",
+        "streetAddress": "586 Coffey Street",
+        "city": "Oasis",
+        "state": "Oregon",
+        "zip": 7208,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-03-09T04:07:02 +07:00",
+        "name": "INFOTRIPS",
+        "streetAddress": "217 Clifford Place",
+        "city": "Layhill",
+        "state": "Kansas",
+        "zip": 6050,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-08-29T02:27:02 +07:00",
+        "name": "ZIPAK",
+        "streetAddress": "489 Bush Street",
+        "city": "Marysville",
+        "state": "American Samoa",
+        "zip": 8175,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-11-22T06:31:48 +08:00",
+        "name": "ENERSOL",
+        "streetAddress": "909 Imlay Street",
+        "city": "Buxton",
+        "state": "Oklahoma",
+        "zip": 9164,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,672.00",
+      "detention": "$1,694.44",
+      "layover": "$3,883.84"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a082f2deacaff254a",
+    "loadNumber": 31,
+    "billTo": {
+      "name": "BOSTONIC",
+      "streetAddress": "146 Atkins Avenue",
+      "city": "Fairfield",
+      "state": " Nebraska",
+      "zip": 6052
+    },
+    "stops": [
+      {
+        "date": "2015-04-20T06:23:30 +07:00",
+        "name": "GYNK",
+        "streetAddress": "847 Flatbush Avenue",
+        "city": "Neibert",
+        "state": "Marshall Islands",
+        "zip": 4579,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-08-12T11:50:45 +07:00",
+        "name": "GLEAMINK",
+        "streetAddress": "823 Bergen Street",
+        "city": "Shawmut",
+        "state": "Alaska",
+        "zip": 3218,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-05-14T07:50:42 +07:00",
+        "name": "ZILLACOM",
+        "streetAddress": "480 Mermaid Avenue",
+        "city": "Boling",
+        "state": "Michigan",
+        "zip": 7831,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,248.16",
+      "detention": "$2,108.29",
+      "layover": "$1,914.94"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a77ad3212a64002da",
+    "loadNumber": 31,
+    "billTo": {
+      "name": "ORBAXTER",
+      "streetAddress": "972 Lewis Avenue",
+      "city": "Caroleen",
+      "state": " Mississippi",
+      "zip": 601
+    },
+    "stops": [
+      {
+        "date": "2016-09-28T02:04:37 +07:00",
+        "name": "INTERFIND",
+        "streetAddress": "189 Fillmore Place",
+        "city": "Gasquet",
+        "state": "New Hampshire",
+        "zip": 7483,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-11-04T04:06:43 +08:00",
+        "name": "ZOINAGE",
+        "streetAddress": "862 Columbia Place",
+        "city": "Hamilton",
+        "state": "Delaware",
+        "zip": 7070,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-05-14T10:50:33 +07:00",
+        "name": "MACRONAUT",
+        "streetAddress": "873 Lawrence Avenue",
+        "city": "Fannett",
+        "state": "Georgia",
+        "zip": 9006,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,814.58",
+      "detention": "$2,262.98",
+      "layover": "$1,058.19"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0ae93c152c4370a1cf",
+    "loadNumber": 38,
+    "billTo": {
+      "name": "FANGOLD",
+      "streetAddress": "174 Miami Court",
+      "city": "Dunbar",
+      "state": " Guam",
+      "zip": 6816
+    },
+    "stops": [
+      {
+        "date": "2014-12-08T11:57:03 +08:00",
+        "name": "PHARMACON",
+        "streetAddress": "330 Bergen Court",
+        "city": "Vowinckel",
+        "state": "Ohio",
+        "zip": 263,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-02-11T08:55:40 +08:00",
+        "name": "CYTREX",
+        "streetAddress": "398 Union Avenue",
+        "city": "Hatteras",
+        "state": "Hawaii",
+        "zip": 5964,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,334.72",
+      "detention": "$3,398.21",
+      "layover": "$2,725.46"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a92fe795b1aa0e248",
+    "loadNumber": 37,
+    "billTo": {
+      "name": "ZILLAN",
+      "streetAddress": "465 High Street",
+      "city": "Callaghan",
+      "state": " Missouri",
+      "zip": 3473
+    },
+    "stops": [
+      {
+        "date": "2017-11-17T03:07:48 +08:00",
+        "name": "COMFIRM",
+        "streetAddress": "551 Bills Place",
+        "city": "Santel",
+        "state": "Tennessee",
+        "zip": 3188,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-04-03T04:00:09 +07:00",
+        "name": "ZENSURE",
+        "streetAddress": "811 Oxford Street",
+        "city": "Villarreal",
+        "state": "Texas",
+        "zip": 4778,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,849.60",
+      "detention": "$2,197.84",
+      "layover": "$3,788.54"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a155eae0e68689458",
+    "loadNumber": 31,
+    "billTo": {
+      "name": "ZOXY",
+      "streetAddress": "190 Ridgewood Avenue",
+      "city": "Vincent",
+      "state": " Puerto Rico",
+      "zip": 9921
+    },
+    "stops": [
+      {
+        "date": "2019-08-22T03:07:16 +07:00",
+        "name": "ONTAGENE",
+        "streetAddress": "975 Pulaski Street",
+        "city": "Bangor",
+        "state": "Arkansas",
+        "zip": 899,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-12-07T12:30:22 +08:00",
+        "name": "RAMJOB",
+        "streetAddress": "362 Keen Court",
+        "city": "Westmoreland",
+        "state": "Montana",
+        "zip": 2458,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-02-06T09:41:30 +08:00",
+        "name": "PANZENT",
+        "streetAddress": "330 Seba Avenue",
+        "city": "Nanafalia",
+        "state": "Louisiana",
+        "zip": 7914,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-09-02T01:59:51 +07:00",
+        "name": "QIMONK",
+        "streetAddress": "349 Elmwood Avenue",
+        "city": "Lynn",
+        "state": "Alabama",
+        "zip": 9635,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,687.40",
+      "detention": "$3,641.55",
+      "layover": "$3,923.64"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a58d7986d7de91135",
+    "loadNumber": 37,
+    "billTo": {
+      "name": "EXOSPEED",
+      "streetAddress": "275 Essex Street",
+      "city": "Konterra",
+      "state": " Maryland",
+      "zip": 2424
+    },
+    "stops": [
+      {
+        "date": "2018-06-28T09:30:54 +07:00",
+        "name": "ACRODANCE",
+        "streetAddress": "404 Remsen Street",
+        "city": "Jackpot",
+        "state": "Vermont",
+        "zip": 1984,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-02-25T06:11:44 +08:00",
+        "name": "INTERGEEK",
+        "streetAddress": "878 Lois Avenue",
+        "city": "Foscoe",
+        "state": "Pennsylvania",
+        "zip": 2082,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-03-07T04:10:47 +08:00",
+        "name": "MEGALL",
+        "streetAddress": "315 Colby Court",
+        "city": "Albany",
+        "state": "Federated States Of Micronesia",
+        "zip": 5817,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-07-29T10:43:30 +07:00",
+        "name": "DAYCORE",
+        "streetAddress": "230 Horace Court",
+        "city": "Gordon",
+        "state": "New Jersey",
+        "zip": 5597,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,661.29",
+      "detention": "$2,319.18",
+      "layover": "$2,402.26"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0ab9c69a2521534e67",
+    "loadNumber": 30,
+    "billTo": {
+      "name": "RUBADUB",
+      "streetAddress": "408 Tabor Court",
+      "city": "Kilbourne",
+      "state": " Iowa",
+      "zip": 6499
+    },
+    "stops": [
+      {
+        "date": "2015-02-02T06:43:45 +08:00",
+        "name": "PRIMORDIA",
+        "streetAddress": "610 Jodie Court",
+        "city": "Madaket",
+        "state": "Wyoming",
+        "zip": 9199,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-03-12T12:20:29 +08:00",
+        "name": "ZENOLUX",
+        "streetAddress": "911 Herbert Street",
+        "city": "Brule",
+        "state": "District Of Columbia",
+        "zip": 6632,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-09-19T06:22:11 +07:00",
+        "name": "AEORA",
+        "streetAddress": "224 Rewe Street",
+        "city": "Tyro",
+        "state": "Colorado",
+        "zip": 6677,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2016-08-28T01:39:19 +07:00",
+        "name": "QUALITEX",
+        "streetAddress": "210 Merit Court",
+        "city": "Loretto",
+        "state": "West Virginia",
+        "zip": 2584,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2018-02-16T03:38:43 +08:00",
+        "name": "CINESANCT",
+        "streetAddress": "281 Tompkins Place",
+        "city": "Rivera",
+        "state": "California",
+        "zip": 2539,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,501.66",
+      "detention": "$1,329.67",
+      "layover": "$1,472.68"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0aecbefe46d4f34835",
+    "loadNumber": 39,
+    "billTo": {
+      "name": "CIRCUM",
+      "streetAddress": "130 Wogan Terrace",
+      "city": "Hinsdale",
+      "state": " New Mexico",
+      "zip": 3783
+    },
+    "stops": [
+      {
+        "date": "2018-07-29T04:13:42 +07:00",
+        "name": "DIGIAL",
+        "streetAddress": "908 Mill Avenue",
+        "city": "Woodruff",
+        "state": "North Carolina",
+        "zip": 4712,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-12-30T07:43:46 +08:00",
+        "name": "EXOSWITCH",
+        "streetAddress": "660 Amboy Street",
+        "city": "Lowell",
+        "state": "Illinois",
+        "zip": 5796,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-01-19T12:21:41 +08:00",
+        "name": "ENOMEN",
+        "streetAddress": "170 Montauk Court",
+        "city": "Kaka",
+        "state": "Kentucky",
+        "zip": 6072,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-08-16T08:56:27 +07:00",
+        "name": "ZYPLE",
+        "streetAddress": "691 Cox Place",
+        "city": "Dawn",
+        "state": "Minnesota",
+        "zip": 8671,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2017-07-01T04:48:28 +07:00",
+        "name": "NEBULEAN",
+        "streetAddress": "526 Bay Parkway",
+        "city": "Trona",
+        "state": "Connecticut",
+        "zip": 9169,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,093.96",
+      "detention": "$1,841.98",
+      "layover": "$1,524.39"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a8d755390073285ed",
+    "loadNumber": 25,
+    "billTo": {
+      "name": "SNOWPOKE",
+      "streetAddress": "572 Calyer Street",
+      "city": "Sedley",
+      "state": " Nevada",
+      "zip": 1318
+    },
+    "stops": [
+      {
+        "date": "2017-01-23T01:14:34 +08:00",
+        "name": "LUMBREX",
+        "streetAddress": "908 Hicks Street",
+        "city": "Edgewater",
+        "state": "South Dakota",
+        "zip": 7185,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-01-19T06:22:03 +08:00",
+        "name": "CUJO",
+        "streetAddress": "497 Erskine Loop",
+        "city": "Delshire",
+        "state": "Rhode Island",
+        "zip": 8545,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-09-14T02:58:19 +07:00",
+        "name": "BEDLAM",
+        "streetAddress": "260 Granite Street",
+        "city": "Walker",
+        "state": "Utah",
+        "zip": 5010,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,659.22",
+      "detention": "$3,641.36",
+      "layover": "$3,377.28"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a3007f2d00e98ab98",
+    "loadNumber": 40,
+    "billTo": {
+      "name": "TWIGGERY",
+      "streetAddress": "577 Dekalb Avenue",
+      "city": "Tryon",
+      "state": " Virginia",
+      "zip": 8374
+    },
+    "stops": [
+      {
+        "date": "2014-02-26T06:14:56 +08:00",
+        "name": "ROBOID",
+        "streetAddress": "244 Hyman Court",
+        "city": "Nicholson",
+        "state": "Florida",
+        "zip": 8014,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2018-09-23T03:28:55 +07:00",
+        "name": "FITCORE",
+        "streetAddress": "203 Centre Street",
+        "city": "Osmond",
+        "state": "Northern Mariana Islands",
+        "zip": 4944,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-03-20T09:27:14 +07:00",
+        "name": "EXOSPACE",
+        "streetAddress": "160 Corbin Place",
+        "city": "Ryderwood",
+        "state": "Palau",
+        "zip": 5458,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-01-18T07:47:51 +08:00",
+        "name": "MONDICIL",
+        "streetAddress": "647 Vine Street",
+        "city": "Alderpoint",
+        "state": "South Carolina",
+        "zip": 3988,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2014-07-20T03:57:22 +07:00",
+        "name": "TERASCAPE",
+        "streetAddress": "356 Greenwood Avenue",
+        "city": "Hardyville",
+        "state": "Wisconsin",
+        "zip": 2682,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,116.60",
+      "detention": "$3,907.41",
+      "layover": "$3,884.17"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a3aa3b0b3ac136cbf",
+    "loadNumber": 27,
+    "billTo": {
+      "name": "ECOSYS",
+      "streetAddress": "517 Ryerson Street",
+      "city": "Cashtown",
+      "state": " Indiana",
+      "zip": 3053
+    },
+    "stops": [
+      {
+        "date": "2015-01-28T05:53:00 +08:00",
+        "name": "SHEPARD",
+        "streetAddress": "155 India Street",
+        "city": "Norvelt",
+        "state": "Maine",
+        "zip": 2912,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-01-08T11:26:21 +08:00",
+        "name": "VIRVA",
+        "streetAddress": "885 Taylor Street",
+        "city": "Garberville",
+        "state": "Washington",
+        "zip": 9614,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-06-15T03:29:20 +07:00",
+        "name": "KLUGGER",
+        "streetAddress": "278 Mayfair Drive",
+        "city": "Dubois",
+        "state": "Arizona",
+        "zip": 8284,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2018-12-07T09:35:46 +08:00",
+        "name": "RECRITUBE",
+        "streetAddress": "534 Lott Place",
+        "city": "Leeper",
+        "state": "Virgin Islands",
+        "zip": 2001,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,959.31",
+      "detention": "$3,433.30",
+      "layover": "$2,272.02"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0af56322347d6f71b8",
+    "loadNumber": 22,
+    "billTo": {
+      "name": "EZENTIA",
+      "streetAddress": "107 Meserole Avenue",
+      "city": "Loveland",
+      "state": " North Dakota",
+      "zip": 4276
+    },
+    "stops": [
+      {
+        "date": "2016-12-25T02:46:10 +08:00",
+        "name": "ZEPITOPE",
+        "streetAddress": "177 Box Street",
+        "city": "Veyo",
+        "state": "Idaho",
+        "zip": 6982,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-12-23T03:52:26 +08:00",
+        "name": "KINETICA",
+        "streetAddress": "240 Moore Street",
+        "city": "Sparkill",
+        "state": "Massachusetts",
+        "zip": 2213,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2019-08-21T12:24:23 +07:00",
+        "name": "FUELWORKS",
+        "streetAddress": "835 Hamilton Avenue",
+        "city": "Riceville",
+        "state": "Oregon",
+        "zip": 6828,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-09-11T01:47:04 +07:00",
+        "name": "KANGLE",
+        "streetAddress": "421 Dumont Avenue",
+        "city": "Richmond",
+        "state": "Kansas",
+        "zip": 5686,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,605.24",
+      "detention": "$2,275.09",
+      "layover": "$3,037.89"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a98a782ee3f38505d",
+    "loadNumber": 37,
+    "billTo": {
+      "name": "XYMONK",
+      "streetAddress": "503 Richards Street",
+      "city": "Highland",
+      "state": " American Samoa",
+      "zip": 3934
+    },
+    "stops": [
+      {
+        "date": "2018-08-01T10:03:29 +07:00",
+        "name": "JOVIOLD",
+        "streetAddress": "663 Maple Street",
+        "city": "Chumuckla",
+        "state": "Oklahoma",
+        "zip": 6703,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2020-02-20T12:54:19 +08:00",
+        "name": "HONOTRON",
+        "streetAddress": "925 Bainbridge Street",
+        "city": "Hayden",
+        "state": "Nebraska",
+        "zip": 1711,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2015-07-30T08:23:22 +07:00",
+        "name": "TROLLERY",
+        "streetAddress": "825 Argyle Road",
+        "city": "Woodlands",
+        "state": "Marshall Islands",
+        "zip": 5375,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,216.78",
+      "detention": "$3,026.68",
+      "layover": "$3,384.84"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a85e4f9a58d8d52f1",
+    "loadNumber": 29,
+    "billTo": {
+      "name": "QUANTALIA",
+      "streetAddress": "356 Hinckley Place",
+      "city": "Calvary",
+      "state": " Alaska",
+      "zip": 7619
+    },
+    "stops": [
+      {
+        "date": "2019-03-18T09:46:19 +07:00",
+        "name": "ASSITIA",
+        "streetAddress": "285 Flatlands Avenue",
+        "city": "Clarktown",
+        "state": "Michigan",
+        "zip": 1298,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-08-20T11:38:12 +07:00",
+        "name": "ZIDANT",
+        "streetAddress": "381 Village Court",
+        "city": "Glenbrook",
+        "state": "Mississippi",
+        "zip": 7840,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2017-05-29T08:28:39 +07:00",
+        "name": "BOILCAT",
+        "streetAddress": "925 Seton Place",
+        "city": "Dyckesville",
+        "state": "New Hampshire",
+        "zip": 9179,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,587.34",
+      "detention": "$3,690.77",
+      "layover": "$1,697.99"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a9d76da7f482b09b1",
+    "loadNumber": 40,
+    "billTo": {
+      "name": "UNI",
+      "streetAddress": "894 Hancock Street",
+      "city": "Galesville",
+      "state": " Delaware",
+      "zip": 4476
+    },
+    "stops": [
+      {
+        "date": "2016-01-14T04:25:28 +08:00",
+        "name": "XERONK",
+        "streetAddress": "131 Melba Court",
+        "city": "Whitewater",
+        "state": "Georgia",
+        "zip": 2649,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2014-10-24T03:08:00 +07:00",
+        "name": "ISOSPHERE",
+        "streetAddress": "111 Verona Street",
+        "city": "Aurora",
+        "state": "Guam",
+        "zip": 775,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-09-14T05:08:08 +07:00",
+        "name": "VANTAGE",
+        "streetAddress": "105 Gatling Place",
+        "city": "Coaldale",
+        "state": "Ohio",
+        "zip": 7813,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-03-22T05:03:47 +07:00",
+        "name": "SHOPABOUT",
+        "streetAddress": "282 Strong Place",
+        "city": "Nescatunga",
+        "state": "Hawaii",
+        "zip": 3949,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$1,505.91",
+      "detention": "$2,845.88",
+      "layover": "$2,791.23"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0abb2b7f5206c3186c",
+    "loadNumber": 36,
+    "billTo": {
+      "name": "ZBOO",
+      "streetAddress": "326 Livingston Street",
+      "city": "Monument",
+      "state": " Missouri",
+      "zip": 2908
+    },
+    "stops": [
+      {
+        "date": "2019-04-16T05:44:11 +07:00",
+        "name": "ULTRASURE",
+        "streetAddress": "532 Beacon Court",
+        "city": "Ballico",
+        "state": "Tennessee",
+        "zip": 9615,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2019-02-12T06:10:09 +08:00",
+        "name": "FISHLAND",
+        "streetAddress": "301 Durland Place",
+        "city": "Finzel",
+        "state": "Texas",
+        "zip": 2385,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2017-10-24T04:17:25 +07:00",
+        "name": "MUSANPOLY",
+        "streetAddress": "509 Dictum Court",
+        "city": "Lookingglass",
+        "state": "Puerto Rico",
+        "zip": 4517,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-05-24T07:04:00 +07:00",
+        "name": "LOTRON",
+        "streetAddress": "320 Abbey Court",
+        "city": "Crisman",
+        "state": "Arkansas",
+        "zip": 9396,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,115.71",
+      "detention": "$3,558.88",
+      "layover": "$1,599.77"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0aad959efa9e6ebb42",
+    "loadNumber": 28,
+    "billTo": {
+      "name": "GRAINSPOT",
+      "streetAddress": "958 Interborough Parkway",
+      "city": "Venice",
+      "state": " Montana",
+      "zip": 5465
+    },
+    "stops": [
+      {
+        "date": "2015-09-20T01:54:14 +07:00",
+        "name": "QUILK",
+        "streetAddress": "758 Lacon Court",
+        "city": "Wyoming",
+        "state": "Louisiana",
+        "zip": 5460,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-08-29T12:36:19 +07:00",
+        "name": "ESCENTA",
+        "streetAddress": "793 Arlington Place",
+        "city": "Germanton",
+        "state": "Alabama",
+        "zip": 3861,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2017-02-26T03:41:08 +08:00",
+        "name": "OULU",
+        "streetAddress": "473 Montieth Street",
+        "city": "Boomer",
+        "state": "Maryland",
+        "zip": 2243,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-07-18T01:17:43 +07:00",
+        "name": "MAINELAND",
+        "streetAddress": "430 Forbell Street",
+        "city": "Lopezo",
+        "state": "Vermont",
+        "zip": 7705,
+        "type": "PICKUP"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$3,938.30",
+      "detention": "$2,303.06",
+      "layover": "$1,096.32"
+    }
+  },
+  {
+    "invoiceNumber": "5e951a0a11d1e4fa1a2ac65a",
+    "loadNumber": 25,
+    "billTo": {
+      "name": "DARWINIUM",
+      "streetAddress": "946 Fanchon Place",
+      "city": "Ona",
+      "state": " Pennsylvania",
+      "zip": 2483
+    },
+    "stops": [
+      {
+        "date": "2018-04-08T05:54:36 +07:00",
+        "name": "DOGTOWN",
+        "streetAddress": "100 Crooke Avenue",
+        "city": "Bath",
+        "state": "Federated States Of Micronesia",
+        "zip": 5749,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2020-04-01T07:04:33 +07:00",
+        "name": "MICRONAUT",
+        "streetAddress": "780 Story Court",
+        "city": "Swartzville",
+        "state": "New Jersey",
+        "zip": 2891,
+        "type": "DELIVERY"
+      },
+      {
+        "date": "2016-04-29T02:48:09 +07:00",
+        "name": "BRAINQUIL",
+        "streetAddress": "721 Elliott Place",
+        "city": "Grandview",
+        "state": "Iowa",
+        "zip": 5947,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2015-02-12T08:00:04 +08:00",
+        "name": "EVIDENDS",
+        "streetAddress": "363 Lefferts Avenue",
+        "city": "Silkworth",
+        "state": "Wyoming",
+        "zip": 1649,
+        "type": "PICKUP"
+      },
+      {
+        "date": "2018-10-12T01:06:08 +07:00",
+        "name": "KROG",
+        "streetAddress": "853 Haring Street",
+        "city": "Hegins",
+        "state": "District Of Columbia",
+        "zip": 984,
+        "type": "DELIVERY"
+      }
+    ],
+    "balances": {
+      "rateAmount": "$2,377.41",
+      "detention": "$2,591.98",
+      "layover": "$3,750.69"
     }
   }
 ];

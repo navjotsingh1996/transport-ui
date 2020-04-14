@@ -53,13 +53,7 @@ export const columns = [
 ];
 
 export const options = {
-  pagination: false,
-  resizableColumns: true,
-  customToolbar: () => <div>Hey THere</div>,
-  expandableRows: true,
-  renderExpandableRow: (rowData, rowMeta) => {
-    return <div>This will have expended data</div>
-  }
+  uniqueDataKeyAccessor: 'invoiceNumber'
 };
 
 const multiStop = (value, key, type) => {
@@ -71,7 +65,6 @@ const multiStop = (value, key, type) => {
     }
   });
   myStops.forEach((v, index) => {
-    console.log(v[key]);
     const elem = (<p key={v[key]}>{v[key]}{index === value.length ? null : <br />}</p>);
     buildCell.push(elem);
   });
