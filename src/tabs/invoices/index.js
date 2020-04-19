@@ -1,41 +1,129 @@
 import React from 'react';
 import DataTable from '../../components/DataGrid';
+import InvoiceDialog from './InvoiceDialog';
 import { columns, options } from './dataGridConfig'
 import fakeData from './fakeData';
+import Link from '@material-ui/core/Link';
+import DeleteDialog from "../../components/DeleteDialog";
+
 
 export default function InvoicesTab() {
-
-  const onCreate = (data) => {
-    console.log(data);
+  const defaultInvDialogState = {
+    open: false,
+    invoices: [],
+    readOnly: true
+  };
+  const [dialogState, setDialogState] = React.useState(defaultInvDialogState);
+  const [deleteDialog, setDeleteDialog] = React.useState({
+    open: false,
+    invoiceIds: []
+  });
+  const getInvoice = (invoiceId) => {
+    let invoiceData = {};
+    fakeData.forEach((data) => {
+      if (data.invoiceNumber === invoiceId) {
+        invoiceData = data;
+        return 0;
+      }
+    });
+    return invoiceData;
   };
 
-  const onEdit = (data) => {
-    console.log(data);
+  const getMultipleInvoices = (selected) => {
+    return selected.map((sel) => {
+      return getInvoice(sel);
+    })
+  }
+
+  const onView = (e, invoiceId) => {
+    e.stopPropagation();
+    setDialogState({
+      open: true,
+      invoices: [getInvoice(invoiceId)],
+      readOnly: true,
+      type: 'view'
+    })
   };
 
-  const onGenerate = (data) => {
-    console.log(data);
+  const onCreate = () => {
+    setDialogState({
+      open: true,
+      invoices: [{}],
+      readOnly: false,
+      type: 'create'
+    })
   };
 
-  const onDelete = (data) => {
-    console.log(data);
+  const onEdit = (selected) => {
+    setDialogState({
+      open: true,
+      invoices: getMultipleInvoices(selected),
+      readOnly: false,
+      type: 'edit'
+    })
+  };
+
+  const onDelete = (selected) => {
+    setDeleteDialog({
+      open: true,
+      invoiceIds: selected
+    });
+  };
+
+  const onDeleteCancel = () => {
+    setDeleteDialog({
+      ...deleteDialog,
+      open: false,
+    });
+  }
+
+  const onDeleteConfirm = () => {
+    console.log(deleteDialog.invoiceIds);
   };
 
   const onDownload = (data) => {
-    console.log(data);
+ //   console.log(data);
   };
 
+  const handleDlgClose = () => {
+    setDialogState({
+      ...dialogState,
+      open: false,
+    });
+  };
+
+  const invoiceNumberLink = (content) => {
+    const viewCall = (e) => onView(e, content);
+    return <Link color={'textSecondary'} href='#' onClick={(e) => viewCall(e)}>{content}</Link>
+  };
+
+  columns[0].customBody = (val) => invoiceNumberLink(val);
+
   return (
-    <DataTable
-      title='Invoices'
-      columns={columns}
-      options={options}
-      data={fakeData}
-      onCreate={onCreate}
-      onEdit={onEdit}
-      onDelete={onDelete}
-      onGenerate={onGenerate}
-      onDownload={onDownload}
-    />
+    <div>
+      <DataTable
+        title='Invoices'
+        columns={columns}
+        options={options}
+        data={fakeData}
+        onCreate={onCreate}
+        onEdit={(selected) => onEdit(selected)}
+        onDelete={(selected) => onDelete(selected)}
+        onDownload={onDownload}
+      />
+      <InvoiceDialog
+        open={dialogState.open}
+        invoices={dialogState.invoices}
+        readOnly={dialogState.readOnly}
+        handleOnClose={handleDlgClose}
+        type={dialogState.type}
+      />
+      <DeleteDialog
+        open={deleteDialog.open}
+        list={deleteDialog.invoiceIds}
+        onClose={onDeleteCancel}
+        onDelete={onDeleteConfirm}
+      />
+    </div>
   )
 }

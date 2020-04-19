@@ -8,7 +8,6 @@ import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
-import BuildIcon from '@material-ui/icons/Build';
 import DownloadIcon from '@material-ui/icons/GetApp';
 
 const useToolbarStyles = makeStyles((theme) => ({
@@ -28,7 +27,7 @@ const useToolbarStyles = makeStyles((theme) => ({
 
 export default function DataGridHeader(props) {
   const classes = useToolbarStyles();
-  const { title, selected, onDelete, onCreate, onEdit, onGenerate, onDownload } = props;
+  const { title, selected, onDelete, onCreate, onEdit, onDownload } = props;
   return (
     <Toolbar className={clsx(classes.root, {
       [classes.highlight]: selected.length > 0,
@@ -45,20 +44,19 @@ export default function DataGridHeader(props) {
           <AddIcon />
         </IconButton>
       </Tooltip>
-      <Tooltip title="Edit Selected Invoices" disabled={selected.length === 0}>
-        <IconButton aria-label="edit" onClick={() => onEdit(selected)}>
+      <Tooltip title="Edit Selected Invoices">
+        <span>
+        <IconButton aria-label="edit" onClick={() => onEdit(selected)} disabled={selected.length === 0}>
           <EditIcon />
         </IconButton>
+        </span>
       </Tooltip>
-      <Tooltip title="Generate selected Invoices" disabled={selected.length === 0}>
-        <IconButton aria-label="generate" onClick={() => onGenerate(selected)}>
-          <BuildIcon />
-        </IconButton>
-      </Tooltip>
-      <Tooltip title="Delete selected Invoices" disabled={selected.length === 0}>
-        <IconButton aria-label="delete" onClick={() => onDelete(selected)}>
+      <Tooltip title="Delete selected Invoices">
+        <span>
+        <IconButton aria-label="delete" onClick={() => onDelete(selected)} disabled={selected.length === 0}>
           <DeleteIcon />
         </IconButton>
+        </span>
       </Tooltip>
       <Tooltip title="Download Table">
         <IconButton aria-label="download" onClick={() => onDownload(selected)}>

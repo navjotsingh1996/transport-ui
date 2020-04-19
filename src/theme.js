@@ -1,6 +1,13 @@
 import { createMuiTheme } from "@material-ui/core";
 
 export const theme = createMuiTheme({
+  override: {
+    MuiDialogTitle: {
+      root: {
+        backgroundColor: '#fffd70'
+      }
+    }
+  },
   palette: {
     type: "dark"
   },
