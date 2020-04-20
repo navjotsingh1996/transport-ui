@@ -1,17 +1,13 @@
 // ...
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-
-// ...
-import { helloSaga } from './sagas'
+import invoicesReducer from './tabs/invoices/invoicesProvider/invoicesReducer';
+import invoicesSaga from './tabs/invoices/invoicesProvider/sagas';
 
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(
-  reducer,
+export const store = createStore(
+  invoicesReducer,
   applyMiddleware(sagaMiddleware)
 );
-sagaMiddleware.run(helloSaga);
 
-const action = type => store.dispatch({type});
-
-// rest unchanged
+sagaMiddleware.run(invoicesSaga);

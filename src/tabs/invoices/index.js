@@ -5,9 +5,18 @@ import { columns, options } from './dataGridConfig'
 import fakeData from './fakeData';
 import Link from '@material-ui/core/Link';
 import DeleteDialog from "../../components/DeleteDialog";
+import {
+  getInvoices,
+  editInvoices,
+  createInvoices,
+  deleteInvoices
+} from "./invoicesProvider/actions";
+import { useSelector, useDispatch } from 'react-redux';
 
 
 export default function InvoicesTab() {
+  // const invoicesState = useSelector(state => state.invoices);
+  const dispatch = useDispatch();
   const defaultInvDialogState = {
     open: false,
     invoices: [],
@@ -33,7 +42,7 @@ export default function InvoicesTab() {
     return selected.map((sel) => {
       return getInvoice(sel);
     })
-  }
+  };
 
   const onView = (e, invoiceId) => {
     e.stopPropagation();
@@ -75,10 +84,10 @@ export default function InvoicesTab() {
       ...deleteDialog,
       open: false,
     });
-  }
+  };
 
   const onDeleteConfirm = () => {
-    console.log(deleteDialog.invoiceIds);
+    dispatch(deleteInvoices(deleteDialog.invoiceIds))
   };
 
   const onDownload = (data) => {
