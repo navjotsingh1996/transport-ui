@@ -1,12 +1,28 @@
 import { all, takeEvery, takeLatest } from 'redux-saga/effects';
+import { REST_PREFIX } from '../../../main/constants';
+import axios from 'axios';
+
 import * as ACTIONS from './constants';
 
 export function* getInvoicesHandler() {
-  console.log("Getting invoices")
+  axios.get('/invoice').then((res) => {
+    console.log(res);
+  }, (err) => {
+    console.log(err);
+  })
 }
 
+// FIXME: Need to batch these request so we don't lose error messages
 export function* createInvoicesHandler(action){
-  console.log(action)
+  const invoices = action.invoices;
+  invoices.forEach((inv) =>
+  {
+    axios.post('/invoice', inv).then((res) => {
+      console.log(res)
+    }, (err) => {
+      console.log(err)
+    })
+  });
 }
 
 export function* editInvoicesHandler(action){

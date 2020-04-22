@@ -16,7 +16,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 const DIALOG_TYPE = {'view':'view', 'create':'create', 'edit':'edit'};
 
 export default function InvoiceDialog(props) {
-  const { readOnly, invoices, open, handleOnClose, type } = props;
+  const { readOnly, invoices, open, handleOnClose, type, onSubmit } = props;
   let newInvoices = [];
 
   React.useEffect(() => {
@@ -40,7 +40,7 @@ export default function InvoiceDialog(props) {
         {icon}
       </ListItemIcon>
     );
-  }
+  };
 
   const getTitleText = () => {
     let text = '';
@@ -60,7 +60,7 @@ export default function InvoiceDialog(props) {
         {text}
       </Typography>
     )
-  }
+  };
 
   const getButtonText = () => {
     switch(type){
@@ -71,7 +71,7 @@ export default function InvoiceDialog(props) {
       default:
         return 'Create';
     }
-  }
+  };
 
   const mkTitle = () => {
     return (
@@ -80,7 +80,7 @@ export default function InvoiceDialog(props) {
           {getTitleText()}
         </Toolbar>
     )
-  }
+  };
 
   const gatherChanges = (index, invoiceNumber, invoiceDate, loadNumber, billTo, stops, totalBalance) => {
     const invoice = {
@@ -92,11 +92,6 @@ export default function InvoiceDialog(props) {
       totalBalance
     };
     newInvoices[index] = invoice;
-  };
-
-  const submitChanges = () => {
-    console.log(invoices);
-    handleOnClose();
   };
 
   return (
@@ -113,8 +108,8 @@ export default function InvoiceDialog(props) {
       <DialogContent dividers>
       {invoices.map((inv, index) => (
         <div key={`invoice-content-${index}`}>
-          <InvoiceDialogContent selNum={index} gatherChanges={gatherChanges} readOnly={readOnly} invoice={inv} /> {index === invoices.length - 1 ? '' :
-          <div><br /> <Divider /> <br /></div>}
+          <InvoiceDialogContent selNum={index} gatherChanges={gatherChanges} readOnly={readOnly} invoice={inv} />
+          {index === invoices.length - 1 ? '' : <div><br /> <Divider /> <br /></div>}
         </div>
       ))}
       </DialogContent>
@@ -122,7 +117,7 @@ export default function InvoiceDialog(props) {
         <Button onClick={handleOnClose} color={'secondary'}>
           Cancel
         </Button>
-        {getButtonText ? <Button onClick={submitChanges} color={'secondary'}>
+        {getButtonText ? <Button onClick={() => onSubmit(newInvoices)} color={'secondary'}>
           {getButtonText()}
         </Button> : ''}
       </DialogActions>

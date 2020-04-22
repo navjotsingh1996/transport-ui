@@ -27,6 +27,11 @@ export default function InvoicesTab() {
     open: false,
     invoiceIds: []
   });
+
+  React.useEffect(() => {
+    dispatch(getInvoices());
+  }, [dispatch]);
+
   const getInvoice = (invoiceId) => {
     let invoiceData = {};
     fakeData.forEach((data) => {
@@ -59,8 +64,9 @@ export default function InvoicesTab() {
       open: true,
       invoices: [{}],
       readOnly: false,
-      type: 'create'
-    })
+      type: 'create',
+      onSubmit: onCreateSubmit
+    });
   };
 
   const onEdit = (selected) => {
@@ -68,8 +74,17 @@ export default function InvoicesTab() {
       open: true,
       invoices: getMultipleInvoices(selected),
       readOnly: false,
-      type: 'edit'
+      type: 'edit',
+      onSubmit: onEditSubmit
     })
+  };
+
+  const onEditSubmit = (invoices) => {
+    dispatch(editInvoices(invoices))
+  }
+  ;
+  const onCreateSubmit = (invoices) => {
+    dispatch(createInvoices(invoices))
   };
 
   const onDelete = (selected) => {
@@ -125,6 +140,7 @@ export default function InvoicesTab() {
         invoices={dialogState.invoices}
         readOnly={dialogState.readOnly}
         handleOnClose={handleDlgClose}
+        onSubmit={(inv) => dialogState.onSubmit(inv)}
         type={dialogState.type}
       />
       <DeleteDialog
