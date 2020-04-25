@@ -12,6 +12,7 @@ import {
   deleteInvoices
 } from "./invoicesProvider/actions";
 import { useSelector, useDispatch } from 'react-redux';
+import { downloadFile } from "../../utils/utils";
 
 
 export default function InvoicesTab() {
@@ -27,15 +28,24 @@ export default function InvoicesTab() {
     open: false,
     invoiceIds: []
   });
-
+  const invoiceFileData = useSelector(state => state.invoice.invoiceFile);
+  const createInProg = useSelector(state => state.invoice.invoicesCreateInProg);
+  const reducerData = useSelector(state => state.invoice.invoices);
+  const data = reducerData.length === 0 ? [] : reducerData;
   React.useEffect(() => {
     dispatch(getInvoices());
   }, [dispatch]);
 
+  React.useEffect(() => {
+    if (!createInProg && invoiceFileData) {
+      downloadFile('test.pdf', {type: 'application/pdf'}, invoiceFileData);
+    }
+  }, [createInProg]);
+
   const getInvoice = (invoiceId) => {
     let invoiceData = {};
-    fakeData.forEach((data) => {
-      if (data.invoiceNumber === invoiceId) {
+    data.forEach((data) => {
+      if (data.id === invoiceId) {
         invoiceData = data;
         return 0;
       }
@@ -43,17 +53,11 @@ export default function InvoicesTab() {
     return invoiceData;
   };
 
-  const getMultipleInvoices = (selected) => {
-    return selected.map((sel) => {
-      return getInvoice(sel);
-    })
-  };
-
   const onView = (e, invoiceId) => {
     e.stopPropagation();
     setDialogState({
       open: true,
-      invoices: [getInvoice(invoiceId)],
+      invoice: getInvoice(invoiceId),
       readOnly: true,
       type: 'view'
     })
@@ -62,29 +66,30 @@ export default function InvoicesTab() {
   const onCreate = () => {
     setDialogState({
       open: true,
-      invoices: [{}],
+      invoice: {},
       readOnly: false,
       type: 'create',
       onSubmit: onCreateSubmit
     });
   };
 
+  // On Edit we only allow up to one selection
   const onEdit = (selected) => {
     setDialogState({
       open: true,
-      invoices: getMultipleInvoices(selected),
+      invoice: getInvoice(selected[0]),
       readOnly: false,
       type: 'edit',
       onSubmit: onEditSubmit
     })
   };
 
-  const onEditSubmit = (invoices) => {
-    dispatch(editInvoices(invoices))
+  const onEditSubmit = (invoice) => {
+    dispatch(editInvoices(invoice))
   }
   ;
-  const onCreateSubmit = (invoices) => {
-    dispatch(createInvoices(invoices))
+  const onCreateSubmit = (invoice) => {
+    dispatch(createInvoices(invoice))
   };
 
   const onDelete = (selected) => {
@@ -117,6 +122,9 @@ export default function InvoicesTab() {
   };
 
   const invoiceNumberLink = (content) => {
+    if (!content) {
+      return '';
+    }
     const viewCall = (e) => onView(e, content);
     return <Link color={'textSecondary'} href='#' onClick={(e) => viewCall(e)}>{content}</Link>
   };
@@ -129,7 +137,7 @@ export default function InvoicesTab() {
         title='Invoices'
         columns={columns}
         options={options}
-        data={fakeData}
+        data={data}
         onCreate={onCreate}
         onEdit={(selected) => onEdit(selected)}
         onDelete={(selected) => onDelete(selected)}
@@ -137,7 +145,7 @@ export default function InvoicesTab() {
       />
       <InvoiceDialog
         open={dialogState.open}
-        invoices={dialogState.invoices}
+        invoice={dialogState.invoice}
         readOnly={dialogState.readOnly}
         handleOnClose={handleDlgClose}
         onSubmit={(inv) => dialogState.onSubmit(inv)}

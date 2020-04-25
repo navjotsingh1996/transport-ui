@@ -4,12 +4,13 @@ import { stopTypes } from './constants';
 export const columns = [
   {
     label: 'Invoice #',
-    accessor: 'invoiceNumber',
+    accessor: 'id',
     sort: true
   },
   {
     label: 'Invoice Date',
-    accessor: 'invoiceDate',
+    accessor: 'date',
+    customBody: value => formatDate(value),
     sort: true
   },
   {
@@ -32,7 +33,7 @@ export const columns = [
     key: 'pickupDate',
     sort: false,
     customBody: value => multiStop(value, 'date', stopTypes.pickup)
-},
+  },
   {
     label: "Pickup",
     accessor: 'stops',
@@ -60,7 +61,7 @@ export const columns = [
 ];
 
 export const options = {
-  uniqueDataKeyAccessor: 'invoiceNumber'
+  uniqueDataKeyAccessor: 'id'
 };
 
 const billToSort = (a, b, accessor) => {

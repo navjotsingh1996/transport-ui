@@ -1,29 +1,5 @@
 import * as ACTIONS from './constants';
 
-/*
-export const getDeployedDocText = (planId, deviceId) => {
-  return {
-    type: ACTIONS.GET_DEPLOYED_DOC_TEXT,
-    planId,
-    deviceId
-  };
-};
-
-export const getDeployedDocTextOk = (result) => {
-  return {
-    type: ACTIONS.GET_DEPLOYED_DOC_TEXT_OK,
-    result
-  };
-};
-
-export const getDeployedDocTextFail = (err) => {
-  return {
-    type: ACTIONS.GET_DEPLOYED_DOC_TEXT_FAIL,
-    err
-  };
-};
- */
-
 export const getInvoices = () => {
   return {
     type: ACTIONS.GET_INVOICES
@@ -44,16 +20,17 @@ export const getInvoicesFail = (err) => {
   }
 };
 
-export const createInvoices = (invoices) => {
+export const createInvoices = (invoice) => {
   return {
     type: ACTIONS.CREATE_INVOICES,
-    invoices
+    invoice
   }
 };
 
-export const createInvoicesOk = () => {
+export const createInvoicesOk = (res) => {
   return {
-    type: ACTIONS.CREATE_INVOICES_OK
+    type: ACTIONS.CREATE_INVOICES_OK,
+    res
   }
 };
 
@@ -64,16 +41,17 @@ export const createInvoicesFail = (err) => {
   }
 };
 
-export const editInvoices = (invoices) => {
+export const editInvoices = (invoice) => {
   return {
     type: ACTIONS.EDIT_INVOICES,
-    invoices
+    invoice
   }
 };
 
-export const editInvoicesOk = () => {
+export const editInvoicesOk = (res) => {
   return {
-    type: ACTIONS.EDIT_INVOICES_OK
+    type: ACTIONS.EDIT_INVOICES_OK,
+    res
   }
 };
 

@@ -210,7 +210,7 @@ export default function DataTable(props) {
                 const isItemSelected = isSelected(row[rowKey]);
                 return (
                 <TableRow
-                  key={`${row.invoiceNumber}-${rowIndex}`}
+                  key={`${row.id}-${rowIndex}`}
                   hover
                   color={'secondary'}
                   onClick={(event) => handleClick(event, row[rowKey])}
@@ -226,7 +226,7 @@ export default function DataTable(props) {
                     />
                   </TableCell>
                   {columns.map((col, colIndex) => (
-                    <TableCell key={`${row.invoiceNumber}-${rowIndex}-${colIndex}`}>
+                    <TableCell key={`${row.id}-${rowIndex}-${colIndex}`}>
                       {mkCell(col, row)}
                       </TableCell>
                   ))}

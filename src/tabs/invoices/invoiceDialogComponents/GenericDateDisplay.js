@@ -7,7 +7,6 @@ import {
 
 export default function GenericDateDisplay(props) {
   const { heading, readOnly, value, onChange, setter, oldObj, objKey, id } = props;
-
   const mkTextField = () => {
     if (readOnly) {
       return(

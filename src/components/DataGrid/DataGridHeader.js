@@ -46,7 +46,7 @@ export default function DataGridHeader(props) {
       </Tooltip>
       <Tooltip title="Edit Selected Invoices">
         <span>
-        <IconButton aria-label="edit" onClick={() => onEdit(selected)} disabled={selected.length === 0}>
+        <IconButton aria-label="edit" onClick={() => onEdit(selected)} disabled={selected.length === 0 || selected.length > 1}>
           <EditIcon />
         </IconButton>
         </span>

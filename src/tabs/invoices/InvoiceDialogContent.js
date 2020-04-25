@@ -34,19 +34,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function InvoiceDialogContent(props) {
-  const { invoice, readOnly, selNum, gatherChanges } = props;
+  const { invoice, readOnly, gatherChanges } = props;
+  const defaultStop = (type) => {
+    return {
+      date: new Date().getTime(),
+      name: '',
+      streetAddress: '',
+      city: '',
+      state: '',
+      zip: '',
+      type: type
+    }
+  }
   const getMyStops = (type) => {
     const myStops = [];
     if (!invoice.stops) {
-      return [{
-        date: new Date(),
-        name: '',
-        streetAddress: '',
-        city: '',
-        state: '',
-        zip: '',
-        type: type
-      }];
+      return [defaultStop(type)];
     }
     invoice.stops.forEach((stop) => {
       if(stop.type === type) {
@@ -56,8 +59,8 @@ export default function InvoiceDialogContent(props) {
     return myStops;
   };
   const classes = useStyles();
-  const [invoiceNumber, setInvoiceNumber] = React.useState(invoice.invoiceNumber || '');
-  const [invoiceDate, setInvoiceDate] = React.useState(invoice.invoiceDate || new Date());
+  const [invoiceNumber, setInvoiceNumber] = React.useState(invoice.id || '');
+  const [invoiceDate, setInvoiceDate] = React.useState(invoice.date || new Date().getTime());
   const [loadNumber, setLoadNumber] = React.useState(invoice.loadNumber || '');
   const [billTo, setBillTo] = React.useState({
     name: invoice.billTo ? invoice.billTo.name : '',
@@ -81,17 +84,17 @@ export default function InvoiceDialogContent(props) {
 
   React.useEffect(() => {
     setPickupStops(getMyStops(stopTypes.pickup));
-    setDeliveryStops(getMyStops(stopTypes.delivery))
+    setDeliveryStops(getMyStops(stopTypes.delivery));
   }, []);
 
   React.useEffect(() => {
     updateInvoice();
-  });
+  }, [invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops, deliveryStops, totalBal]);
 
   const printBillToContent = () => {
     return (
       <GenericAddressDisplay
-        id={`bill-to-${selNum}`}
+        id={`bill-to`}
         object={billTo}
         objSetter={setBillTo}
         onChange={textOnChange}
@@ -110,7 +113,8 @@ export default function InvoiceDialogContent(props) {
         readOnly={readOnly}
         onChange={stopsTextOnChange}
         type={type}
-        rowId={selNum}
+        onDelete={deleteStop}
+        onAdd={addStop}
       />
     )
   };
@@ -168,7 +172,7 @@ export default function InvoiceDialogContent(props) {
   };
 
   const updateInvoice = () => {
-    gatherChanges(selNum, invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops.concat(deliveryStops), totalBal )
+    gatherChanges(invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops.concat(deliveryStops), totalBal )
   };
 
   const onTruckOrderToggle = () => {
@@ -183,6 +187,16 @@ export default function InvoiceDialogContent(props) {
       ...totalBal,
       [key]: val,
     })
+  };
+
+  const deleteStop = (stop, index) => {
+    stop.type === stopTypes.pickup ? pickupStops.splice(index, 1) : deliveryStops.splice(index, 1);
+    stop.type === stopTypes.pickup ? setPickupStops(pickupStops.concat([])) : setDeliveryStops(deliveryStops.concat([]));
+  };
+
+  const addStop = (type) => {
+    type === stopTypes.pickup ? setPickupStops(pickupStops.concat(defaultStop(type))) :
+      setDeliveryStops(deliveryStops.concat(defaultStop(type)));
   };
 
   const textOnChange = (e, setter, oldObj, key, isDate) => {

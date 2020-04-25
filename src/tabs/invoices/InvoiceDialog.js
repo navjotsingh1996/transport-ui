@@ -1,5 +1,4 @@
 import React from 'react';
-import Divider from '@material-ui/core/Divider';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -16,13 +15,8 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 const DIALOG_TYPE = {'view':'view', 'create':'create', 'edit':'edit'};
 
 export default function InvoiceDialog(props) {
-  const { readOnly, invoices, open, handleOnClose, type, onSubmit } = props;
-  let newInvoices = [];
-
-  React.useEffect(() => {
-    newInvoices = invoices;
-  }, []);
-
+  const { readOnly, invoice, open, handleOnClose, type, onSubmit } = props;
+  const [newInvoice, setNewInvoice] = React.useState({});
   const getIcon = () => {
     let icon = '';
     switch(type){
@@ -82,16 +76,16 @@ export default function InvoiceDialog(props) {
     )
   };
 
-  const gatherChanges = (index, invoiceNumber, invoiceDate, loadNumber, billTo, stops, totalBalance) => {
+  const gatherChanges = (invoiceNumber, invoiceDate, loadNumber, billTo, stops, balances) => {
     const invoice = {
       invoiceNumber,
       invoiceDate,
       loadNumber,
       billTo,
       stops,
-      totalBalance
+      balances
     };
-    newInvoices[index] = invoice;
+    setNewInvoice(invoice);
   };
 
   return (
@@ -106,18 +100,15 @@ export default function InvoiceDialog(props) {
         {mkTitle()}
         </DialogTitle>
       <DialogContent dividers>
-      {invoices.map((inv, index) => (
-        <div key={`invoice-content-${index}`}>
-          <InvoiceDialogContent selNum={index} gatherChanges={gatherChanges} readOnly={readOnly} invoice={inv} />
-          {index === invoices.length - 1 ? '' : <div><br /> <Divider /> <br /></div>}
+        <div key={'invoice-content'}>
+          <InvoiceDialogContent gatherChanges={gatherChanges} readOnly={readOnly} invoice={invoice} />
         </div>
-      ))}
       </DialogContent>
       <DialogActions>
         <Button onClick={handleOnClose} color={'secondary'}>
           Cancel
         </Button>
-        {getButtonText ? <Button onClick={() => onSubmit(newInvoices)} color={'secondary'}>
+        {getButtonText ? <Button onClick={() => onSubmit(newInvoice)} color={'secondary'}>
           {getButtonText()}
         </Button> : ''}
       </DialogActions>

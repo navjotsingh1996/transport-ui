@@ -1,36 +1,58 @@
-import { all, takeEvery, takeLatest } from 'redux-saga/effects';
-import { REST_PREFIX } from '../../../main/constants';
+import { all, put, call, takeEvery, takeLatest } from 'redux-saga/effects';
 import axios from 'axios';
+import axiosAgent from '../../../utils/axiosAgent';
+import {
+  getInvoices,
+  getInvoicesOk,
+  getInvoicesFail,
+  createInvoicesOk,
+  createInvoicesFail,
+  editInvoicesOk,
+  editInvoicesFail,
+  deleteInvoicesOk,
+  deleteInvoicesFail
+} from './actions';
 
 import * as ACTIONS from './constants';
 
+const baseURI = '/invoice';
+
 export function* getInvoicesHandler() {
-  axios.get('/invoice').then((res) => {
-    console.log(res);
-  }, (err) => {
-    console.log(err);
-  })
+
+  try {
+    const res = yield call(axiosAgent.get, baseURI);
+    yield put(getInvoicesOk(res.data));
+  } catch(err) {
+    yield put(getInvoicesFail(err))
+  }
 }
 
 // FIXME: Need to batch these request so we don't lose error messages
 export function* createInvoicesHandler(action){
-  const invoices = action.invoices;
-  invoices.forEach((inv) =>
-  {
-    axios.post('/invoice', inv).then((res) => {
-      console.log(res)
-    }, (err) => {
-      console.log(err)
-    })
-  });
+  try {
+    const res = yield call(axiosAgent.post, baseURI, action.invoice, { responseType: 'blob' });
+    yield put(createInvoicesOk(res.data));
+  } catch (err) {
+    yield put(createInvoicesFail(err));
+  }
 }
 
 export function* editInvoicesHandler(action){
-  console.log(action)
+  try {
+    const res = yield call(axiosAgent.put, baseURI, action.invoice, {responseType: 'blob'})
+    yield put(editInvoicesOk(res.data))
+  } catch (err) {
+    yield put(editInvoicesFail(err));
+  }
 }
 
 export function* deleteInvoicesHandler(action){
-  console.log(action)
+  try {
+    yield call(axiosAgent.put, baseURI, action.invoices);
+    yield put(deleteInvoicesOk())
+  } catch (err) {
+    yield put(deleteInvoicesFail(err));
+  }
 }
 
 export default function* getInvoicesWatcher() {
