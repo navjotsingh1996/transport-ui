@@ -32,6 +32,7 @@ export function* createInvoicesHandler(action){
   try {
     const res = yield call(axiosAgent.post, baseURI, action.invoice, { responseType: 'blob' });
     yield put(createInvoicesOk(res.data));
+    yield put(getInvoices());
   } catch (err) {
     yield put(createInvoicesFail(err));
   }
@@ -39,17 +40,20 @@ export function* createInvoicesHandler(action){
 
 export function* editInvoicesHandler(action){
   try {
-    const res = yield call(axiosAgent.put, baseURI, action.invoice, {responseType: 'blob'})
-    yield put(editInvoicesOk(res.data))
+    const res = yield call(axiosAgent.put, baseURI, action.invoice, {responseType: 'blob'});
+    yield put(editInvoicesOk(res.data));
+    yield put(getInvoices());
   } catch (err) {
     yield put(editInvoicesFail(err));
   }
 }
 
 export function* deleteInvoicesHandler(action){
+  const deleteURI = '/delete';
   try {
-    yield call(axiosAgent.put, baseURI, action.invoices);
-    yield put(deleteInvoicesOk())
+    yield call(axiosAgent.put, baseURI + deleteURI, action.invoices);
+    yield put(deleteInvoicesOk());
+    yield put(getInvoices());
   } catch (err) {
     yield put(deleteInvoicesFail(err));
   }

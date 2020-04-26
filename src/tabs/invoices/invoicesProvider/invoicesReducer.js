@@ -58,6 +58,7 @@ function invoicesReducer(state = initialState, action) {
     case invoiceActions.EDIT_INVOICES_OK:
       return {
         ...initialState,
+        invoiceFile: action.res,
         invoicesEditInProg: false,
         invoicesEditErr: null
       };

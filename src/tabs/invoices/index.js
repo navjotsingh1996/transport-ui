@@ -2,7 +2,6 @@ import React from 'react';
 import DataTable from '../../components/DataGrid';
 import InvoiceDialog from './InvoiceDialog';
 import { columns, options } from './dataGridConfig'
-import fakeData from './fakeData';
 import Link from '@material-ui/core/Link';
 import DeleteDialog from "../../components/DeleteDialog";
 import {
@@ -18,18 +17,14 @@ import { downloadFile } from "../../utils/utils";
 export default function InvoicesTab() {
   // const invoicesState = useSelector(state => state.invoices);
   const dispatch = useDispatch();
-  const defaultInvDialogState = {
-    open: false,
-    invoices: [],
-    readOnly: true
-  };
-  const [dialogState, setDialogState] = React.useState(defaultInvDialogState);
+  const [dialogState, setDialogState] = React.useState({});
   const [deleteDialog, setDeleteDialog] = React.useState({
     open: false,
     invoiceIds: []
   });
   const invoiceFileData = useSelector(state => state.invoice.invoiceFile);
   const createInProg = useSelector(state => state.invoice.invoicesCreateInProg);
+  const editInProg = useSelector(state => state.invoice.invoicesEditInProg);
   const reducerData = useSelector(state => state.invoice.invoices);
   const data = reducerData.length === 0 ? [] : reducerData;
   React.useEffect(() => {
@@ -41,6 +36,12 @@ export default function InvoicesTab() {
       downloadFile('test.pdf', {type: 'application/pdf'}, invoiceFileData);
     }
   }, [createInProg]);
+
+  React.useEffect(() => {
+    if (!editInProg && invoiceFileData) {
+      downloadFile('test.pdf', {type: 'application/pdf'}, invoiceFileData);
+    }
+  }, [editInProg]);
 
   const getInvoice = (invoiceId) => {
     let invoiceData = {};
@@ -84,12 +85,20 @@ export default function InvoicesTab() {
     })
   };
 
+  const closeDialog = () => {
+    setDialogState({
+      ...dialogState,
+      open: false
+    });
+  };
+
   const onEditSubmit = (invoice) => {
-    dispatch(editInvoices(invoice))
-  }
-  ;
+    dispatch(editInvoices(invoice));
+    closeDialog();
+  };
   const onCreateSubmit = (invoice) => {
-    dispatch(createInvoices(invoice))
+    dispatch(createInvoices(invoice));
+    closeDialog();
   };
 
   const onDelete = (selected) => {
@@ -100,14 +109,12 @@ export default function InvoicesTab() {
   };
 
   const onDeleteCancel = () => {
-    setDeleteDialog({
-      ...deleteDialog,
-      open: false,
-    });
+    closeDialog();
   };
 
   const onDeleteConfirm = () => {
-    dispatch(deleteInvoices(deleteDialog.invoiceIds))
+    dispatch(deleteInvoices(deleteDialog.invoiceIds));
+    closeDialog();
   };
 
   const onDownload = (data) => {
