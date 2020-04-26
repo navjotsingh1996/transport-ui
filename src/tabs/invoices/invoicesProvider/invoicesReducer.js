@@ -17,72 +17,72 @@ function invoicesReducer(state = initialState, action) {
   switch(action.type) {
     case invoiceActions.GET_INVOICES:
       return {
-        ...initialState,
+        ...state,
         getInvoicesInProg: true
       };
     case invoiceActions.GET_INVOICES_OK:
       return {
-        ...initialState,
+        ...state,
         getInvoicesInProg: false,
         getInvoicesErr: null,
         invoices: action.data
       };
     case invoiceActions.GET_INVOICES_FAIL:
       return {
-        ...initialState,
+        ...state,
         getInvoicesInProg: false,
         getInvoicesErr: action.err,
       };
     case invoiceActions.CREATE_INVOICES:
       return {
-        ...initialState,
+        ...state,
         invoicesCreateInProg: true
       };
     case invoiceActions.EDIT_INVOICES:
       return {
-        ...initialState,
+        ...state,
         invoicesEditInProg: true
       };
     case invoiceActions.DELETE_INVOICES:
       return {
-        ...initialState,
+        ...state,
         invoicesDeleteInProg: true
       };
     case invoiceActions.CREATE_INVOICES_OK:
       return {
-        ...initialState,
+        ...state,
         invoiceFile: action.res,
         invoicesCreateInProg: false,
         invoicesCreateErr: null
       };
     case invoiceActions.EDIT_INVOICES_OK:
       return {
-        ...initialState,
+        ...state,
         invoiceFile: action.res,
         invoicesEditInProg: false,
         invoicesEditErr: null
       };
     case invoiceActions.DELETE_INVOICES_OK:
       return {
-        ...initialState,
+        ...state,
         invoicesDeleteInProg: false,
         invoicesDeleteErr: null
       };
     case invoiceActions.CREATE_INVOICES_FAIL:
       return {
-        ...initialState,
+        ...state,
         invoicesCreateInProg: false,
         invoicesCreateErr: action.err,
       };
     case invoiceActions.EDIT_INVOICES_FAIL:
       return {
-        ...initialState,
+        ...state,
         invoicesEditInProg: false,
         invoicesEditErr: action.err,
       };
     case invoiceActions.DELETE_INVOICES_FAIL:
       return {
-        ...initialState,
+        ...state,
         invoicesDeleteInProg: false,
         invoicesDeleteErr: action.err,
       };

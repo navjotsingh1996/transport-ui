@@ -43,6 +43,10 @@ export default function DataTable(props) {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('invoiceNumber');
 
+  React.useEffect(() => {
+    updateSelection();
+  }, [data]);
+
   const mkCell = (column, data) => {
     return column.customBody ? column.customBody(data[column.accessor]) :
       data[column.accessor];
@@ -123,14 +127,20 @@ export default function DataTable(props) {
     handleRequestSort(event, property);
   };
 
-  /**
-   * End sorting functions
-   */
+  const updateSelection = () => {
+    const updatedSelected = [];
+    selected.forEach((s) => {
+      if (data.some(d => d.id === s)) {
+        updatedSelected.push(s);
+      }
+    });
+    setSelected(updatedSelected);
+  };
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelecteds = data.map((n) => n[rowKey]);
-      setSelected(newSelecteds);
+      const newSelectedIds = data.map((n) => n[rowKey]);
+      setSelected(newSelectedIds);
       return;
     }
     setSelected([]);

@@ -13,11 +13,12 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import { downloadFile } from "../../utils/utils";
 
-
 export default function InvoicesTab() {
-  // const invoicesState = useSelector(state => state.invoices);
   const dispatch = useDispatch();
-  const [dialogState, setDialogState] = React.useState({});
+  const [dialogState, setDialogState] = React.useState({
+    open: false,
+    readOnly: true
+  });
   const [deleteDialog, setDeleteDialog] = React.useState({
     open: false,
     invoiceIds: []
@@ -25,8 +26,8 @@ export default function InvoicesTab() {
   const invoiceFileData = useSelector(state => state.invoice.invoiceFile);
   const createInProg = useSelector(state => state.invoice.invoicesCreateInProg);
   const editInProg = useSelector(state => state.invoice.invoicesEditInProg);
-  const reducerData = useSelector(state => state.invoice.invoices);
-  const data = reducerData.length === 0 ? [] : reducerData;
+  const data = useSelector(state => state.invoice.invoices);
+
   React.useEffect(() => {
     dispatch(getInvoices());
   }, [dispatch]);
@@ -69,8 +70,7 @@ export default function InvoicesTab() {
       open: true,
       invoice: {},
       readOnly: false,
-      type: 'create',
-      onSubmit: onCreateSubmit
+      type: 'create'
     });
   };
 
@@ -80,25 +80,17 @@ export default function InvoicesTab() {
       open: true,
       invoice: getInvoice(selected[0]),
       readOnly: false,
-      type: 'edit',
-      onSubmit: onEditSubmit
+      type: 'edit'
     })
-  };
-
-  const closeDialog = () => {
-    setDialogState({
-      ...dialogState,
-      open: false
-    });
   };
 
   const onEditSubmit = (invoice) => {
     dispatch(editInvoices(invoice));
-    closeDialog();
+    handleDlgClose();
   };
-  const onCreateSubmit = (invoice) => {
+  const onCreateSubmit = (e, invoice) => {
     dispatch(createInvoices(invoice));
-    closeDialog();
+    handleDlgClose();
   };
 
   const onDelete = (selected) => {
@@ -109,12 +101,18 @@ export default function InvoicesTab() {
   };
 
   const onDeleteCancel = () => {
-    closeDialog();
+    setDeleteDialog({
+      ...deleteDialog,
+      open: false
+    });
   };
 
   const onDeleteConfirm = () => {
     dispatch(deleteInvoices(deleteDialog.invoiceIds));
-    closeDialog();
+    setDeleteDialog({
+        ...deleteDialog,
+      open: false
+    });
   };
 
   const onDownload = (data) => {
@@ -122,6 +120,7 @@ export default function InvoicesTab() {
   };
 
   const handleDlgClose = () => {
+    console.log(dialogState);
     setDialogState({
       ...dialogState,
       open: false,
@@ -137,6 +136,7 @@ export default function InvoicesTab() {
   };
 
   columns[0].customBody = (val) => invoiceNumberLink(val);
+  console.log(dialogState);
 
   return (
     <div>
@@ -155,7 +155,7 @@ export default function InvoicesTab() {
         invoice={dialogState.invoice}
         readOnly={dialogState.readOnly}
         handleOnClose={handleDlgClose}
-        onSubmit={(inv) => dialogState.onSubmit(inv)}
+        onSubmit={(inv) => dialogState.type === 'edit' ? onEditSubmit(inv) : onCreateSubmit(inv) }
         type={dialogState.type}
       />
       <DeleteDialog
