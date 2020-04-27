@@ -5,18 +5,21 @@ export const columns = [
   {
     label: 'Invoice #',
     accessor: 'id',
-    sort: true
+    sort: true,
+    filter: true
   },
   {
     label: 'Invoice Date',
     accessor: 'date',
     customBody: value => formatDate(value),
-    sort: true
+    sort: true,
+    filter: true
   },
   {
     label: 'Load #',
     accessor: 'loadNumber',
-    sort: true
+    sort: true,
+    filter: true
   },
   {
     label: 'Brokerage',
@@ -24,7 +27,8 @@ export const columns = [
     customBody: value => value.name,
     toolTip: "Brokerage company name",
     sort: true,
-    sortFunction: (a, b, accessor) => billToSort(a, b, accessor)
+    sortFunction: (a, b, accessor) => billToSort(a, b, accessor),
+    filter: true
   },
   {
     label: 'Pickup Date',
@@ -65,7 +69,8 @@ export const columns = [
     key: 'balances',
     sort: true,
     customBody: value => formatBalance(value),
-    sortFunction: (a, b, accessor) => balanceSort(a, b, accessor)
+    sortFunction: (a, b, accessor) => balanceSort(a, b, accessor),
+    filter: true
   }
 ];
 

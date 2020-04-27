@@ -8,6 +8,7 @@ import TableSortLabel from '@material-ui/core/TableSortLabel';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TablePagination from '@material-ui/core/TablePagination';
+import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
 import DataGridHeader from './DataGridHeader';
@@ -45,6 +46,15 @@ export default function DataTable(props) {
   const [orderBy, setOrderBy] = React.useState('invoiceNumber');
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [filters, setFilters] = React.useState({});
+
+  React.useEffect(() => {
+    const initializeFilters = {};
+    columns.forEach((col) => {
+      initializeFilters[col.key] = '';
+    });
+    setFilters(initializeFilters);
+  }, [columns]);
 
   React.useEffect(() => {
     updateSelection();
@@ -177,6 +187,12 @@ export default function DataTable(props) {
     setSelected(newSelected);
   };
 
+  const onFilterChange = (value, key) => {
+    const currentFilters = filters;
+    currentFilters[key] = value;
+    setFilters(currentFilters);
+  };
+
   const isSelected = (name) => selected.indexOf(name) !== -1;
 
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
@@ -227,6 +243,22 @@ export default function DataTable(props) {
                       </TableSortLabel>
                     </TableCell>
                   ) : (<TableCell key={col.label}>{col.label}</TableCell>)})}
+              </TableRow>
+            </TableHead>
+            <TableHead>
+              <TableRow>
+                <TableCell padding="checkbox">
+                  <div />
+                </TableCell>
+                {columns.map((col) => {
+                  return (
+                    <TableCell key={`${col.label}-filter`}>
+                      <TextField
+                        disabled={!col.filter}
+                        value={filters[col.key]}
+                        onChange={(e) => onFilterChange(e.target.value, col.key)}
+                      />
+                    </TableCell>)})}
               </TableRow>
             </TableHead>
             <TableBody>
