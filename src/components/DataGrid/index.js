@@ -7,13 +7,14 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import TablePagination from '@material-ui/core/TablePagination';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
 import DataGridHeader from './DataGridHeader';
 
 const useStyles = makeStyles((theme) => ({
   table: {
-    minWidth: 650,
+    minWidth: 900,
   },
   root: {
     width: '100%',
@@ -42,6 +43,8 @@ export default function DataTable(props) {
   const [selected, setSelected] = React.useState([]);
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('invoiceNumber');
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   React.useEffect(() => {
     updateSelection();
@@ -137,6 +140,15 @@ export default function DataTable(props) {
     setSelected(updatedSelected);
   };
 
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
+
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
       const newSelectedIds = data.map((n) => n[rowKey]);
@@ -166,6 +178,8 @@ export default function DataTable(props) {
   };
 
   const isSelected = (name) => selected.indexOf(name) !== -1;
+
+  const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
 
   return (
     <div className={classes.root}>
@@ -216,7 +230,8 @@ export default function DataTable(props) {
               </TableRow>
             </TableHead>
             <TableBody>
-              {stableSort(data, getComparator(order, orderBy)).map((row, rowIndex) => {
+              {stableSort(data, getComparator(order, orderBy))
+                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, rowIndex) => {
                 const isItemSelected = isSelected(row[rowKey]);
                 return (
                 <TableRow
@@ -245,6 +260,15 @@ export default function DataTable(props) {
             </TableBody>
           </Table>
         </TableContainer>
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25]}
+          component="div"
+          count={data.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onChangePage={handleChangePage}
+          onChangeRowsPerPage={handleChangeRowsPerPage}
+        />
       </Paper>
     </div>
   )
