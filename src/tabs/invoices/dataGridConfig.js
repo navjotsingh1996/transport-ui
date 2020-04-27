@@ -57,6 +57,15 @@ export const columns = [
     key: 'delivery',
     sort: false,
     customBody: value => multiStop(value, 'name', stopTypes.delivery)
+  },
+  {
+    label: 'Total Rate',
+    accessor: 'balances',
+    toolTip: 'Total cost of invoice',
+    key: 'balances',
+    sort: true,
+    customBody: value => formatBalance(value),
+    sortFunction: (a, b, accessor) => balanceSort(a, b, accessor)
   }
 ];
 
@@ -64,8 +73,26 @@ export const options = {
   uniqueDataKeyAccessor: 'id'
 };
 
+const getTotalBalance = (bal) => {
+  const { rateAmount, advance, detention, extraStop, layover, other, truckOrderNotUsed } = bal;
+  return truckOrderNotUsed ? rateAmount.toFixed(2) : (rateAmount + advance + detention + extraStop + layover + other).toFixed(2);
+};
+
 const billToSort = (a, b, accessor) => {
   return b[accessor].name.localeCompare(a[accessor].name);
+};
+
+const balanceSort = (a, b, accessor) => {
+  const aTotal = getTotalBalance(a[accessor]);
+  const bTotal = getTotalBalance(b[accessor]);
+  return bTotal - aTotal;
+};
+
+const formatBalance = (val) => {
+  const { rateAmount, truckOrderNotUsed } = val;
+  return truckOrderNotUsed ? (
+    <h4>TRUCK ORDER NOT USED: $ {rateAmount.toFixed(2)}</h4>
+  ) : getTotalBalance(val);
 };
 
 const formatDate = (date) => {

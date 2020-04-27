@@ -14,7 +14,7 @@ export default function TotalBalanceDisplay(props) {
         {readOnly ? (
           <div>
             <u>Rate Amount $ {obj.rateAmount}</u>
-            <h3>Total Balance $ {obj.rateAmount}</h3>
+            <h3>Total Balance $ {obj.rateAmount.toFixed(2)}</h3>
           </div>
         ) : (
           <div>
@@ -86,7 +86,7 @@ export default function TotalBalanceDisplay(props) {
         {printGenericTextObj('extraStop','Extra Stop', obj.extraStop, 'extraStop')}
         {printGenericTextObj('lumper','Lumper', obj.lumper, 'lumper')}
         {printGenericTextObj('others','Others', obj.others, 'others')}
-        <h3>Total Balance $ {totalBal}</h3>
+        <h3>Total Balance $ {totalBal.toFixed(2)}</h3>
       </div>
     );
   };

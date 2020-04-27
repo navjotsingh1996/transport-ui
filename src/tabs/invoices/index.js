@@ -120,7 +120,6 @@ export default function InvoicesTab() {
   };
 
   const handleDlgClose = () => {
-    console.log(dialogState);
     setDialogState({
       ...dialogState,
       open: false,
@@ -136,7 +135,6 @@ export default function InvoicesTab() {
   };
 
   columns[0].customBody = (val) => invoiceNumberLink(val);
-  console.log(dialogState);
 
   return (
     <div>

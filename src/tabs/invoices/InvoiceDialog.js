@@ -76,9 +76,9 @@ export default function InvoiceDialog(props) {
     )
   };
 
-  const gatherChanges = (invoiceNumber, invoiceDate, loadNumber, billTo, stops, balances) => {
+  const gatherChanges = (id, invoiceDate, loadNumber, billTo, stops, balances) => {
     const invoice = {
-      invoiceNumber,
+      id,
       invoiceDate,
       loadNumber,
       billTo,

@@ -28,6 +28,7 @@ export default function StopTypeDisplay(props) {
           <div id={`${id}-${i}`} key={`${id}-${i}`}>
             <h3>
               {`${type === stopTypes.pickup ? 'Pickup #' : 'Delivery #'}${i + 1}`}
+              {readOnly ? '' : (
                 <IconButton
                   aria-label="add"
                   className={classes.deleteButton}
@@ -35,7 +36,7 @@ export default function StopTypeDisplay(props) {
                   onClick={() => onDelete(stop, i)}
                 >
                   <DeleteIcon />
-                </IconButton>
+                </IconButton>)}
               </h3>
             <GenericDateDisplay
               id={`${id}-date-${type}-${i}`}
