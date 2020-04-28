@@ -45,13 +45,14 @@ export default function DataTable(props) {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('invoiceNumber');
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [filters, setFilters] = React.useState({});
 
   React.useEffect(() => {
     const initializeFilters = {};
     columns.forEach((col) => {
-      initializeFilters[col.key] = '';
+      const uniqueId = col.key || col.accessor;
+      initializeFilters[uniqueId] = '';
     });
     setFilters(initializeFilters);
   }, [columns]);
@@ -66,7 +67,7 @@ export default function DataTable(props) {
   };
 
   /**
-   * sorts the array using whatever coparotor we use
+   * sorts the array using whatever comparator we use
    * @param array Data being sorted
    * @param comparator Comparator being used on the data
    * @returns {*}
@@ -140,6 +141,26 @@ export default function DataTable(props) {
     handleRequestSort(event, property);
   };
 
+  const simpleStringFilter = (element, filter) => {
+    return element.toString().includes(filter);
+  };
+
+
+  const filterTable = () => {
+    const stabilizedThis = data.map((el, index) => [el, index]);
+    const filteredColData = [];
+    columns.forEach((col) => {
+      const uniqueId = col.key || col.accessor;
+        if (col.filter) {
+          filteredColData.push(stabilizedThis.filter(val => {
+            return col.customFilter ? col.customFilter(val[0][col.accessor], filters[uniqueId]) :
+            simpleStringFilter(val[0][col.accessor], filters[uniqueId]);
+          }));
+        }
+    });
+    return filteredColData.reduce((a, b) => b.filter(Set.prototype.has, new Set(a))).map((res) => res[0]);
+  };
+
   const updateSelection = () => {
     const updatedSelected = [];
     selected.forEach((s) => {
@@ -188,14 +209,17 @@ export default function DataTable(props) {
   };
 
   const onFilterChange = (value, key) => {
-    const currentFilters = filters;
-    currentFilters[key] = value;
-    setFilters(currentFilters);
+    setFilters({
+      ...filters,
+      [key]: value
+    });
   };
 
   const isSelected = (name) => selected.indexOf(name) !== -1;
 
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
+
+  const filteredData = filterTable();
 
   return (
     <div className={classes.root}>
@@ -251,18 +275,19 @@ export default function DataTable(props) {
                   <div />
                 </TableCell>
                 {columns.map((col) => {
+                  const uniqueId = col.key || col.accessor;
                   return (
                     <TableCell key={`${col.label}-filter`}>
                       <TextField
                         disabled={!col.filter}
-                        value={filters[col.key]}
-                        onChange={(e) => onFilterChange(e.target.value, col.key)}
+                        value={filters[uniqueId]}
+                        onChange={(e) => onFilterChange(e.target.value, uniqueId)}
                       />
                     </TableCell>)})}
               </TableRow>
             </TableHead>
             <TableBody>
-              {stableSort(data, getComparator(order, orderBy))
+              {stableSort(filteredData, getComparator(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, rowIndex) => {
                 const isItemSelected = isSelected(row[rowKey]);
                 return (
@@ -293,9 +318,9 @@ export default function DataTable(props) {
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
+          rowsPerPageOptions={[10, 20, 100]}
           component="div"
-          count={data.length}
+          count={filteredData.length}
           rowsPerPage={rowsPerPage}
           page={page}
           onChangePage={handleChangePage}

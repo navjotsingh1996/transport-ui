@@ -13,7 +13,7 @@ export const columns = [
     accessor: 'date',
     customBody: value => formatDate(value),
     sort: true,
-    filter: true
+    filter: false
   },
   {
     label: 'Load #',
@@ -28,7 +28,7 @@ export const columns = [
     toolTip: "Brokerage company name",
     sort: true,
     sortFunction: (a, b, accessor) => billToSort(a, b, accessor),
-    filter: true
+    filter: false
   },
   {
     label: 'Pickup Date',
@@ -70,7 +70,7 @@ export const columns = [
     sort: true,
     customBody: value => formatBalance(value),
     sortFunction: (a, b, accessor) => balanceSort(a, b, accessor),
-    filter: true
+    filter: false
   }
 ];
 

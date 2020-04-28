@@ -161,6 +161,7 @@ export default function InvoicesTab() {
         list={deleteDialog.invoiceIds}
         onClose={onDeleteCancel}
         onDelete={onDeleteConfirm}
+        itemLabel={'Invoice Number'}
       />
     </div>
   )

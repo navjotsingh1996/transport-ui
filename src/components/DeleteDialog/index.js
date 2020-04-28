@@ -6,7 +6,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
 
 export default function DeleteDialog(props) {
-  const { open, onClose, onDelete, list } = props;
+  const { open, onClose, onDelete, list, itemLabel } = props;
   return (
     <Dialog
       open={open}
@@ -18,7 +18,7 @@ export default function DeleteDialog(props) {
       <DialogContent dividers>
         <ul>
           {list.map((item) => {
-            return <li key={item} id={item}>{item}</li>
+            return <li key={item} id={item}>{itemLabel}: {item}</li>
           })}
         </ul>
       </DialogContent>
