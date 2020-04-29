@@ -79,7 +79,7 @@ export default function InvoiceDialogContent(props) {
     extraStop: invoice.balances ? invoice.balances.extraStop || 0.0 : 0.0,
     lumper: invoice.balances ? invoice.balances.lumper || 0.0 : 0.0,
     others: invoice.balances ? invoice.balances.others || 0.0 : 0.0,
-    truckOrderNotUsed: !!invoice.balances.truckOrderNotUsed
+    truckOrderNotUsed: invoice.balances ? !!invoice.balances.truckOrderNotUsed : false
   });
   React.useEffect(() => {
     setPickupStops(getMyStops(stopTypes.pickup));

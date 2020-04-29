@@ -12,8 +12,10 @@ import {
 } from "./invoicesProvider/actions";
 import { useSelector, useDispatch } from 'react-redux';
 import { downloadFile } from "../../utils/utils";
+import { useSnackbar } from 'notistack';
 
 export default function InvoicesTab() {
+  const { enqueueSnackbar } = useSnackbar();
   const dispatch = useDispatch();
   const [dialogState, setDialogState] = React.useState({
     open: false,
@@ -26,7 +28,39 @@ export default function InvoicesTab() {
   const invoiceFileData = useSelector(state => state.invoice.invoiceFile);
   const createInProg = useSelector(state => state.invoice.invoicesCreateInProg);
   const editInProg = useSelector(state => state.invoice.invoicesEditInProg);
+  const deleteInProg = useSelector(state => state.invoice.invoicesDeleteInProg);
+  const createErr = useSelector(state => state.invoice.invoicesCreateErr);
+  const editErr = useSelector(state => state.invoice.invoicesEditErr);
+  const deleteErr = useSelector(state => state.invoice.invoicesDeleteErr);
   const data = useSelector(state => state.invoice.invoices);
+
+  const successSnackbar = (msg) => {
+    enqueueSnackbar(msg, {
+      variant: 'success',
+      anchorOrigin: {
+        vertical: 'bottom',
+        horizontal: 'right',
+      },
+    });
+  };
+
+  React.useEffect(() => {
+    if (!deleteInProg && !deleteErr) {
+      successSnackbar('Deletion was a success');
+    }
+  }, [deleteInProg]);
+
+  React.useEffect(() => {
+    if (!editInProg && !editErr && invoiceFileData) {
+      successSnackbar('Invoice edit action was successful, your file will be in the downloads folder');
+    }
+  }, [editInProg]);
+
+  React.useEffect(() => {
+    if (!createInProg && !createErr && invoiceFileData) {
+      successSnackbar('Invoice create action was successful, your file will be in the downloads folder');
+    }
+  }, [createInProg]);
 
   React.useEffect(() => {
     dispatch(getInvoices());

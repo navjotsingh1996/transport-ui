@@ -2,7 +2,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
 export default function GenericTextDisplay(props) {
-  const { heading, readOnly, value, onChange, setter, oldObj, objKey, id } = props;
+  const { heading, readOnly, value, onChange, setter, oldObj, objKey, id, error, helperText } = props;
 
   const mkTextField = () => {
     if (readOnly) {
@@ -15,6 +15,8 @@ export default function GenericTextDisplay(props) {
     return (
       <TextField
         id={`${id}-textfield-${value}`}
+        error={error}
+        helperText={helperText}
         label={heading}
         value={value}
         style={{width: '100%'}}
