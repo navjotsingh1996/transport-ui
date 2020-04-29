@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -25,6 +26,9 @@ const useToolbarStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * Header for the data grid, includes all of the actions
+ */
 export default function DataGridHeader(props) {
   const classes = useToolbarStyles();
   const { title, selected, onDelete, onCreate, onEdit, onDownload } = props;
@@ -66,3 +70,12 @@ export default function DataGridHeader(props) {
     </Toolbar>
   )
 }
+// title, selected, onDelete, onCreate, onEdit, onDownload
+DataGridHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+  selected: PropTypes.array.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onCreate: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
+  onDownload: PropTypes.func.isRequired,
+};
