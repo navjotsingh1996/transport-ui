@@ -70,7 +70,7 @@ export default function DataGridHeader(props) {
     </Toolbar>
   )
 }
-// title, selected, onDelete, onCreate, onEdit, onDownload
+
 DataGridHeader.propTypes = {
   title: PropTypes.string.isRequired,
   selected: PropTypes.array.isRequired,

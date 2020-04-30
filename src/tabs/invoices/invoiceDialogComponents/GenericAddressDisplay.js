@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import GenericTextDisplay from './GenericTextDisplay'
 
 export default function GenericAddressDisplay(props) {
@@ -63,3 +64,12 @@ export default function GenericAddressDisplay(props) {
 
   return mkTextField();
 }
+
+GenericAddressDisplay.propTypes = {
+  readOnly: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  object: PropTypes.any.isRequired,
+  objSetter: PropTypes.func.isRequired,
+  heading: PropTypes.string,
+};

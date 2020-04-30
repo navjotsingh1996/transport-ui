@@ -1,3 +1,9 @@
+/**
+ * For downloading files
+ * @param name filename
+ * @param fileType the type of file (pdf, csv, etc) (must be in format { type: '<type>' }
+ * @param fileData contents of the file
+ */
 export const downloadFile = (name, fileType, fileData) => {
   // create a download anchor tag
   const downloadLink      = document.createElement('a');

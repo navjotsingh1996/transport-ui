@@ -1,5 +1,8 @@
 import React from 'react'
 
+/**
+ * Top level home page
+ */
 export default function HomeTab() {
   return (
     <div>

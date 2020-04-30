@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
@@ -70,3 +71,14 @@ export default function StopTypeDisplay(props) {
     </div>
   )
 }
+
+StopTypeDisplay.propTypes = {
+  stops: PropTypes.array.isRequired,
+  stopsSetter: PropTypes.func.isRequired,
+  readOnly: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  type: PropTypes.any.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onAdd: PropTypes.func.isRequired,
+};

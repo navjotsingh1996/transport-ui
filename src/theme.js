@@ -1,5 +1,8 @@
 import { createMuiTheme } from "@material-ui/core";
 
+/**
+ * Contains the theme for the whole application
+ */
 export const theme = createMuiTheme({
   override: {
     MuiDialogTitle: {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -28,4 +29,12 @@ export default function DeleteDialog(props) {
       </DialogActions>
     </Dialog>
   );
+}
+
+DeleteDialog.propTypes = {
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  list: PropTypes.array.isRequired,
+  itemLabel: PropTypes.string.isRequired,
 }

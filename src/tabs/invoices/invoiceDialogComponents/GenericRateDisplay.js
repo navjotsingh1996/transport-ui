@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CurrencyTextField from '@unicef/material-ui-currency-textfield'
 
 export default function GenericRateDisplay(props) {
@@ -27,3 +28,12 @@ export default function GenericRateDisplay(props) {
 
   return mkTextField()
 }
+
+GenericRateDisplay.propTypes = {
+  readOnly: PropTypes.bool.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  heading: PropTypes.string,
+  objKey: PropTypes.string.isRequired,
+};

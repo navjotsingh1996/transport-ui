@@ -36,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * Left panel navigation tabs, contains the tabs and routing to each page.
+ */
 export default function Navbar(props) {
   const classes = useStyles();
   const location = useLocation();

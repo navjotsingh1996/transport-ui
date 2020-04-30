@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -36,7 +37,9 @@ const useStyles = makeStyles((theme) => ({
     width: 1,
   },
 }));
-
+/**
+ * Uses Material-ui tables to build a data-grid that can be used throughout the application
+ */
 export default function DataTable(props) {
   const classes = useStyles();
   const {columns, title, data, options, onDelete, onCreate, onEdit, onDownload} = props;
@@ -48,6 +51,9 @@ export default function DataTable(props) {
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [filters, setFilters] = React.useState({});
 
+  /**
+   * initializes the filters for each columns as empty strings
+   */
   React.useEffect(() => {
     const initializeFilters = {};
     columns.forEach((col) => {
@@ -57,10 +63,19 @@ export default function DataTable(props) {
     setFilters(initializeFilters);
   }, [columns]);
 
+  /**
+   * Updates selection every time data changes
+   */
   React.useEffect(() => {
     updateSelection();
   }, [data]);
 
+  /**
+   * Makes a custom body for any column that has a customBody element otherwise just prints the data
+   * @param column all columns in the data-grid
+   * @param data all data in the data-grid
+   * @returns data value if no customBody specified otherwise returns a custom cell
+   */
   const mkCell = (column, data) => {
     return column.customBody ? column.customBody(data[column.accessor]) :
       data[column.accessor];
@@ -70,7 +85,7 @@ export default function DataTable(props) {
    * sorts the array using whatever comparator we use
    * @param array Data being sorted
    * @param comparator Comparator being used on the data
-   * @returns {*}
+   * @returns array of sets (data, index)
    */
   function stableSort(array, comparator) {
     const stabilizedThis = array.map((el, index) => [el, index]);
@@ -83,11 +98,11 @@ export default function DataTable(props) {
   }
 
   /**
-   *
-   * @param a
-   * @param b
-   * @param orderBy
-   * @returns {number}
+   * default sorting comparator
+   * @param a first element
+   * @param b second element
+   * @param orderBy column we are ordering by
+   * @returns -1 if first element is greater,1 if second element is greater, and 0 if they are both equal
    */
   const descendingComparator = (a, b, orderBy) => {
     if (b[orderBy] < a[orderBy]) {
@@ -100,10 +115,10 @@ export default function DataTable(props) {
   };
 
   /**
-   * This is the comparotor that is run by each row to determine the order of the rows
+   * This is the comparator that is run by each row to determine the order of the rows
    * @param order Ascending or descending
    * @param orderBy The column we will be sorting by
-   * @returns {function(*=, *=): number}
+   * @returns returns the correct comparator function to be used during the sort
    */
   const getComparator = (order, orderBy) => {
     let columnIndex = 0;
@@ -135,17 +150,25 @@ export default function DataTable(props) {
   /**
    * Handles header cell clicks (which triggers sorting)
    * @param property is the column that is to be sorted
-   * @returns {Function}
    */
   const createSortHandler = (property) => (event) => {
     handleRequestSort(event, property);
   };
 
+  /**
+   * Basic default filter if none is provided in columns
+   * @param element element we are filtering
+   * @param filter filter being used
+   * @returns true or false if element is withing the filter or not
+   */
   const simpleStringFilter = (element, filter) => {
     return element.toString().includes(filter);
   };
 
-
+  /**
+   * filters the current data for the table
+   * @returns filtered list of data
+   */
   const filterTable = () => {
     const stabilizedThis = data.map((el, index) => [el, index]);
     const filteredColData = [];
@@ -161,6 +184,9 @@ export default function DataTable(props) {
     return filteredColData.reduce((a, b) => b.filter(Set.prototype.has, new Set(a))).map((res) => res[0]);
   };
 
+  /**
+   * Updates the selection, if the selected value is no longer in the data set, it is removed from selection
+   */
   const updateSelection = () => {
     const updatedSelected = [];
     selected.forEach((s) => {
@@ -171,15 +197,28 @@ export default function DataTable(props) {
     setSelected(updatedSelected);
   };
 
+  /**
+   * Handles the changing of pages (sets new page)
+   * @param event page change event
+   * @param newPage new page that the table was changed to
+   */
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
 
+  /**
+   * Handles changing of total rows per page (sets to the new value)
+   * @param event rows per page changed event
+   */
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
 
+  /**
+   * Handles the case where we select all rows in the table
+   * @param event onClick of the header row
+   */
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
       const newSelectedIds = data.map((n) => n[rowKey]);
@@ -189,6 +228,11 @@ export default function DataTable(props) {
     setSelected([]);
   };
 
+  /**
+   * Handles the selection of a single data row
+   * @param event when a row is clicked
+   * @param name row that was clicked
+   */
   const handleClick = (event, name) => {
     const selectedIndex = selected.indexOf(name);
     let newSelected = [];
@@ -208,6 +252,11 @@ export default function DataTable(props) {
     setSelected(newSelected);
   };
 
+  /**
+   * When a filter is changed
+   * @param value new filter value
+   * @param key column that was filtered
+   */
   const onFilterChange = (value, key) => {
     setFilters({
       ...filters,
@@ -215,9 +264,12 @@ export default function DataTable(props) {
     });
   };
 
+  /**
+   * determines if a row has been selected
+   * @param name row
+   * @returns {Boolean} if row was selected or not
+   */
   const isSelected = (name) => selected.indexOf(name) !== -1;
-
-  const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
 
   const filteredData = filterTable();
 
@@ -329,5 +381,15 @@ export default function DataTable(props) {
       </Paper>
     </div>
   )
-
 }
+
+DataTable.propTypes = {
+  columns: PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
+  options: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onCreate: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
+  onDownload: PropTypes.func.isRequired,
+};

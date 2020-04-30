@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * Application top Appbar
+ */
 export default function MainHeader() {
 
   const classes = useStyles();

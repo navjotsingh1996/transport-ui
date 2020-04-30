@@ -4,6 +4,9 @@ import HomeTab from './tabs/home';
 import HomeIcon from '@material-ui/icons/Home';
 import InvoiceIcon from '@material-ui/icons/Description';
 
+/**
+ * Contains the url routes for the whole application
+ */
 const routes = [
   {
     path: '/home',

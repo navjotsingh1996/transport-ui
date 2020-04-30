@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DateFnsUtils from '@date-io/date-fns';
 import {
   MuiPickersUtilsProvider,
@@ -38,3 +39,14 @@ export default function GenericDateDisplay(props) {
 
   return mkTextField()
 }
+
+GenericDateDisplay.propTypes = {
+  readOnly: PropTypes.bool.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  heading: PropTypes.string,
+  setter: PropTypes.func,
+  oldObj: PropTypes.any,
+  objKey: PropTypes.string
+};
