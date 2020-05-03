@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import GenericRateDisplay from "./GenericRateDisplay";
 
 export default function TotalBalanceDisplay(props) {
-  const { readOnly, obj, setter, onToggle, onChange} = props;
+  const { readOnly, obj, setter, onToggle, onChange } = props;
 
   const truckOrderNotUsed = () => {
     return (
@@ -45,6 +46,14 @@ export default function TotalBalanceDisplay(props) {
     );
   };
 
+  /**
+   * Helper function to create a rate react element
+   * @param id rate react element id
+   * @param heading header title text
+   * @param value value of the object
+   * @param key for the rate react element
+   * @returns a rate react element
+   */
   const printGenericTextObj = (id, heading, value, key) => {
     return (
       <GenericRateDisplay
@@ -60,6 +69,10 @@ export default function TotalBalanceDisplay(props) {
     )
   };
 
+  /**
+   * Constructs the total balances of the invoice
+   * @returns {*}
+   */
   const totalBalanceDisplay = () => {
     const totalBal = parseFloat(obj.rateAmount) + parseFloat(obj.detention) + parseFloat(obj.layover) +
       parseFloat(obj.advance) + parseFloat(obj.extraStop) + parseFloat(obj.lumper) + parseFloat(obj.others);
@@ -92,3 +105,11 @@ export default function TotalBalanceDisplay(props) {
   };
   return obj.truckOrderNotUsed ? truckOrderNotUsed() : totalBalanceDisplay();
 }
+
+TotalBalanceDisplay.propTypes = {
+  readOnly: PropTypes.bool.isRequired,
+  obj: PropTypes.any.isRequired,
+  setter: PropTypes.func.isRequired,
+  onToggle: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+};

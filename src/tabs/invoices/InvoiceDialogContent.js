@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -33,8 +34,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * Holds the content of the edit/create/view invoices dialog
+ */
 export default function InvoiceDialogContent(props) {
   const { invoice, readOnly, gatherChanges } = props;
+  /**
+   * Helper function that returns an empty stop
+   * @param type pickup or delivery
+   * @returns stop with empty values
+   */
   const defaultStop = (type) => {
     return {
       date: new Date().getTime(),
@@ -45,7 +54,13 @@ export default function InvoiceDialogContent(props) {
       zip: '',
       type: type
     }
-  }
+  };
+
+  /**
+   * helper function to only return the type of stop your looking for
+   * @param type pickup or deliver
+   * @returns array of the type of stop
+   */
   const getMyStops = (type) => {
     const myStops = [];
     if (!invoice.stops) {
@@ -58,6 +73,10 @@ export default function InvoiceDialogContent(props) {
     });
     return myStops;
   };
+
+  /**
+   * Setting up the state of all the different parts of the dialog
+   */
   const classes = useStyles();
   const [invoiceNumber, setInvoiceNumber] = React.useState(invoice.id || '');
   const [invoiceDate, setInvoiceDate] = React.useState(invoice.date || new Date().getTime());
@@ -81,15 +100,25 @@ export default function InvoiceDialogContent(props) {
     others: invoice.balances ? invoice.balances.others || 0.0 : 0.0,
     truckOrderNotUsed: invoice.balances ? !!invoice.balances.truckOrderNotUsed : false
   });
+
+  /**
+   * initializes stops
+   */
   React.useEffect(() => {
     setPickupStops(getMyStops(stopTypes.pickup));
     setDeliveryStops(getMyStops(stopTypes.delivery));
   }, []);
 
+  /**
+   * Updates the parent invoice object
+   */
   React.useEffect(() => {
     updateInvoice();
   }, [invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops, deliveryStops, totalBal]);
 
+  /**
+   * Helper function that renders the bill to section
+   */
   const printBillToContent = () => {
     return (
       <GenericAddressDisplay
@@ -103,6 +132,12 @@ export default function InvoiceDialogContent(props) {
     )
   };
 
+  /**
+   * Helper function that renders stops
+   * @param stops list of stops
+   * @param setter setter for that specific object
+   * @param type pickup or delivery
+   */
   const printStopContent = (stops, setter, type) => {
     return (
       <StopTypeDisplay
@@ -118,6 +153,9 @@ export default function InvoiceDialogContent(props) {
     )
   };
 
+  /**
+   * Helper function to show total balances
+   */
   const printTotalCost = () => {
     return (
       <TotalBalanceDisplay
@@ -131,6 +169,9 @@ export default function InvoiceDialogContent(props) {
     )
   };
 
+  /**
+   * Helper function to show invoice number
+   */
   const printInvoiceNumber = () => {
     return (
       <GenericTextDisplay
@@ -144,6 +185,9 @@ export default function InvoiceDialogContent(props) {
     );
   };
 
+  /**
+   * Helper function to show invoice date
+   */
   const printInvoiceDate = () => {
     return (
       <GenericDateDisplay
@@ -157,6 +201,9 @@ export default function InvoiceDialogContent(props) {
     )
   };
 
+  /**
+   * Helper function to show load number
+   */
   const printLoadNumber = () => {
     return (
       <GenericTextDisplay
@@ -170,10 +217,16 @@ export default function InvoiceDialogContent(props) {
     );
   };
 
+  /**
+   * helper function that updates the invoice
+   */
   const updateInvoice = () => {
     gatherChanges(invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops.concat(deliveryStops), totalBal )
   };
 
+  /**
+   * sets truck order not used toggle
+   */
   const onTruckOrderToggle = () => {
     setTotalBal({
       ...totalBal,
@@ -181,6 +234,11 @@ export default function InvoiceDialogContent(props) {
     });
   };
 
+  /**
+   * setts new value in the total balance setter
+   * @param val new value
+   * @param key what element it is
+   */
   const onRateChange = (val, key) => {
     setTotalBal({
       ...totalBal,
@@ -188,16 +246,33 @@ export default function InvoiceDialogContent(props) {
     })
   };
 
+  /**
+   * Deletes a stop
+   * @param stop what stop it is
+   * @param index index of stop
+   */
   const deleteStop = (stop, index) => {
     stop.type === stopTypes.pickup ? pickupStops.splice(index, 1) : deliveryStops.splice(index, 1);
     stop.type === stopTypes.pickup ? setPickupStops(pickupStops.concat([])) : setDeliveryStops(deliveryStops.concat([]));
   };
 
+  /**
+   * Adding a stop
+   * @param type type of stop
+   */
   const addStop = (type) => {
     type === stopTypes.pickup ? setPickupStops(pickupStops.concat(defaultStop(type))) :
       setDeliveryStops(deliveryStops.concat(defaultStop(type)));
   };
 
+  /**
+   * generic text change function, handles most of the textfields
+   * @param e event
+   * @param setter setter function
+   * @param oldObj old object with all the data
+   * @param key key of element
+   * @param isDate if this is a date field
+   */
   const textOnChange = (e, setter, oldObj, key, isDate) => {
     const val = isDate ? e : e.target.value;
     if (oldObj) {
@@ -211,7 +286,15 @@ export default function InvoiceDialogContent(props) {
     }
   };
 
-
+  /**
+   * Generic stops on change function
+   * @param e event
+   * @param setter setter function
+   * @param oldObj old object with all the data
+   * @param key key of element
+   * @param index array position of the stop
+   * @param isDate if this is a date field
+   */
   const stopsTextOnChange = (e, setter, oldObj, key, index, isDate) => {
     const obj = oldObj;
     obj[index][key] = isDate ? e : e.target.value;
@@ -260,3 +343,9 @@ export default function InvoiceDialogContent(props) {
     </div>
   )
 }
+
+InvoiceDialogContent.propTypes = {
+  readOnly: PropTypes.bool.isRequired,
+  invoice: PropTypes.any.isRequired,
+  gatherChanges: PropTypes.func.isRequired,
+};

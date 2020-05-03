@@ -29,3 +29,32 @@ export const downloadFile = (name, fileType, fileData) => {
   document.body.removeChild(downloadLink);
   URL.revokeObjectURL(downloadUrl);
 };
+
+
+/**
+ * creates a copy of two arrays and compares them
+ * @param arr1 first array
+ * @param arr2 second array
+ * @returns {boolean}
+ */
+export const arrayCompare = (arr1, arr2) => {
+  const arr1C = [];
+  const arr2C = [];
+  arr1.forEach((elem) => {
+    arr1C.push(elem);
+  });
+  arr2.forEach((elem) => {
+    arr2C.push(elem);
+  });
+  arr1C.sort((a, b) =>  b - a);
+  arr2C.sort((a, b) =>  b - a);
+  if (arr1C.length !== arr2C.length) {
+    return false;
+  }
+  arr1C.forEach((elem, i) => {
+    if (elem !== arr2C[i]) {
+      return false;
+    }
+  });
+  return true;
+};

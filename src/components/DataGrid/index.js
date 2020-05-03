@@ -13,6 +13,7 @@ import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
 import DataGridHeader from './DataGridHeader';
+import { arrayCompare } from '../../utils/utils';
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -220,8 +221,8 @@ export default function DataTable(props) {
    * @param event onClick of the header row
    */
   const handleSelectAllClick = (event) => {
-    if (event.target.checked) {
-      const newSelectedIds = data.map((n) => n[rowKey]);
+    if (event.target.checked && !arrayCompare(selected, filteredData.map((elem) => elem.id))) {
+      const newSelectedIds = filteredData.map((n) => n[rowKey]);
       setSelected(newSelectedIds);
       return;
     }
