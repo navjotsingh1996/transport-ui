@@ -18,6 +18,7 @@
     "@unicef/material-ui-currency-textfield": "^0.8.6",
     "axios": "^0.19.2",
     "date-fns": "latest",
+    "download-csv": "^1.1.1",
     "downshift": "^5.1.1",
     "moment": "^2.24.0",
     "muishift": "^1.1.4",

@@ -13,6 +13,7 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import { downloadFile } from "../../utils/utils";
 import { useSnackbar } from 'notistack';
+import downloadCsv from 'download-csv';
 
 export default function InvoicesTab() {
   const { enqueueSnackbar } = useSnackbar();
@@ -149,8 +150,10 @@ export default function InvoicesTab() {
     });
   };
 
-  const onDownload = (data) => {
- //   console.log(data);
+  const onDownload = (selected) => {
+    const data = [];
+    selected.forEach((select) => data.push(getInvoice(select)));
+    downloadCsv(data, columns.map((col) => col.label));
   };
 
   const handleDlgClose = () => {
@@ -180,7 +183,7 @@ export default function InvoicesTab() {
         onCreate={onCreate}
         onEdit={(selected) => onEdit(selected)}
         onDelete={(selected) => onDelete(selected)}
-        onDownload={onDownload}
+        onDownload={(selected) => onDownload(selected)}
       />
       <InvoiceDialog
         open={dialogState.open}
