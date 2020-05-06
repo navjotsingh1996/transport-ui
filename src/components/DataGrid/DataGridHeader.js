@@ -63,7 +63,7 @@ export default function DataGridHeader(props) {
         </span>
       </Tooltip>
       <Tooltip title="Download Table">
-        <IconButton aria-label="download" onClick={() => onDownload(selected)}>
+        <IconButton aria-label="download" onClick={() => onDownload(selected)} disabled={selected.length === 0}>
           <DownloadIcon />
         </IconButton>
       </Tooltip>

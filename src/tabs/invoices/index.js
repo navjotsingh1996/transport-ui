@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import DataTable from '../../components/DataGrid';
 import InvoiceDialog from './InvoiceDialog';
 import { columns, options } from './dataGridConfig'
@@ -14,6 +14,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { downloadFile } from "../../utils/utils";
 import { useSnackbar } from 'notistack';
 import downloadCsv from 'download-csv';
+import {stopTypes} from "./constants";
 
 export default function InvoicesTab() {
   const { enqueueSnackbar } = useSnackbar();
@@ -35,6 +36,8 @@ export default function InvoicesTab() {
   const deleteErr = useSelector(state => state.invoice.invoicesDeleteErr);
   const data = useSelector(state => state.invoice.invoices);
 
+  const initialRender = React.useRef(true);
+
   const successSnackbar = (msg) => {
     enqueueSnackbar(msg, {
       variant: 'success',
@@ -46,8 +49,9 @@ export default function InvoicesTab() {
   };
 
   React.useEffect(() => {
-    if (!deleteInProg && !deleteErr) {
+    if (!deleteInProg && !deleteErr && !initialRender.current) {
       successSnackbar('Deletion was a success');
+      initialRender.current = false;
     }
   }, [deleteInProg]);
 
@@ -152,8 +156,8 @@ export default function InvoicesTab() {
 
   const onDownload = (selected) => {
     const data = [];
-    selected.forEach((select) => data.push(getInvoice(select)));
-    downloadCsv(data, columns.map((col) => col.label));
+    selected.forEach((select) => data.push(formatDownload(getInvoice(select))));
+    downloadCsv(data, columns.map((col) => col.label), 'Invoices Table Data');
   };
 
   const handleDlgClose = () => {
@@ -161,6 +165,44 @@ export default function InvoicesTab() {
       ...dialogState,
       open: false,
     });
+  };
+
+  /**
+   * Formats the csv so we can see all the columns with data
+   * @param rowData row specific data that needs to be formatted
+   * @returns simple csv downloadable object
+   */
+  const formatDownload = (rowData) => {
+    console.log(rowData);
+    const bal = rowData.balances;
+    return {
+      id: rowData.id,
+      loadNumber: rowData.loadNumber,
+      date: new Date(rowData.date).toLocaleDateString(),
+      broker: rowData.billTo.name,
+      pickupDate: new Date (formatStopsDownload(rowData.stops, stopTypes.pickup)[0].date).toLocaleDateString(),
+      pickup: formatStopsDownload(rowData.stops, stopTypes.pickup).length,
+      deliveryDate: new Date(formatStopsDownload(rowData.stops, stopTypes.delivery)[0].date).toLocaleDateString(),
+      delivery: formatStopsDownload(rowData.stops, stopTypes.delivery).length,
+      total: bal.truckOrderNotUsed ? `TRUCK ORDER NOT USED: \$${bal.totalBalance}` :
+        `\$ ${bal.totalBalance}`
+    }
+  };
+
+  /**
+   * Gets the type of stops pickup/delivery
+   * @param stops all stops
+   * @param type pickup/delivery
+   * @returns {Array} of stops that match a specific type pickup/delivery
+   */
+  const formatStopsDownload = (stops, type) => {
+    const myStops = [];
+    stops.forEach((stop) => {
+      if (stop.type === type) {
+        myStops.push(stop)
+      }
+    });
+    return myStops;
   };
 
   const invoiceNumberLink = (content) => {
