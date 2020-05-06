@@ -68,7 +68,8 @@ export default function DataTable(props) {
    * Updates selection every time data changes
    */
   React.useEffect(() => {
-    updateSelection();
+    //updateSelection();
+    setSelected([]);
   }, [data]);
 
   /**
@@ -333,7 +334,7 @@ export default function DataTable(props) {
                     <TableCell key={`${col.label}-filter`}>
                       <TextField
                         disabled={!col.filter}
-                        value={filters[uniqueId]}
+                        value={filters[uniqueId] || ''}
                         onChange={(e) => onFilterChange(e.target.value, uniqueId)}
                       />
                     </TableCell>)})}

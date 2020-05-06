@@ -1,5 +1,4 @@
 import { all, put, call, takeEvery, takeLatest } from 'redux-saga/effects';
-import axios from 'axios';
 import axiosAgent from '../../../utils/axiosAgent';
 import {
   getInvoices,

@@ -38,7 +38,7 @@ export default function InvoicesTab() {
 
   const initialRender = React.useRef(true);
 
-  const successSnackbar = (msg) => {
+  const successSnackbar = React.useCallback((msg) => {
     enqueueSnackbar(msg, {
       variant: 'success',
       anchorOrigin: {
@@ -46,26 +46,27 @@ export default function InvoicesTab() {
         horizontal: 'right',
       },
     });
-  };
+  }, [enqueueSnackbar]);
 
   React.useEffect(() => {
+    console.log(initialRender.current);
     if (!deleteInProg && !deleteErr && !initialRender.current) {
       successSnackbar('Deletion was a success');
-      initialRender.current = false;
     }
-  }, [deleteInProg]);
+    initialRender.current = false;
+  }, [deleteInProg, deleteErr, successSnackbar]);
 
   React.useEffect(() => {
     if (!editInProg && !editErr && invoiceFileData) {
       successSnackbar('Invoice edit action was successful, your file will be in the downloads folder');
     }
-  }, [editInProg]);
+  }, [editInProg, editErr, invoiceFileData, successSnackbar]);
 
   React.useEffect(() => {
     if (!createInProg && !createErr && invoiceFileData) {
       successSnackbar('Invoice create action was successful, your file will be in the downloads folder');
     }
-  }, [createInProg]);
+  }, [createInProg, createErr, invoiceFileData, successSnackbar]);
 
   React.useEffect(() => {
     dispatch(getInvoices());
@@ -75,13 +76,13 @@ export default function InvoicesTab() {
     if (!createInProg && invoiceFileData) {
       downloadFile('test.pdf', {type: 'application/pdf'}, invoiceFileData);
     }
-  }, [createInProg]);
+  }, [createInProg, invoiceFileData]);
 
   React.useEffect(() => {
     if (!editInProg && invoiceFileData) {
       downloadFile('test.pdf', {type: 'application/pdf'}, invoiceFileData);
     }
-  }, [editInProg]);
+  }, [editInProg, invoiceFileData]);
 
   const getInvoice = (invoiceId) => {
     let invoiceData = {};
@@ -184,8 +185,8 @@ export default function InvoicesTab() {
       pickup: formatStopsDownload(rowData.stops, stopTypes.pickup).length,
       deliveryDate: new Date(formatStopsDownload(rowData.stops, stopTypes.delivery)[0].date).toLocaleDateString(),
       delivery: formatStopsDownload(rowData.stops, stopTypes.delivery).length,
-      total: bal.truckOrderNotUsed ? `TRUCK ORDER NOT USED: \$${bal.totalBalance}` :
-        `\$ ${bal.totalBalance}`
+      total: bal.truckOrderNotUsed ? `TRUCK ORDER NOT USED: $${bal.totalBalance}` :
+        `$ ${bal.totalBalance}`
     }
   };
 

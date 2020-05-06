@@ -57,24 +57,6 @@ export default function InvoiceDialogContent(props) {
   };
 
   /**
-   * helper function to only return the type of stop your looking for
-   * @param type pickup or deliver
-   * @returns array of the type of stop
-   */
-  const getMyStops = (type) => {
-    const myStops = [];
-    if (!invoice.stops) {
-      return [defaultStop(type)];
-    }
-    invoice.stops.forEach((stop) => {
-      if(stop.type === type) {
-        myStops.push(stop);
-      }
-    });
-    return myStops;
-  };
-
-  /**
    * Setting up the state of all the different parts of the dialog
    */
   const classes = useStyles();
@@ -105,16 +87,38 @@ export default function InvoiceDialogContent(props) {
    * initializes stops
    */
   React.useEffect(() => {
-    setPickupStops(getMyStops(stopTypes.pickup));
-    setDeliveryStops(getMyStops(stopTypes.delivery));
-  }, []);
+
+    /**
+     * helper function to only return the type of stop your looking for
+     * @param type pickup or deliver
+     * @returns array of the type of stop
+     */
+    const getMyStops = (type) => {
+      const myStops = [];
+      if (!invoice.stops) {
+        return [defaultStop(type)];
+      }
+      invoice.stops.forEach((stop) => {
+        if(stop.type === type) {
+          myStops.push(stop);
+        }
+      });
+      return myStops;
+    };
+
+    //setPickupStops(getMyStops(stopTypes.pickup));
+    //setDeliveryStops(getMyStops(stopTypes.delivery));
+  }, [invoice.stops]);
 
   /**
    * Updates the parent invoice object
    */
   React.useEffect(() => {
-    updateInvoice();
-  }, [invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops, deliveryStops, totalBal]);
+    /**
+     * helper function that updates the invoice
+     */
+    gatherChanges(invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops.concat(deliveryStops), totalBal )
+  }, [invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops, deliveryStops, totalBal, gatherChanges]);
 
   /**
    * Helper function that renders the bill to section
@@ -215,13 +219,6 @@ export default function InvoiceDialogContent(props) {
         setter={setLoadNumber}
       />
     );
-  };
-
-  /**
-   * helper function that updates the invoice
-   */
-  const updateInvoice = () => {
-    gatherChanges(invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops.concat(deliveryStops), totalBal )
   };
 
   /**
