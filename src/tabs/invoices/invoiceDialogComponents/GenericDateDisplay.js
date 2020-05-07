@@ -42,7 +42,7 @@ export default function GenericDateDisplay(props) {
 
 GenericDateDisplay.propTypes = {
   readOnly: PropTypes.bool.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.any.isRequired,
   onChange: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   heading: PropTypes.string,

@@ -31,7 +31,7 @@ export default function GenericRateDisplay(props) {
 
 GenericRateDisplay.propTypes = {
   readOnly: PropTypes.bool.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.any.isRequired,
   onChange: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   heading: PropTypes.string,

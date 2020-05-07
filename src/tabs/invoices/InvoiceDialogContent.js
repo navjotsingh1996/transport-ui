@@ -106,8 +106,8 @@ export default function InvoiceDialogContent(props) {
       return myStops;
     };
 
-    //setPickupStops(getMyStops(stopTypes.pickup));
-    //setDeliveryStops(getMyStops(stopTypes.delivery));
+    setPickupStops(getMyStops(stopTypes.pickup));
+    setDeliveryStops(getMyStops(stopTypes.delivery));
   }, [invoice.stops]);
 
   /**
@@ -118,7 +118,7 @@ export default function InvoiceDialogContent(props) {
      * helper function that updates the invoice
      */
     gatherChanges(invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops.concat(deliveryStops), totalBal )
-  }, [invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops, deliveryStops, totalBal, gatherChanges]);
+  }, [invoiceNumber, invoiceDate, loadNumber, billTo, pickupStops, deliveryStops, totalBal]);
 
   /**
    * Helper function that renders the bill to section

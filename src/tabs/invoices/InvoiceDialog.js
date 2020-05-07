@@ -101,7 +101,8 @@ export default function InvoiceDialog(props) {
         </DialogTitle>
       <DialogContent dividers>
         <div key={'invoice-content'}>
-          <InvoiceDialogContent gatherChanges={gatherChanges} readOnly={readOnly} invoice={invoice || {}} />
+          {invoice ? <InvoiceDialogContent gatherChanges={gatherChanges} readOnly={readOnly} invoice={invoice}/> :
+            ''}
         </div>
       </DialogContent>
       <DialogActions>
