@@ -128,7 +128,7 @@ export default function InvoicesTab() {
     dispatch(editInvoices(invoice));
     handleDlgClose();
   };
-  const onCreateSubmit = (e, invoice) => {
+  const onCreateSubmit = (invoice) => {
     dispatch(createInvoices(invoice));
     handleDlgClose();
   };
