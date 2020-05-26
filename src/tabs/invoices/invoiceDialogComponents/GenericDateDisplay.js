@@ -23,6 +23,7 @@ export default function GenericDateDisplay(props) {
           disableToolbar
           variant="inline"
           format="MM/dd/yyyy"
+          disablePast="true"
           margin="normal"
           id={`${id}-date-picker-${value}`}
           label={heading}
