@@ -216,7 +216,7 @@ export default function InvoiceDialogContent(props) {
         heading='Load Number'
         readOnly={readOnly}
         value={loadNumber}
-        onChange={textOnChange}
+        onChange={loadNumOnChange}
         setter={setLoadNumber}
       />
     );
@@ -307,6 +307,29 @@ export default function InvoiceDialogContent(props) {
     }
   };
 
+    /**
+   * generic text change function, handles most of the textfields
+   * @param e event
+   * @param setter setter function
+   * @param oldObj old object with all the data
+   * @param key key of element
+   * @param isDate if this is a date field
+   */
+  const loadNumOnChange = (e, setter, oldObj, key, isDate) => {
+    const val = isDate ? e : e.target.value;
+    if (!val || validator.isAlphanumeric(val)) {
+      if (oldObj) {
+        setter({
+          ...oldObj,
+          [key]: val,
+        });
+      }
+      else {
+        setter(val);
+      }
+    }
+  };
+  
   /**
    * Generic stops on change function
    * @param e event
