@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 
 export default function GenericTextDisplay(props) {
   const { heading, readOnly, value, onChange, setter, oldObj, objKey, id, error, helperText } = props;
+    console.log(error);
 
   /**
    * Displays non-editable values or renders a textfield

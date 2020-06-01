@@ -61,7 +61,11 @@ export default function InvoiceDialogContent(props) {
    * Setting up the state of all the different parts of the dialog
    */
   const classes = useStyles();
-  const [invoiceNumber, setInvoiceNumber] = React.useState(invoice.id || '');
+  const [invoiceNumber, setInvoiceNumber] = React.useState({
+    value: invoice.id || '',
+    error: false,
+    helperText: '',
+    });
   const [invoiceDate, setInvoiceDate] = React.useState(invoice.date || new Date().getTime());
   const [loadNumber, setLoadNumber] = React.useState(invoice.loadNumber || '');
   const [billTo, setBillTo] = React.useState({
@@ -180,10 +184,14 @@ export default function InvoiceDialogContent(props) {
   const printInvoiceNumber = () => {
     return (
       <GenericTextDisplay
+        oldObj={invoiceNumber}
+        objKey={'value'}
         id='invoice-number'
         heading='Invoice Number'
+        error={invoiceNumber.error}
+        helperText={invoiceNumber.helperText}
         readOnly={readOnly}
-        value={invoiceNumber}
+        value={invoiceNumber.value}
         onChange={invoiceOnChange}
         setter={setInvoiceNumber}
       />
@@ -214,6 +222,7 @@ export default function InvoiceDialogContent(props) {
       <GenericTextDisplay
         id='load-number'
         heading='Load Number'
+        // error={error}
         readOnly={readOnly}
         value={loadNumber}
         onChange={loadNumOnChange}
@@ -299,11 +308,20 @@ export default function InvoiceDialogContent(props) {
         setter({
           ...oldObj,
           [key]: val,
+          error: false,
+          helperText: ''
         });
       }
       else {
         setter(val);
       }
+    }
+    else {
+      setter({
+        ...oldObj,
+        error: true,
+        helperText: "dont do this"       
+      })
     }
   };
 
@@ -327,6 +345,12 @@ export default function InvoiceDialogContent(props) {
       else {
         setter(val);
       }
+    }
+    else {
+      setter({
+       error: 'true',
+       helperText: "dondognfdoi"
+      });
     }
   };
   
@@ -392,4 +416,6 @@ InvoiceDialogContent.propTypes = {
   readOnly: PropTypes.bool.isRequired,
   invoice: PropTypes.any.isRequired,
   gatherChanges: PropTypes.func.isRequired,
+  error: PropTypes.bool,
+  helperText: PropTypes.string
 };
