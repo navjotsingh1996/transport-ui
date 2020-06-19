@@ -10,6 +10,7 @@ import {
   createInvoices,
   deleteInvoices
 } from "./invoicesProvider/actions";
+import ErrorDialog from '../../components/ErrorDialog'
 import { useSelector, useDispatch } from 'react-redux';
 import { downloadFile } from "../../utils/utils";
 import { useSnackbar } from 'notistack';
@@ -27,16 +28,22 @@ export default function InvoicesTab() {
     open: false,
     invoiceIds: []
   });
+  const [errorDialog, setErrorDialog] = React.useState({
+    open: false,
+    title: '',
+  });
   const invoiceFileData = useSelector(state => state.invoice.invoiceFile);
   const createInProg = useSelector(state => state.invoice.invoicesCreateInProg);
   const editInProg = useSelector(state => state.invoice.invoicesEditInProg);
   const deleteInProg = useSelector(state => state.invoice.invoicesDeleteInProg);
+  const getInProg = useSelector(state => state.invoice.getInvoicesInProg);
+  const getErr = useSelector(state => state.invoice.getInvoicesErr);
   const createErr = useSelector(state => state.invoice.invoicesCreateErr);
   const editErr = useSelector(state => state.invoice.invoicesEditErr);
   const deleteErr = useSelector(state => state.invoice.invoicesDeleteErr);
   const data = useSelector(state => state.invoice.invoices);
 
-  const initialRender = React.useRef(true);
+  const initialRenderDelete = React.useRef(true);
 
   const successSnackbar = React.useCallback((msg) => {
     enqueueSnackbar(msg, {
@@ -49,16 +56,27 @@ export default function InvoicesTab() {
   }, [enqueueSnackbar]);
 
   React.useEffect(() => {
-    console.log(initialRender.current);
-    if (!deleteInProg && !deleteErr && !initialRender.current) {
+    if (!deleteInProg && !deleteErr && !initialRenderDelete.current) {
       successSnackbar('Deletion was a success');
     }
-    initialRender.current = false;
+    if (!deleteInProg && deleteErr) {
+      setErrorDialog({
+        open: true,
+        title: deleteErr.message
+      });
+    }
+    initialRenderDelete.current = false;
   }, [deleteInProg, deleteErr, successSnackbar]);
 
   React.useEffect(() => {
     if (!editInProg && !editErr && invoiceFileData) {
       successSnackbar('Invoice edit action was successful, your file will be in the downloads folder');
+    }
+    if (!editInProg && editErr) {
+      setErrorDialog({
+        open: true,
+        title: editErr.message
+      });
     }
   }, [editInProg, editErr, invoiceFileData, successSnackbar]);
 
@@ -66,7 +84,22 @@ export default function InvoicesTab() {
     if (!createInProg && !createErr && invoiceFileData) {
       successSnackbar('Invoice create action was successful, your file will be in the downloads folder');
     }
+    if (!createInProg && createErr) {
+      setErrorDialog({
+        open: true,
+        title: createErr.message
+      });
+    }
   }, [createInProg, createErr, invoiceFileData, successSnackbar]);
+
+  React.useEffect(() => {
+    if (!getInProg && getErr) {
+      setErrorDialog({
+        open: true,
+        title: getErr.message
+      });
+    }
+  }, [getInProg, getErr]);
 
   React.useEffect(() => {
     dispatch(getInvoices());
@@ -128,7 +161,7 @@ export default function InvoicesTab() {
     dispatch(editInvoices(invoice));
     handleDlgClose();
   };
-  const onCreateSubmit = (e, invoice) => {
+  const onCreateSubmit = (invoice) => {
     dispatch(createInvoices(invoice));
     handleDlgClose();
   };
@@ -155,6 +188,13 @@ export default function InvoicesTab() {
     });
   };
 
+  const onErrorDialogClose = () => {
+    setErrorDialog({
+      title: '',
+      open: false
+    });
+  };
+
   const onDownload = (selected) => {
     const data = [];
     selected.forEach((select) => data.push(formatDownload(getInvoice(select))));
@@ -174,7 +214,6 @@ export default function InvoicesTab() {
    * @returns simple csv downloadable object
    */
   const formatDownload = (rowData) => {
-    console.log(rowData);
     const bal = rowData.balances;
     return {
       id: rowData.id,
@@ -242,6 +281,11 @@ export default function InvoicesTab() {
         onClose={onDeleteCancel}
         onDelete={onDeleteConfirm}
         itemLabel={'Invoice Number'}
+      />
+      <ErrorDialog
+        open={errorDialog.open}
+        onClose={onErrorDialogClose}
+        title={errorDialog.title}
       />
     </div>
   )
