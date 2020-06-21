@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 
-export default function GenericTextDisplay(props) {
+function GenericTextDisplay(props) {
   const { heading, readOnly, value, onChange, setter, oldObj, objKey, id, error, helperText } = props;
 
   /**
@@ -17,6 +17,7 @@ export default function GenericTextDisplay(props) {
         </div>
       );
     }
+
     return (
       <TextField
         id={`${id}-textfield-${value}`}
@@ -33,6 +34,15 @@ export default function GenericTextDisplay(props) {
   return mkTextField()
 }
 
+function areEqual(prev, next) {
+  if (next.oldObj) {
+    return prev.readOnly === next.readOnly && prev.oldObj[prev.objKey] === next.oldObj[next.objKey] &&
+      prev.error === next.error && prev.helperText === next.helperText && prev.value === next.value
+  }
+  return prev.readOnly === next.readOnly && prev.error === next.error && prev.helperText === next.helperText &&
+    prev.value === next.value
+}
+
 GenericTextDisplay.propTypes = {
   readOnly: PropTypes.bool.isRequired,
   value: PropTypes.any.isRequired,
@@ -45,3 +55,5 @@ GenericTextDisplay.propTypes = {
   objKey: PropTypes.string,
   helperText: PropTypes.string
 };
+
+export default React.memo(GenericTextDisplay, areEqual);

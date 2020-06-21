@@ -4,7 +4,7 @@ import GenericTextDisplay from './GenericTextDisplay'
 
 export default function GenericAddressDisplay(props) {
   const { object, objSetter, onChange, id, readOnly, heading } = props;
-  console.log(object);
+
   const mkTextField = () => {
     return (
       <div id={id}>
