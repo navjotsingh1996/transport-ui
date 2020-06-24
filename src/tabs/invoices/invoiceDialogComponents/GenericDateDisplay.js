@@ -6,7 +6,7 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 
-export default function GenericDateDisplay(props) {
+function GenericDateDisplay(props) {
   const { heading, readOnly, value, onChange, setter, oldObj, objKey, id } = props;
   const mkTextField = () => {
     if (readOnly) {
@@ -40,6 +40,15 @@ export default function GenericDateDisplay(props) {
   return mkTextField()
 }
 
+function areEqual(prev, next) {
+  if (next.oldObj) {
+    return prev.readOnly === next.readOnly && prev.oldObj[prev.objKey] === next.oldObj[next.objKey] &&
+      prev.error === next.error && prev.helperText === next.helperText && prev.value === next.value
+  }
+  return prev.readOnly === next.readOnly && prev.error === next.error && prev.helperText === next.helperText &&
+    prev.value === next.value
+}
+
 GenericDateDisplay.propTypes = {
   readOnly: PropTypes.bool.isRequired,
   value: PropTypes.any.isRequired,
@@ -50,3 +59,5 @@ GenericDateDisplay.propTypes = {
   oldObj: PropTypes.any,
   objKey: PropTypes.string
 };
+
+export default React.memo(GenericDateDisplay, areEqual);

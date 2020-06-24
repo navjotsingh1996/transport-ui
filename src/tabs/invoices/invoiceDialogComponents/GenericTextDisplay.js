@@ -26,7 +26,8 @@ function GenericTextDisplay(props) {
         label={heading}
         value={value}
         style={{width: '100%'}}
-        onChange={(e) => onChange(e, setter, oldObj, objKey) }
+        onChange={(e) => {
+          onChange(e, setter, oldObj, objKey)}}
       />
     );
   };
@@ -37,7 +38,8 @@ function GenericTextDisplay(props) {
 function areEqual(prev, next) {
   if (next.oldObj) {
     return prev.readOnly === next.readOnly && prev.oldObj[prev.objKey] === next.oldObj[next.objKey] &&
-      prev.error === next.error && prev.helperText === next.helperText && prev.value === next.value
+      prev.error === next.error && prev.helperText === next.helperText && prev.value === next.value &&
+      prev.oldObj === next.oldObj
   }
   return prev.readOnly === next.readOnly && prev.error === next.error && prev.helperText === next.helperText &&
     prev.value === next.value

@@ -48,7 +48,6 @@ export default function TotalBalanceDisplay(props) {
 
   /**
    * Helper function to create a rate react element
-   * @param id rate react element id
    * @param heading header title text
    * @param value value of the object
    * @param key for the rate react element

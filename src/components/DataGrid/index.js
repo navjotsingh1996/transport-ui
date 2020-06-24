@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 /**
  * Uses Material-ui tables to build a data-grid that can be used throughout the application
  */
-export default function DataTable(props) {
+function DataTable(props) {
   const classes = useStyles();
   const {columns, title, data, options, onDelete, onCreate, onEdit, onDownload} = props;
   const rowKey = options.uniqueDataKeyAccessor;
@@ -385,6 +385,10 @@ export default function DataTable(props) {
   )
 }
 
+function areEqual(prev, next) {
+  return prev.data === next.data && prev.options === next.options
+}
+
 DataTable.propTypes = {
   columns: PropTypes.array.isRequired,
   data: PropTypes.array.isRequired,
@@ -395,3 +399,5 @@ DataTable.propTypes = {
   onEdit: PropTypes.func.isRequired,
   onDownload: PropTypes.func.isRequired,
 };
+
+export default React.memo(DataTable, areEqual);

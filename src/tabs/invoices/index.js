@@ -62,7 +62,7 @@ export default function InvoicesTab() {
     if (!deleteInProg && deleteErr) {
       setErrorDialog({
         open: true,
-        title: deleteErr.message
+        title: deleteErr.response.statusText
       });
     }
     initialRenderDelete.current = false;
@@ -75,7 +75,7 @@ export default function InvoicesTab() {
     if (!editInProg && editErr) {
       setErrorDialog({
         open: true,
-        title: editErr.message
+        title: editErr.response.statusText
       });
     }
   }, [editInProg, editErr, invoiceFileData, successSnackbar]);
@@ -87,7 +87,7 @@ export default function InvoicesTab() {
     if (!createInProg && createErr) {
       setErrorDialog({
         open: true,
-        title: createErr.message
+        title: createErr.response.statusText
       });
     }
   }, [createInProg, createErr, invoiceFileData, successSnackbar]);
@@ -96,7 +96,7 @@ export default function InvoicesTab() {
     if (!getInProg && getErr) {
       setErrorDialog({
         open: true,
-        title: getErr.message
+        title: getErr.response.statusText
       });
     }
   }, [getInProg, getErr]);

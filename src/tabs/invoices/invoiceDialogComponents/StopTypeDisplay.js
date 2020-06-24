@@ -72,6 +72,7 @@ export default function StopTypeDisplay(props) {
   )
 }
 
+
 StopTypeDisplay.propTypes = {
   stops: PropTypes.array.isRequired,
   stopsSetter: PropTypes.func.isRequired,
