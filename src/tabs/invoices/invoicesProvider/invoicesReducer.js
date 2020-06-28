@@ -10,7 +10,10 @@ const initialState = {
   invoicesEditInProg: false,
   invoicesEditErr: false,
   invoicesDeleteInProg: false,
-  invoicesDeleteErr: false
+  invoicesDeleteErr: false,
+  invoicesSearchInProg: false,
+  invoicesSearchErr: null,
+  invoicesSearchList: []
 };
 
 function invoicesReducer(state = initialState, action) {
@@ -85,6 +88,24 @@ function invoicesReducer(state = initialState, action) {
         ...state,
         invoicesDeleteInProg: false,
         invoicesDeleteErr: action.err,
+      };
+    case invoiceActions.SEARCH_INVOICES:
+      return {
+        ...state,
+        invoicesSearchInProg: true
+      };
+    case invoiceActions.SEARCH_INVOICES_OK:
+      return {
+        ...state,
+        invoicesSearchInProg: false,
+        invoicesSearchErr: null,
+        invoicesSearchList: action.data
+      };
+    case invoiceActions.SEARCH_INVOICES_FAIL:
+      return {
+        ...state,
+        invoicesSearchInProg: false,
+        invoicesSearchErr: action.err,
       };
     default:
       return state;

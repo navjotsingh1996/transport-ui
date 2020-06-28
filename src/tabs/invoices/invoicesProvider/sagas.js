@@ -9,7 +9,9 @@ import {
   editInvoicesOk,
   editInvoicesFail,
   deleteInvoicesOk,
-  deleteInvoicesFail
+  deleteInvoicesFail,
+  searchInvoicesOk,
+  searchInvoicesFail
 } from './actions';
 
 import * as ACTIONS from './constants';
@@ -26,7 +28,6 @@ export function* getInvoicesHandler() {
   }
 }
 
-// FIXME: Need to batch these request so we don't lose error messages
 export function* createInvoicesHandler(action){
   try {
     const res = yield call(axiosAgent.post, baseURI, action.invoice, { responseType: 'blob' });
@@ -58,11 +59,22 @@ export function* deleteInvoicesHandler(action){
   }
 }
 
+export function* searchInvoicesHandler(action){
+  const deleteURI = `/search?field=${action.field}&name=${action.name}&address=${action.address}`;
+  try {
+    const res = yield call(axiosAgent.get, baseURI + deleteURI);
+    yield put(searchInvoicesOk(res.data));
+  } catch (err) {
+    yield put(searchInvoicesFail(err));
+  }
+}
+
 export default function* getInvoicesWatcher() {
   yield all([
     takeEvery(ACTIONS.GET_INVOICES, getInvoicesHandler),
     takeLatest(ACTIONS.EDIT_INVOICES, editInvoicesHandler),
     takeLatest(ACTIONS.CREATE_INVOICES, createInvoicesHandler),
     takeLatest(ACTIONS.DELETE_INVOICES, deleteInvoicesHandler),
+    takeLatest(ACTIONS.SEARCH_INVOICES, searchInvoicesHandler),
   ])
 }

@@ -81,3 +81,26 @@ export const deleteInvoicesFail = (err) => {
     err
   }
 };
+
+export const searchInvoices = (name, address, field) => {
+  return {
+    type: ACTIONS.SEARCH_INVOICES,
+    name,
+    address,
+    field
+  }
+};
+
+export const searchInvoicesOk = (list) => {
+  return {
+    type: ACTIONS.SEARCH_INVOICES_OK,
+    list
+  }
+};
+
+export const searchInvoicesFail = (err) => {
+  return {
+    type: ACTIONS.SEARCH_INVOICES_FAIL,
+    err
+  }
+};
