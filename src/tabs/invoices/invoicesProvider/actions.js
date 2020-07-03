@@ -91,10 +91,10 @@ export const searchInvoices = (name, address, field) => {
   }
 };
 
-export const searchInvoicesOk = (list) => {
+export const searchInvoicesOk = (data) => {
   return {
     type: ACTIONS.SEARCH_INVOICES_OK,
-    list
+    data
   }
 };
 
