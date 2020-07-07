@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 
 function AutoComplete(props) {
-  const { options, title, onTextChange, onOptionChange, value, id } = props;
+  const { options, heading, onTextChange, onOptionChange, value, id } = props;
   const [open, setOpen] = React.useState(false);
   const loading = open && options.length === 0 && value !== '';
 
@@ -15,7 +15,7 @@ function AutoComplete(props) {
     <Autocomplete
       id={`${id}-autocomplete`}
       freeSolo
-      style={{ width: 300 }}
+      style={{ width: '100%' }}
       open={open}
       onOpen={() => {
         setOpen(true);
@@ -31,8 +31,9 @@ function AutoComplete(props) {
       renderInput={(params) => (
         <TextField
           {...params}
+          style={{ width: '100%' }}
           onChange={(e) => onTextChange(e)}
-          label={title}
+          label={heading}
           InputProps={{
             ...params.InputProps,
             endAdornment: (
@@ -54,7 +55,7 @@ function areEqual(prev, next) {
 
 AutoComplete.propTypes = {
   options: PropTypes.array.isRequired,
-  title: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
   onTextChange: PropTypes.func.isRequired,
   onOptionChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,

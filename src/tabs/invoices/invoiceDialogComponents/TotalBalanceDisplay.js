@@ -6,7 +6,7 @@ import FormControl from '@material-ui/core/FormControl';
 import GenericRateDisplay from "./GenericRateDisplay";
 
 export default function TotalBalanceDisplay(props) {
-  const { readOnly, obj, setter, onToggle, onChange } = props;
+  const { readOnly, obj, onToggle, onChange } = props;
 
   const truckOrderNotUsed = () => {
     return (
@@ -34,10 +34,7 @@ export default function TotalBalanceDisplay(props) {
                 heading='Rate Amount'
                 readOnly={readOnly}
                 value={obj.rateAmount}
-                onChange={onChange}
-                setter={setter}
-                oldObj={obj}
-                objKey={'rateAmount'}
+                onChange={(val) => onChange(val, 'rateAmount')}
               />
             <h3>Total Balance $ {obj.rateAmount}</h3>
           </div>
@@ -60,10 +57,7 @@ export default function TotalBalanceDisplay(props) {
         heading={heading}
         readOnly={readOnly}
         value={value}
-        onChange={onChange}
-        setter={setter}
-        oldObj={obj}
-        objKey={key}
+        onChange={(val) => onChange(val, key)}
       />
     )
   };
@@ -108,7 +102,6 @@ export default function TotalBalanceDisplay(props) {
 TotalBalanceDisplay.propTypes = {
   readOnly: PropTypes.bool.isRequired,
   obj: PropTypes.any.isRequired,
-  setter: PropTypes.func.isRequired,
   onToggle: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
 };

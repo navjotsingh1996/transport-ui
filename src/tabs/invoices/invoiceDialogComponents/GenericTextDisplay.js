@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 
 function GenericTextDisplay(props) {
-  const { heading, readOnly, value, onChange, setter, oldObj, objKey, id, error, helperText } = props;
+  const { heading, readOnly, value, onChange, id, error, helperText } = props;
 
   /**
    * Displays non-editable values or renders a textfield
@@ -26,8 +26,7 @@ function GenericTextDisplay(props) {
         label={heading}
         value={value}
         style={{width: '100%'}}
-        onChange={(e) => {
-          onChange(e, setter, oldObj, objKey)}}
+        onChange={onChange}
       />
     );
   };
@@ -36,11 +35,6 @@ function GenericTextDisplay(props) {
 }
 
 function areEqual(prev, next) {
-  if (next.oldObj) {
-    return prev.readOnly === next.readOnly && prev.oldObj[prev.objKey] === next.oldObj[next.objKey] &&
-      prev.error === next.error && prev.helperText === next.helperText && prev.value === next.value &&
-      prev.oldObj === next.oldObj
-  }
   return prev.readOnly === next.readOnly && prev.error === next.error && prev.helperText === next.helperText &&
     prev.value === next.value
 }
@@ -51,10 +45,7 @@ GenericTextDisplay.propTypes = {
   onChange: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   heading: PropTypes.string,
-  setter: PropTypes.func,
-  oldObj: PropTypes.any,
   error: PropTypes.bool,
-  objKey: PropTypes.string,
   helperText: PropTypes.string
 };
 

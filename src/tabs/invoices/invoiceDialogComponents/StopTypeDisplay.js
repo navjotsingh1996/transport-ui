@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 });
 
 export default function StopTypeDisplay(props) {
-  const { stops, stopsSetter, id, readOnly, onChange, type, onDelete, onAdd } = props;
+  const { stops, id, readOnly, onChange, type, onDelete, onAdd } = props;
   const classes = useStyles();
   return (
     <div id={id}>
@@ -44,18 +44,14 @@ export default function StopTypeDisplay(props) {
               heading={`${type === stopTypes.pickup ? 'Pickup Date' : 'Delivery Date'} ${i + 1}`}
               readOnly={readOnly}
               value={stop.date}
-              onChange={(e, setter, oldObj, key) => onChange(e, setter, stops, key, i, true)}
-              setter={stopsSetter}
-              oldObj={stop}
-              objKey='date'
+              onChange={(e) => onChange(e, 'date', i, true)}
             />
             <GenericAddressDisplay
               id={`${id}-address-${type}-${i}`}
               heading={''}
               readOnly={readOnly}
               object={stop}
-              onChange={(e, setter, oldObj, key) => onChange(e, setter, stops, key, i)}
-              objSetter={stopsSetter}
+              onChange={(e, key) => onChange(e, key, i, false)}
             /><br />
           </div>
         )
@@ -75,7 +71,6 @@ export default function StopTypeDisplay(props) {
 
 StopTypeDisplay.propTypes = {
   stops: PropTypes.array.isRequired,
-  stopsSetter: PropTypes.func.isRequired,
   readOnly: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,

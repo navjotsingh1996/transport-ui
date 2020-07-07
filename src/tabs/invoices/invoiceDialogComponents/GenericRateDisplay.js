@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CurrencyTextField from '@unicef/material-ui-currency-textfield'
 
 function GenericRateDisplay(props) {
-  const { heading, readOnly, value, onChange, objKey, id } = props;
+  const { heading, readOnly, value, onChange, id } = props;
 
   const mkTextField = () => {
     if (readOnly) {
@@ -21,7 +21,7 @@ function GenericRateDisplay(props) {
         currencySymbol="$"
         outputFormat="number"
         style={{width: '100%'}}
-        onChange={(e, value) => onChange(value, objKey)}
+        onChange={(e, value) => onChange(value)}
       />
     );
   };
@@ -31,7 +31,7 @@ function GenericRateDisplay(props) {
 
 
 function areEqual(prev, next) {
-  return prev.readOnly === next.readOnly && prev.value === next.value && prev.oldObj === next.oldObj
+  return prev.readOnly === next.readOnly && prev.value === next.value;
 }
 
 GenericRateDisplay.propTypes = {
@@ -40,8 +40,6 @@ GenericRateDisplay.propTypes = {
   onChange: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   heading: PropTypes.string,
-  objKey: PropTypes.string.isRequired,
-  oldObj: PropTypes.any.isRequired,
 };
 
 

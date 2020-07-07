@@ -4991,8 +4991,7 @@ const fakeData = [
     "invoiceDate": 1571586682,
     "billTo": {
       "name": "SPRINGBEE",
-      "streetAddress": "720 Cortelyou Road",
-      "city": "Avoca",
+      "streetAddress": "720 Cortelyou Road",      "city": "Avoca",
       "state": " Puerto Rico",
       "zip": 1959
     },

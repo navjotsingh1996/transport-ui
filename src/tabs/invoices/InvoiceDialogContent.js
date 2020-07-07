@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 /**
  * Holds the content of the edit/create/view invoices dialog
  */
-export default function InvoiceDialogContent(props) {
+function InvoiceDialogContent(props) {
   const { invoice, readOnly, gatherChanges } = props;
   /**
    * Helper function that returns an empty stop
@@ -128,8 +128,7 @@ export default function InvoiceDialogContent(props) {
       <GenericAddressDisplay
         id={`bill-to`}
         object={billTo}
-        objSetter={setBillTo}
-        onChange={textOnChange}
+        onChange={(e, key) => billToTextOnChange(e, key)}
         readOnly={readOnly}
         heading={'Bill To'}
       />
@@ -147,9 +146,8 @@ export default function InvoiceDialogContent(props) {
       <StopTypeDisplay
         id={'pickup-stops'}
         stops={stops}
-        stopsSetter={setter}
         readOnly={readOnly}
-        onChange={stopsTextOnChange}
+        onChange={(e, key, i, isDate) => stopsTextOnChange(e, setter, stops, key, i, isDate)}
         type={type}
         onDelete={deleteStop}
         onAdd={addStop}
@@ -166,9 +164,8 @@ export default function InvoiceDialogContent(props) {
         id={'total-balance-display'}
         readOnly={readOnly}
         obj={totalBal}
-        setter={setTotalBal}
         onToggle={onTruckOrderToggle}
-        onChange={onRateChange}
+        onChange={(val, key) => onRateChange(val, key)}
       />
     )
   };
@@ -183,7 +180,7 @@ export default function InvoiceDialogContent(props) {
         heading='Invoice Number'
         readOnly={readOnly}
         value={invoiceNumber}
-        onChange={textOnChange}
+        onChange={(e) => textOnChange(e, setInvoiceNumber)}
         setter={setInvoiceNumber}
       />
     );
@@ -199,7 +196,7 @@ export default function InvoiceDialogContent(props) {
         heading='Invoice Date'
         readOnly={readOnly}
         value={invoiceDate}
-        onChange={textOnChange}
+        onChange={(e) => textOnChange(e, setInvoiceDate, true)}
         setter={setInvoiceDate}
         />
     )
@@ -215,7 +212,7 @@ export default function InvoiceDialogContent(props) {
         heading='Load Number'
         readOnly={readOnly}
         value={loadNumber}
-        onChange={textOnChange}
+        onChange={(e) => textOnChange(e, setLoadNumber)}
         setter={setLoadNumber}
       />
     );
@@ -261,26 +258,27 @@ export default function InvoiceDialogContent(props) {
     type === stopTypes.pickup ? setPickupStops(pickupStops.concat(defaultStop(type))) :
       setDeliveryStops(deliveryStops.concat(defaultStop(type)));
   };
+  console.log(billTo);
+
+  /**
+   * Bill to text on change for all bill to fields
+   * @param e event
+   * @param key object key
+   */
+  const billToTextOnChange = (e, key) => {
+    const billToNew = billTo;
+    billToNew[key] = e.target.value;
+    setBillTo({...billToNew})
+  };
 
   /**
    * generic text change function, handles most of the textfields
    * @param e event
    * @param setter setter function
-   * @param oldObj old object with all the data
-   * @param key key of element
    * @param isDate if this is a date field
    */
-  const textOnChange = (e, setter, oldObj, key, isDate) => {
-    const val = isDate ? e : e.target.value;
-    if (oldObj) {
-      setter({
-        ...oldObj,
-        [key]: val,
-      });
-    }
-    else {
-      setter(val);
-    }
+  const textOnChange = (e, setter, isDate) => {
+    setter(isDate ? e : e.target.value);
   };
 
   /**
@@ -341,8 +339,16 @@ export default function InvoiceDialogContent(props) {
   )
 }
 
+function areEqual(prev, next) {
+  console.log("PREVIOUS STATE: ", prev);
+  console.log("NEXT STATE: ", next);
+  return false
+}
+
 InvoiceDialogContent.propTypes = {
   readOnly: PropTypes.bool.isRequired,
   invoice: PropTypes.any.isRequired,
   gatherChanges: PropTypes.func.isRequired,
 };
+
+export default React.memo(InvoiceDialogContent, areEqual);
