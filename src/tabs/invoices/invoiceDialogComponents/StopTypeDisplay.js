@@ -44,7 +44,7 @@ export default function StopTypeDisplay(props) {
               heading={`${type === stopTypes.pickup ? 'Pickup Date' : 'Delivery Date'} ${i + 1}`}
               readOnly={readOnly}
               value={stop.date}
-              onChange={(e, setter, oldObj, key) => onChange(e, setter, stops, key, i, true)}
+              onChange={(e) => onChange(e, 'date', i, true)}
               setter={stopsSetter}
               oldObj={stop}
               objKey='date'
@@ -54,7 +54,7 @@ export default function StopTypeDisplay(props) {
               heading={''}
               readOnly={readOnly}
               object={stop}
-              onChange={(e, setter, oldObj, key) => onChange(e, setter, stops, key, i)}
+              onChange={(e, setter, oldObj, key) => onChange(e, key, i)}
               objSetter={stopsSetter}
             /><br />
           </div>

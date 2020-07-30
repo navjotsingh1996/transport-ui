@@ -92,7 +92,6 @@ export default function InvoiceDialog(props) {
     <Dialog
       open={open}
       scroll={'paper'}
-      onClose={() => handleOnClose() }
       fullWidth={true}
       maxWidth={'md'}
     >

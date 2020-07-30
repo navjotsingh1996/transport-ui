@@ -7,7 +7,13 @@ import {
 } from '@material-ui/pickers';
 
 function GenericDateDisplay(props) {
-  const { heading, readOnly, value, onChange, setter, oldObj, objKey, id } = props;
+  const { heading, readOnly, value, onChange, id } = props;
+
+  const formatDate = () => {
+    const date = new Date(0);
+    date.setUTCSeconds(value);
+    return date;
+  };
   const mkTextField = () => {
     if (readOnly) {
       return(
@@ -17,18 +23,20 @@ function GenericDateDisplay(props) {
       );
     }
     return (
-
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <KeyboardDatePicker
           disableToolbar
+          animateYearScrolling
           variant="inline"
           format="MM/dd/yyyy"
           margin="normal"
           id={`${id}-date-picker-${value}`}
           label={heading}
-          value={value}
+          value={formatDate()}
           style={{width: '100%'}}
-          onChange={ (date) => onChange(date, setter, oldObj, objKey, true)}
+          onChange={ (date) => {
+            onChange(new Date(date).getTime()/1000)
+          }}
           KeyboardButtonProps={{
             'aria-label': 'change date',
           }}
@@ -41,10 +49,6 @@ function GenericDateDisplay(props) {
 }
 
 function areEqual(prev, next) {
-  if (next.oldObj) {
-    return prev.readOnly === next.readOnly && prev.oldObj[prev.objKey] === next.oldObj[next.objKey] &&
-      prev.error === next.error && prev.helperText === next.helperText && prev.value === next.value
-  }
   return prev.readOnly === next.readOnly && prev.error === next.error && prev.helperText === next.helperText &&
     prev.value === next.value
 }
@@ -55,9 +59,6 @@ GenericDateDisplay.propTypes = {
   onChange: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   heading: PropTypes.string,
-  setter: PropTypes.func,
-  oldObj: PropTypes.any,
-  objKey: PropTypes.string
 };
 
 export default React.memo(GenericDateDisplay, areEqual);

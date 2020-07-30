@@ -11,6 +11,7 @@ export default function GenericAddressDisplay(props) {
 
   const dispatch = useDispatch();
   const optionsList = useSelector(state => state.invoice.invoicesSearchList) || [];
+  const isLoading = useSelector(state => state.invoice.invoicesSearchInProg);
 
   const onOptionChange = (val) => {
     if (!val) {
@@ -48,6 +49,7 @@ export default function GenericAddressDisplay(props) {
           }}
           options={createOptionsList()}
           onOptionChange={onOptionChange}
+          loading={isLoading}
         />
         <AutoComplete
           id={`${id}-streetAddress`}
@@ -60,6 +62,7 @@ export default function GenericAddressDisplay(props) {
           }}
           options={createOptionsList()}
           onOptionChange={onOptionChange}
+          loading={isLoading}
         />
         <GenericTextDisplay
           id={`${id}-city`}

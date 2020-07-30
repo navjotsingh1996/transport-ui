@@ -6,9 +6,8 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 function AutoComplete(props) {
-  const { options, heading, onTextChange, onOptionChange, value, id } = props;
+  const { options, heading, onTextChange, onOptionChange, value, id, loading } = props;
   const [open, setOpen] = React.useState(false);
-  const loading = open && options.length === 0 && value !== '';
 
   return (
     <Autocomplete
@@ -24,7 +23,7 @@ function AutoComplete(props) {
       }}
       onChange={(e, val) => onOptionChange(val, e)}
       getOptionSelected={(option, value) => option.object === value.object}
-      getOptionLabel={(option) => option.text}
+      getOptionLabel={(option) => option.text ? option.text : option}
       options={options}
       loading={loading}
       inputValue={value}
@@ -62,6 +61,7 @@ AutoComplete.propTypes = {
   onOptionChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default React.memo(AutoComplete, areEqual);

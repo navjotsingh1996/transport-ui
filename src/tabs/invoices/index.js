@@ -78,7 +78,7 @@ export default function InvoicesTab() {
         title: editErr.response.statusText
       });
     }
-  }, [editInProg, editErr, invoiceFileData, successSnackbar]);
+  }, [editInProg]);
 
   React.useEffect(() => {
     if (!createInProg && !createErr && invoiceFileData) {
@@ -90,7 +90,7 @@ export default function InvoicesTab() {
         title: createErr.response.statusText
       });
     }
-  }, [createInProg, createErr, invoiceFileData, successSnackbar]);
+  }, [createInProg]);
 
   React.useEffect(() => {
     if (!getInProg && getErr) {
@@ -107,15 +107,17 @@ export default function InvoicesTab() {
 
   React.useEffect(() => {
     if (!createInProg && invoiceFileData) {
+      handleDlgClose();
       downloadFile('test.pdf', {type: 'application/pdf'}, invoiceFileData);
     }
-  }, [createInProg, invoiceFileData]);
+  }, [createInProg]);
 
   React.useEffect(() => {
     if (!editInProg && invoiceFileData) {
+      handleDlgClose();
       downloadFile('test.pdf', {type: 'application/pdf'}, invoiceFileData);
     }
-  }, [editInProg, invoiceFileData]);
+  }, [editInProg]);
 
   const getInvoice = (invoiceId) => {
     let invoiceData = {};
@@ -159,11 +161,9 @@ export default function InvoicesTab() {
 
   const onEditSubmit = (invoice) => {
     dispatch(editInvoices(invoice));
-    handleDlgClose();
   };
   const onCreateSubmit = (invoice) => {
     dispatch(createInvoices(invoice));
-    handleDlgClose();
   };
 
   const onDelete = (selected) => {

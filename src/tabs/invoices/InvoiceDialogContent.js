@@ -46,7 +46,7 @@ export default function InvoiceDialogContent(props) {
    */
   const defaultStop = (type) => {
     return {
-      date: new Date().getTime(),
+      date: new Date().getTime()/1000,
       name: '',
       streetAddress: '',
       city: '',
@@ -61,7 +61,7 @@ export default function InvoiceDialogContent(props) {
    */
   const classes = useStyles();
   const [invoiceNumber, setInvoiceNumber] = React.useState(invoice.id || '');
-  const [invoiceDate, setInvoiceDate] = React.useState(invoice.date || new Date().getTime());
+  const [invoiceDate, setInvoiceDate] = React.useState(invoice.date || new Date().getTime()/1000);
   const [loadNumber, setLoadNumber] = React.useState(invoice.loadNumber || '');
   const [billTo, setBillTo] = React.useState({
     name: invoice.billTo ? invoice.billTo.name : '',
@@ -147,9 +147,8 @@ export default function InvoiceDialogContent(props) {
       <StopTypeDisplay
         id={'pickup-stops'}
         stops={stops}
-        stopsSetter={setter}
         readOnly={readOnly}
-        onChange={stopsTextOnChange}
+        onChange={(e, key, i, isDate) => stopsTextOnChange(e, setter, stops, key, i, isDate)}
         type={type}
         onDelete={deleteStop}
         onAdd={addStop}
@@ -199,8 +198,7 @@ export default function InvoiceDialogContent(props) {
         heading='Invoice Date'
         readOnly={readOnly}
         value={invoiceDate}
-        onChange={textOnChange}
-        setter={setInvoiceDate}
+        onChange={(date) => textOnChange(date, setInvoiceDate, null, null, true)}
         />
     )
   };
