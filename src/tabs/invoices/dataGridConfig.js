@@ -136,10 +136,10 @@ const formatBalance = (val) => {
  * @returns {string} returns a human readable date
  */
 const formatDate = (date) => {
-  let d = new Date(date),
-    month = '' + (d.getMonth() + 1),
-    day = '' + d.getDate(),
-    year = d.getFullYear();
+  const d = new Date(date * 1000);
+  let month = '' + (d.getMonth() + 1);
+  let day = '' + d.getDate();
+  const year = d.getFullYear();
 
   if (month.length < 2)
     month = '0' + month;
@@ -179,9 +179,7 @@ const multiStop = (value, key, type) => {
   myStops.forEach((v, index) => {
     let text = v[key];
     if (key === 'date') {
-      const date = new Date(0);
-      date.setUTCMilliseconds(text);
-      text = formatDate(date);
+      text = formatDate(text);
     }
     const elem = (<p key={`${text}-${index}`}>{text}{index === value.length ? null : <br />}</p>);
     buildCell.push(elem);
