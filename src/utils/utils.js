@@ -30,6 +30,21 @@ export const downloadFile = (name, fileType, fileData) => {
   URL.revokeObjectURL(downloadUrl);
 };
 
+/**
+ * helper function that pulls out the filename from content disposition string
+ * @param contentDisposition string that needs to be parsed
+ * @returns {string} filename
+ */
+export const getFileName = (contentDisposition) => {
+  let filename = "";
+  const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+  const matches = filenameRegex.exec(contentDisposition);
+  if (matches != null && matches[1]) {
+    filename = matches[1].replace(/['"]/g, '');
+  }
+  return filename;
+};
+
 
 /**
  * creates a copy of two arrays and compares them

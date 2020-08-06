@@ -7,6 +7,7 @@ const initialState = {
   invoicesCreateInProg: false,
   invoicesCreateErr: false,
   invoiceFile: null,
+  invoiceFilename: null,
   invoicesEditInProg: false,
   invoicesEditErr: false,
   invoicesDeleteInProg: false,
@@ -54,14 +55,16 @@ function invoicesReducer(state = initialState, action) {
     case invoiceActions.CREATE_INVOICES_OK:
       return {
         ...state,
-        invoiceFile: action.res,
+        invoiceFile: action.res.content,
+        invoiceFilename: action.res.filename,
         invoicesCreateInProg: false,
         invoicesCreateErr: null
       };
     case invoiceActions.EDIT_INVOICES_OK:
       return {
         ...state,
-        invoiceFile: action.res,
+        invoiceFile: action.res.content,
+        invoiceFilename: action.res.filename,
         invoicesEditInProg: false,
         invoicesEditErr: null
       };

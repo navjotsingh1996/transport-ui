@@ -33,6 +33,7 @@ export default function InvoicesTab() {
     title: '',
   });
   const invoiceFileData = useSelector(state => state.invoice.invoiceFile);
+  const invoiceFilename = useSelector(state => state.invoice.invoiceFilename);
   const createInProg = useSelector(state => state.invoice.invoicesCreateInProg);
   const editInProg = useSelector(state => state.invoice.invoicesEditInProg);
   const deleteInProg = useSelector(state => state.invoice.invoicesDeleteInProg);
@@ -108,14 +109,14 @@ export default function InvoicesTab() {
   React.useEffect(() => {
     if (!createInProg && invoiceFileData) {
       handleDlgClose();
-      downloadFile('test.pdf', {type: 'application/pdf'}, invoiceFileData);
+      downloadFile(invoiceFilename, {type: 'application/pdf'}, invoiceFileData);
     }
   }, [createInProg]);
 
   React.useEffect(() => {
     if (!editInProg && invoiceFileData) {
       handleDlgClose();
-      downloadFile('test.pdf', {type: 'application/pdf'}, invoiceFileData);
+      downloadFile(invoiceFilename, {type: 'application/pdf'}, invoiceFileData);
     }
   }, [editInProg]);
 

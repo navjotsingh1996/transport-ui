@@ -57,7 +57,7 @@ export default function GenericAddressDisplay(props) {
           readOnly={readOnly}
           value={object.streetAddress}
           onTextChange={(e) => {
-            dispatch(searchInvoices(object.name, e.target.value, searchFields.billTo));
+            dispatch(searchInvoices(object.name, e.target.value, searchFields.streetAddress));
             onChange(e, objSetter, object, 'streetAddress');
           }}
           options={createOptionsList()}

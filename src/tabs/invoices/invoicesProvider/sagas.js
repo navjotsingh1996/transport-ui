@@ -1,5 +1,6 @@
 import { all, put, call, takeEvery, takeLatest } from 'redux-saga/effects';
 import axiosAgent from '../../../utils/axiosAgent';
+import { getFileName } from '../../../utils/utils'
 import {
   getInvoices,
   getInvoicesOk,
@@ -31,7 +32,10 @@ export function* getInvoicesHandler() {
 export function* createInvoicesHandler(action){
   try {
     const res = yield call(axiosAgent.post, baseURI, action.invoice, { responseType: 'blob' });
-    yield put(createInvoicesOk(res.data));
+    yield put(createInvoicesOk({
+      content: res.data,
+      filename: getFileName(res.headers['content-disposition'])
+    }));
     yield put(getInvoices());
   } catch (err) {
     yield put(createInvoicesFail(err));
@@ -41,7 +45,10 @@ export function* createInvoicesHandler(action){
 export function* editInvoicesHandler(action){
   try {
     const res = yield call(axiosAgent.put, baseURI, action.invoice, {responseType: 'blob'});
-    yield put(editInvoicesOk(res.data));
+    yield put(editInvoicesOk({
+      content: res.data,
+      filename: getFileName(res.headers['content-disposition'])
+    }));
     yield put(getInvoices());
   } catch (err) {
     yield put(editInvoicesFail(err));
