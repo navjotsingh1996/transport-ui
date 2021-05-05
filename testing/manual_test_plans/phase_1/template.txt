@@ -1,0 +1,22 @@
+Author: Navjot Singh
+Last Updated: 5/4/21
+Name: template test plan
+Objective: Template for all test plans
+Pass Criteria: N/A
+Test Type: Manual
+
+Steps:
+
+1). Click this
+2). Press that
+3). Redo that
+
+Expected: everything to work
+Actual: everything works
+
+4). click that
+5). Press this
+6). Redo this
+
+Expected: Everything still ok
+Actual: Everything not ok :(
